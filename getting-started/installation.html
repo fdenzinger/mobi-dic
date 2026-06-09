@@ -1093,9 +1093,11 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
+      <a href="https://www.slf.ch" target="_blank" rel="noopener" title="WSL Institute for Snow and Avalanche Research SLF">
+        <img src="../assets/SLF_Logo.png" alt="SLF" style="height:20px; width:auto; vertical-align:middle; margin-right:10px; opacity:0.85;">
+      </a>
       © 2026 WSL Institute for Snow and Avalanche Research SLF
     </div>
-  
   
 </div>
       
@@ -1156,22 +1158,6 @@
         opts.insertBefore(ver, opts.firstChild);
       }
 
-      // Footer: SLF logo + version + proprietary note
-      var copy = document.querySelector('.md-footer-copyright__highlight');
-      if (copy) {
-        var img = document.createElement('img');
-        img.src = '../assets/SLF_Logo.png';
-        img.height = 22;
-        img.alt = 'SLF';
-        img.style.cssText = 'vertical-align:middle; margin-right:10px; opacity:0.85;';
-        copy.insertBefore(img, copy.firstChild);
-
-        var meta = document.createElement('span');
-        meta.className = 'md-footer-meta-text';
-        meta.innerHTML = ' &nbsp;&middot;&nbsp; MOBI-DIC v1.0.0'
-                       + ' &nbsp;&middot;&nbsp; Proprietary &ndash; WSL-SLF Davos';
-        copy.appendChild(meta);
-      }
     });
   </script>
 

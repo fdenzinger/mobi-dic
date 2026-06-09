@@ -30,6 +30,19 @@
   font-size: 0.7rem;
 }
 
+/* ── Footer: match header color ─────────────────────────────────────────── */
+.md-footer {
+  background-color: var(--md-primary-fg-color);
+}
+
+.md-footer-nav__link {
+  color: var(--md-primary-bg-color);
+}
+
+.md-footer-meta {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
 /* ── Home page hero ─────────────────────────────────────────────────────── */
 .mobi-hero {
   text-align: center;
