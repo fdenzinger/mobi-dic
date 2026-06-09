@@ -1209,16 +1209,15 @@
       var copy = document.querySelector('.md-footer-copyright__highlight');
       if (copy) {
         var img = document.createElement('img');
-        img.src = '../assets/SLF_DIC_Logo.png';
-        img.height = 20;
+        img.src = '../assets/SLF_Logo.png';
+        img.height = 22;
         img.alt = 'SLF';
-        img.style.cssText = 'vertical-align:middle; margin-right:8px; opacity:0.8;';
+        img.style.cssText = 'vertical-align:middle; margin-right:10px; opacity:0.85;';
         copy.insertBefore(img, copy.firstChild);
 
         var meta = document.createElement('span');
         meta.className = 'md-footer-meta-text';
         meta.innerHTML = ' &nbsp;&middot;&nbsp; MOBI-DIC v1.0.0'
-                       + ' &nbsp;&middot;&nbsp; Offline documentation'
                        + ' &nbsp;&middot;&nbsp; Proprietary &ndash; WSL-SLF Davos';
         copy.appendChild(meta);
       }
