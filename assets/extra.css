@@ -1,0 +1,68 @@
+/* ── Header badges (version + licence) ─────────────────────────────────── */
+.md-header-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.2em 0.55em;
+  border-radius: 3px;
+  margin-right: 6px;
+  white-space: nowrap;
+  vertical-align: middle;
+  align-self: center;
+}
+
+.md-header-badge--version {
+  background: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.md-header-badge--proprietary {
+  background: rgba(251, 191, 36, 0.2);
+  color: rgba(255, 220, 100, 0.95);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+}
+
+/* ── Footer meta text ───────────────────────────────────────────────────── */
+.md-footer-meta-text {
+  opacity: 0.6;
+  font-size: 0.7rem;
+}
+
+/* ── Home page hero ─────────────────────────────────────────────────────── */
+.mobi-hero {
+  text-align: center;
+  padding: 2.5rem 0 1.5rem;
+}
+
+.mobi-hero h1 {
+  margin: 0.8rem 0 0.3rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.mobi-hero .mobi-subtitle {
+  font-size: 1rem;
+  color: var(--md-default-fg-color--light);
+  margin: 0;
+}
+
+.mobi-hero .mobi-subtitle .accent {
+  color: var(--md-primary-fg-color);
+  font-weight: 700;
+}
+
+/* ── Grid cards tweaks ──────────────────────────────────────────────────── */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li {
+  border-top: 3px solid var(--md-primary-fg-color);
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ol > li:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}

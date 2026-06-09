@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Version + licence badges – top right of header
+      var opts = document.querySelector('.md-header__options');
+      if (opts) {
+        var lic = document.createElement('span');
+        lic.className = 'md-header-badge md-header-badge--proprietary';
+        lic.textContent = 'Proprietary';
+        opts.insertBefore(lic, opts.firstChild);
+
+        var ver = document.createElement('span');
+        ver.className = 'md-header-badge md-header-badge--version';
+        ver.textContent = 'v{{ config.extra.app_version }}';
+        opts.insertBefore(ver, opts.firstChild);
+      }
+
+      // Footer: SLF logo + version + proprietary note
+      var copy = document.querySelector('.md-footer-copyright__highlight');
+      if (copy) {
+        var img = document.createElement('img');
+        img.src = '{{ base_url }}/assets/SLF_DIC_Logo.png';
+        img.height = 20;
+        img.alt = 'SLF';
+        img.style.cssText = 'vertical-align:middle; margin-right:8px; opacity:0.8;';
+        copy.insertBefore(img, copy.firstChild);
+
+        var meta = document.createElement('span');
+        meta.className = 'md-footer-meta-text';
+        meta.innerHTML = ' &nbsp;&middot;&nbsp; MOBI-DIC v{{ config.extra.app_version }}'
+                       + ' &nbsp;&middot;&nbsp; Offline documentation'
+                       + ' &nbsp;&middot;&nbsp; Proprietary &ndash; WSL-SLF Davos';
+        copy.appendChild(meta);
+      }
+    });
+  </script>
+{% endblock %}
