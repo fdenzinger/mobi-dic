@@ -675,10 +675,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#filter-thresholds" class="md-nav__link">
+  <a href="#filter-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Filter thresholds
+        Filter mode
       
     </span>
   </a>
@@ -686,10 +686,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#outputs" class="md-nav__link">
+  <a href="#filter-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Outputs
+        Filter Settings
       
     </span>
   </a>
@@ -697,10 +697,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#background-map" class="md-nav__link">
+  <a href="#iterative-neighbour-filter-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Background map
+        Iterative Neighbour Filter Parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plot-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plot Settings
       
     </span>
   </a>
@@ -988,8 +1010,32 @@
 
 
 <h1 id="vector-filter-tab">Vector Filter Tab<a class="headerlink" href="#vector-filter-tab" title="Permanent link">¶</a></h1>
-<p>Post-processing step applied after the DIC correlation grid has been interpolated. Filters outliers and exports visual outputs.</p>
-<h2 id="filter-thresholds">Filter thresholds<a class="headerlink" href="#filter-thresholds" title="Permanent link">¶</a></h2>
+<p>Post-processing step applied after DIC. Removes outlier vectors and produces visual and vector outputs. Two filter algorithms are available, selected from a dropdown at the top of the tab.</p>
+<h2 id="filter-mode">Filter mode<a class="headerlink" href="#filter-mode" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Disabled</strong></td>
+<td>No filtering — all vectors are passed through as-is.</td>
+</tr>
+<tr>
+<td><strong>Neighbourhood Coherence Filter</strong></td>
+<td>Single-pass, radius-based filter operating on the interpolated HDF5 grid. Each vector is compared to neighbours within <code>skip_factor × RadiusMult</code>. Vectors deviating too much in direction or amplitude from the local mean are rejected.</td>
+</tr>
+<tr>
+<td><strong>Iterative Neighbour Filter</strong></td>
+<td>Multi-pass N-nearest-neighbour similarity filter operating on the sparse GeoPackage export (<code>export_sparse_gpkg</code> is auto-enabled). Progressively refines the result over multiple iterations. Algorithm: Oestreicher et al.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="filter-settings">Filter Settings<a class="headerlink" href="#filter-settings" title="Permanent link">¶</a></h2>
+<p>These thresholds apply regardless of which filter algorithm is selected.</p>
 <table>
 <thead>
 <tr>
@@ -1000,23 +1046,78 @@
 <tbody>
 <tr>
 <td><strong>Max magnitude</strong></td>
-<td>Discard vectors whose total displacement magnitude exceeds this value (metres).</td>
+<td>Hard cap applied first. Vectors exceeding this displacement magnitude (m) are removed entirely, before any neighbourhood comparison.</td>
 </tr>
 <tr>
-<td><strong>Min threshold</strong></td>
-<td>Discard vectors below this magnitude (removes noise).</td>
+<td><strong>Threshold min</strong></td>
+<td>Amplitude range lower bound. Vectors with magnitude below this value are excluded from all outputs.</td>
 </tr>
 <tr>
-<td><strong>Max threshold</strong></td>
-<td>Upper bound (same as max magnitude but applied independently per component).</td>
+<td><strong>Threshold max</strong></td>
+<td>Amplitude range upper bound. Vectors with magnitude above this value are excluded from all outputs.</td>
 </tr>
 <tr>
-<td><strong>Direction filter</strong></td>
-<td>Optionally restrict to vectors within ± tolerance of a reference azimuth.</td>
+<td><strong>Direction threshold</strong> <em>(Coherence only)</em></td>
+<td>Each vector is compared to the circular mean direction of its neighbours. Vectors deviating by more than this angle (°) are rejected. Set to 180° to disable direction filtering.</td>
+</tr>
+<tr>
+<td><strong>Amplitude threshold</strong> <em>(Coherence only)</em></td>
+<td>Vectors whose magnitude differs from the local neighbourhood mean by more than this value (m) are rejected. Works together with the direction threshold.</td>
+</tr>
+<tr>
+<td><strong>Radius multiplier</strong> <em>(Coherence only)</em></td>
+<td>Controls the neighbourhood search radius: <code>radius = skip_factor × multiplier</code>. Larger values include more distant neighbours.</td>
+</tr>
+<tr>
+<td><strong>Arrow downsample (N)</strong></td>
+<td>Keep every N-th vector in all outputs (GPKG, TXT, and plot). Does not affect filtering, only output density.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">¶</a></h2>
+<h2 id="iterative-neighbour-filter-parameters">Iterative Neighbour Filter Parameters<a class="headerlink" href="#iterative-neighbour-filter-parameters" title="Permanent link">¶</a></h2>
+<p>These parameters appear when <strong>Iterative Neighbour Filter</strong> is selected.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Magnitude field</strong></td>
+<td><code>xy</code></td>
+<td>Displacement magnitude used for neighbourhood comparison: <code>xy</code> = 2-D (√(dx²+dy²)); <code>xyz</code> = 3-D (DEM mode only).</td>
+</tr>
+<tr>
+<td><strong>Magnitude threshold</strong></td>
+<td>10 m</td>
+<td>Maximum allowed magnitude deviation from the neighbourhood mean.</td>
+</tr>
+<tr>
+<td><strong>Direction threshold</strong></td>
+<td>15°</td>
+<td>Maximum allowed azimuth deviation from the neighbourhood circular mean.</td>
+</tr>
+<tr>
+<td><strong>Min neighbours</strong></td>
+<td>4</td>
+<td>Points with fewer neighbours within Max distance are removed.</td>
+</tr>
+<tr>
+<td><strong>Max distance</strong></td>
+<td>50 m</td>
+<td>Search radius for finding neighbours (map units / pixels).</td>
+</tr>
+<tr>
+<td><strong>Iterations</strong></td>
+<td>1</td>
+<td>Number of filter passes. More passes remove more outliers but can over-thin dense displacement fields.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="export-files">Export Files<a class="headerlink" href="#export-files" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -1026,24 +1127,65 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Export GPKG</strong></td>
-<td>Write filtered sparse vectors to a GeoPackage file.</td>
+<td><strong>Save as .txt</strong></td>
+<td>Write filtered vectors as tab-separated text (x, y, dx, dy, magnitude columns).</td>
 </tr>
 <tr>
-<td><strong>Export TXT</strong></td>
-<td>Write filtered sparse vectors as a plain-text CSV.</td>
+<td><strong>Save as GeoPackage</strong></td>
+<td>Write filtered vectors as a GeoPackage vector layer with full CRS.</td>
 </tr>
 <tr>
-<td><strong>Export PNG</strong></td>
-<td>Render a vector field overlay on a background map and save as PNG.</td>
+<td><strong>Save result plot as .png</strong></td>
+<td>Render the filtered displacement field overlaid on a background image and save as PNG.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="background-map">Background map<a class="headerlink" href="#background-map" title="Permanent link">¶</a></h2>
-<p>When PNG export is enabled, a basemap tile (OpenStreetMap or custom URL) is fetched and used as the background. Requires internet access or a local tile server.</p>
+<h2 id="plot-settings">Plot Settings<a class="headerlink" href="#plot-settings" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Colour scale max</strong></td>
+<td>Upper limit of the plot colourbar. Vectors above this value are clipped to the top colour; does not affect which vectors are exported.</td>
+</tr>
+<tr>
+<td><strong>Black arrows</strong></td>
+<td>When checked, all arrows are drawn in black. When unchecked, arrows are colour-coded by magnitude. Black arrows are useful when the background raster already carries colour information.</td>
+</tr>
+<tr>
+<td><strong>Background alpha</strong></td>
+<td>Opacity of the displacement magnitude colour overlay behind the arrows (0 = transparent, 1 = opaque).</td>
+</tr>
+<tr>
+<td><strong>Plot hillshade from DSM</strong></td>
+<td>Compute a shaded-relief image from the raster below and blend it into the background.</td>
+</tr>
+<tr>
+<td><strong>Background DSM/raster</strong></td>
+<td>Path to a GeoTIFF used as the hillshade source — typically the primary DEM or orthoimage.</td>
+</tr>
+<tr>
+<td><strong>Overlay 3D displacement magnitude</strong></td>
+<td>Colour-code the background by 3-D displacement magnitude (DEM mode only).</td>
+</tr>
+<tr>
+<td><strong>Fetch WMTS/WMS background tile</strong></td>
+<td>Download a web map tile as the plot background (requires internet).</td>
+</tr>
+<tr>
+<td><strong>WMTS/WMS layer</strong></td>
+<td>Tile style when WMTS is enabled: <code>satellite</code> (aerial imagery), <code>map</code> (OpenStreetMap-style), or <code>relief</code> (terrain shading).</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The vector filter can also be re-run on existing results without reprocessing the full DIC pipeline — use the <strong>Post-Processing</strong> tab in the plugin.</p>
+<p>The Vector Filter can also be re-run on existing results without reprocessing — use the <strong>Post-Processing</strong> sidebar in the plugin.</p>
 </div>
 
 

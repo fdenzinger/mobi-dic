@@ -619,6 +619,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#input-data-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input data requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#single-pair-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -989,6 +1000,112 @@
 
 <h1 id="inputoutput-tab">Input/Output Tab<a class="headerlink" href="#inputoutput-tab" title="Permanent link">¶</a></h1>
 <p>The Input/Output tab configures input files, output location, and the run mode (single pair vs. time series).</p>
+<h2 id="input-data-requirements">Input data requirements<a class="headerlink" href="#input-data-requirements" title="Permanent link">¶</a></h2>
+<p>Requirements differ by processing mode:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">DEM</label><label for="__tabbed_1_2">Optical</label><label for="__tabbed_1_3">Webcam</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Format</strong></td>
+<td>GeoTIFF (<code>.tif</code> / <code>.tiff</code>)</td>
+</tr>
+<tr>
+<td><strong>Bands</strong></td>
+<td>Single-band (elevation values)</td>
+</tr>
+<tr>
+<td><strong>CRS</strong></td>
+<td>Both files must share the same CRS. A mismatch is logged as a warning and processing continues, but results will be incorrect.</td>
+</tr>
+<tr>
+<td><strong>Geographic CRS</strong></td>
+<td>Inputs in degrees (e.g. WGS84) are automatically reprojected to the appropriate UTM zone when <code>auto_reproject_to_utm</code> is enabled.</td>
+</tr>
+<tr>
+<td><strong>Spatial overlap</strong></td>
+<td>Primary and secondary must overlap. Only the overlapping extent is processed.</td>
+</tr>
+<tr>
+<td><strong>No-data</strong></td>
+<td>Cells with the raster nodata value or value <code>0</code> are treated as NaN and excluded from correlation.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Format</strong></td>
+<td>GeoTIFF (<code>.tif</code> / <code>.tiff</code>)</td>
+</tr>
+<tr>
+<td><strong>Bands</strong></td>
+<td>Single-band (grayscale) or multi-band (e.g. RGB). Multi-band images are converted to grayscale via standard luminance weighting (0.299 R + 0.587 G + 0.114 B).</td>
+</tr>
+<tr>
+<td><strong>CRS</strong></td>
+<td>Both files must share the same CRS.</td>
+</tr>
+<tr>
+<td><strong>Geographic CRS</strong></td>
+<td>Same automatic UTM reprojection as DEM mode.</td>
+</tr>
+<tr>
+<td><strong>Spatial overlap</strong></td>
+<td>Primary and secondary must overlap.</td>
+</tr>
+<tr>
+<td><strong>No-data</strong></td>
+<td>Cells with the raster nodata value or value <code>0</code> are treated as NaN and excluded.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Format</strong></td>
+<td>Any PIL-readable image: JPEG, PNG, TIFF, BMP, etc. No GeoTIFF or CRS required.</td>
+</tr>
+<tr>
+<td><strong>Bands</strong></td>
+<td>Any number; images are converted to RGB then grayscale internally.</td>
+</tr>
+<tr>
+<td><strong>CRS</strong></td>
+<td>None — all outputs are in pixel coordinates.</td>
+</tr>
+<tr>
+<td><strong>Image size</strong></td>
+<td>Primary and secondary may differ in size. Use <code>align_mode: crop</code> (default) to clip both to the top-left common area, or <code>align_mode: pad</code> to zero-pad the smaller image.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 <h2 id="single-pair-mode">Single-pair mode<a class="headerlink" href="#single-pair-mode" title="Permanent link">¶</a></h2>
 <table>
 <thead>

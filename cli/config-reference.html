@@ -1231,12 +1231,12 @@
 <tr>
 <td><code>MaxMagnitude</code></td>
 <td>float</td>
-<td>Exclude vectors with displacement magnitude above this value (map units / pixels).</td>
+<td>Hard cap applied first: exclude vectors above this magnitude (map units / pixels).</td>
 </tr>
 <tr>
 <td><code>ThrMin</code> / <code>ThrMax</code></td>
 <td>float</td>
-<td>Magnitude thresholds: exclude vectors outside this range.</td>
+<td>Amplitude range filter: exclude vectors whose magnitude falls outside <code>[ThrMin, ThrMax]</code>. Applied independently of the neighbourhood coherence filter — set to a wide range (e.g. <code>-100</code> / <code>100</code>) to effectively disable.</td>
 </tr>
 <tr>
 <td><code>ColorMax</code></td>
