@@ -276,6 +276,25 @@
   
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../getting-started/troubleshooting.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Troubleshooting
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
     
   
   
@@ -471,6 +490,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/troubleshooting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -492,10 +538,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -513,8 +559,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -725,6 +771,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#symbology-display" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -812,10 +869,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6">
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -833,8 +890,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1036,6 +1093,74 @@ The scan also triggers the range computation for the Symbology table (see below)
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>YYYY-MM-DD COMP
 </code></pre></div>
 <p>For example: <code>DIC_20230801_20230901_RES1.0_WIN64_x.tif</code> → <code>2023-08-01 X</code></p>
+<h2 id="output-components">Output components<a class="headerlink" href="#output-components" title="Permanent link">¶</a></h2>
+<p>Each DIC run produces one GeoTIFF per displacement component. Understanding what each layer represents:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Modes</th>
+<th>Physical meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DIC_x</code></td>
+<td>DEM, Optical</td>
+<td>East–West (X) displacement. Positive = eastward motion.</td>
+</tr>
+<tr>
+<td><code>DIC_y</code></td>
+<td>DEM, Optical</td>
+<td>North–South (Y) displacement. Positive = northward motion.</td>
+</tr>
+<tr>
+<td><code>DIC_xy</code></td>
+<td>DEM, Optical</td>
+<td>2-D horizontal displacement magnitude: √(x² + y²). Always ≥ 0.</td>
+</tr>
+<tr>
+<td><code>DIC_dz</code></td>
+<td>DEM only</td>
+<td>Vertical displacement <em>before</em> the co-registration offset is restored. Reflects raw elevation change between acquisitions.</td>
+</tr>
+<tr>
+<td><code>DIC_z</code></td>
+<td>DEM only</td>
+<td>Vertical displacement <em>after</em> the co-registration offset is restored — the physically meaningful vertical change.</td>
+</tr>
+<tr>
+<td><code>DIC_xyz</code></td>
+<td>DEM only</td>
+<td>3-D displacement magnitude: √(x² + y² + z²). Always ≥ 0.</td>
+</tr>
+<tr>
+<td><code>DIC_az</code></td>
+<td>DEM, Optical</td>
+<td>Displacement azimuth in degrees clockwise from North (0–360°).</td>
+</tr>
+<tr>
+<td><code>DIC_dip</code></td>
+<td>DEM only</td>
+<td>Displacement dip angle: angle of the 3-D vector from horizontal (−90° to +90°). Positive = upward.</td>
+</tr>
+<tr>
+<td><code>DIC_ee</code></td>
+<td>DEM, Optical</td>
+<td>Correlation error — normalised RMS residual from the DFT registration.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Interpreting the EE (correlation error) layer</p>
+<p>EE is a quality indicator for each grid cell's displacement estimate:</p>
+<ul>
+<li><strong>EE &lt; 0.1</strong> — high confidence; strong correlation between the two images.</li>
+<li><strong>EE 0.1–0.3</strong> — moderate quality; results are usually usable but treat with care.</li>
+<li><strong>EE &gt; 0.3</strong> — poor correlation; values may be noise. These areas typically correspond to low-texture surfaces, occlusions, or large changes between acquisitions.</li>
+</ul>
+<p>Use EE as a mask: load it alongside displacement layers and use QGIS's raster calculator to zero out cells where <code>EE &gt; 0.2</code> (or whichever threshold suits your data).</p>
+</div>
 <h2 id="symbology-display">Symbology &amp; Display<a class="headerlink" href="#symbology-display" title="Permanent link">¶</a></h2>
 <p>Each component has a configurable <strong>colormap</strong>, <strong>Min/Max range</strong>, and <strong>Range mode</strong>:</p>
 <table>

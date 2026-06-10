@@ -277,6 +277,25 @@
   
   
   
+    <li class="md-tabs__item">
+      <a href="../getting-started/troubleshooting.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Troubleshooting
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
     
     
       <li class="md-tabs__item">
@@ -473,6 +492,33 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../getting-started/troubleshooting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     
     
     
@@ -489,10 +535,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -510,8 +556,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -693,10 +739,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked="">
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -714,8 +760,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1295,17 +1341,25 @@
 </tbody>
 </table>
 <h2 id="pipeline-stages">Pipeline stages<a class="headerlink" href="#pipeline-stages" title="Permanent link">¶</a></h2>
-<p>For each (resolution, window size) combination in the batch sweep:</p>
-<ol>
-<li><strong>Load &amp; resample</strong> GeoTIFF inputs to the target resolution (rasterio).</li>
-<li><strong>Co-register</strong> (optional) — compute bulk shift from stable ground and subtract.</li>
-<li><strong>Compute feature image</strong> — hillshade or orientation image (DEM mode).</li>
-<li><strong>Run windowed DFT correlation</strong> — <code>src/pixoff.py</code> → <code>src/dftregistration.py</code>.</li>
-<li><strong>Interpolate</strong> sparse results onto a regular grid (<code>src/gridfit.py</code>).</li>
-<li><strong>Write outputs</strong> — HDF5 + GeoTIFF per displacement component.</li>
-<li><strong>Export sparse points</strong> to GeoPackage (optional).</li>
-<li><strong>Vector field filter</strong> (<code>src/vecfilt.py</code>) — apply thresholds, export PNG/GPKG/TXT.</li>
-</ol>
+<p>The diagram below shows one iteration of the batch loop (one resolution × window size combination). The full run repeats this for every combination defined in <code>target_resolutions</code> × <code>window_sizes</code>.</p>
+<pre class="mermaid"><code>flowchart TD
+    A([Input pair\nprimary + secondary]) --&gt; B[Load &amp; resample\nto target resolution]
+    B --&gt; C{Co-registration\nenabled?}
+    C -- yes --&gt; D[Compute bulk shift\nfrom stable ground\nsubtract from secondary]
+    C -- no --&gt; E
+    D --&gt; E{DEM mode?}
+    E -- yes --&gt; F[Compute feature image\nhillshade or orientation]
+    E -- no --&gt; G
+    F --&gt; G[Windowed DFT correlation\npixoff + dftregistration]
+    G --&gt; H[Interpolate sparse grid\ngridfit]
+    H --&gt; I[Write HDF5 + GeoTIFFs\nper displacement component]
+    I --&gt; J{Export sparse\nGPKG?}
+    J -- yes --&gt; K[export_sparse.py]
+    J -- no --&gt; L
+    K --&gt; L{Vector filter\nenabled?}
+    L -- yes --&gt; M[vecfilt.py\nthresholds + PNG/GPKG/TXT]
+    L -- no --&gt; N([Done])
+    M --&gt; N</code></pre>
 <h2 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h2>
 <p>Each run writes a log file <code>run_log_&lt;timestamp&gt;.txt</code> in the output directory. The log includes all parameter values, per-window timing, and any warnings.</p>
 

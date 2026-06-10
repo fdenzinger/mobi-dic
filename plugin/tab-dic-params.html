@@ -276,6 +276,25 @@
   
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../getting-started/troubleshooting.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Troubleshooting
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
     
   
   
@@ -471,6 +490,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/troubleshooting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -492,10 +538,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -513,8 +559,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -795,10 +841,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6">
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -816,8 +862,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1038,6 +1084,15 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition tip">
+<p class="admonition-title">Choosing window size and resolution</p>
+<ul>
+<li><strong>Window size</strong> should be at least 2–3× the expected maximum displacement in pixels at the chosen resolution. Too small → aliasing and noise; too large → loss of spatial detail.</li>
+<li><strong>Start with native resolution</strong> (<code>[1]</code>). Add a coarser resolution (e.g. <code>[1, 2]</code>) only if the run is slow or the signal-to-noise is low at native scale.</li>
+<li><strong>Skip factor 4</strong> (default) gives a grid step of <code>window_size / 4</code> pixels — a good balance between density and speed. Increase to <code>8</code> for faster exploratory runs; decrease to <code>2</code> for the densest possible output.</li>
+<li>For DEM data at <strong>1 m resolution</strong>, <code>WIN=64</code> covers a 64 m correlation patch and resolves displacements of a few centimetres to tens of metres.</li>
+</ul>
+</div>
 <h2 id="correlation-feature-dem-mode">Correlation feature (DEM mode)<a class="headerlink" href="#correlation-feature-dem-mode" title="Permanent link">¶</a></h2>
 <table>
 <thead>
@@ -1082,7 +1137,7 @@
 </tbody>
 </table>
 <h2 id="oversampling">Oversampling<a class="headerlink" href="#oversampling" title="Permanent link">¶</a></h2>
-<p><code>os</code> (oversampling factor, default <code>10</code>) controls sub-pixel precision in the DFT registration step. Higher values give finer sub-pixel resolution at the cost of compute time. Values between <code>10</code> and <code>100</code> are typical.</p>
+<p><code>os</code> (oversampling factor, default <code>4</code>) controls sub-pixel precision in the DFT registration step. Higher values give finer sub-pixel resolution at the cost of compute time. The default <code>4</code> is sufficient for most uses; increase to <code>10</code>–<code>20</code> when sub-pixel accuracy is critical.</p>
 <h2 id="crs">CRS<a class="headerlink" href="#crs" title="Permanent link">¶</a></h2>
 <p>Detected automatically from the primary input. Shown as an EPSG code (default <code>EPSG:2056</code> – Swiss LV95 for SLF data). Change it in the <strong>Settings</strong> dialog if needed.</p>
 
