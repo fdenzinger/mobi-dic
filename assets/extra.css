@@ -44,16 +44,20 @@
 }
 
 /* ── Home page hero ─────────────────────────────────────────────────────── */
-.mobi-hero {
-  text-align: center;
-  padding: 2.5rem 0 1.5rem;
+
+/* Hide the auto-generated "Home" page title — only fires when mobi-hero is present */
+.md-content__inner:has(.mobi-hero) > h1:first-child {
+  display: none;
 }
 
-.mobi-hero h1 {
-  margin: 0.8rem 0 0.3rem;
-  font-size: 2.4rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+/* Pull the hero up tight against the nav bar */
+.md-content__inner:has(.mobi-hero) {
+  padding-top: 0;
+}
+
+.mobi-hero {
+  text-align: center;
+  padding: 1rem 0 1.5rem;
 }
 
 .mobi-hero .mobi-subtitle {
