@@ -10,8 +10,10 @@
       
       
       
-        <link rel="prev" href="security.html">
+        <link rel="prev" href="cli/config-reference.html">
       
+      
+        <link rel="next" href="about.html">
       
       
         
@@ -22,7 +24,7 @@
     
     
       
-        <title>About - MOBI-DIC Documentation</title>
+        <title>Security - MOBI-DIC Documentation</title>
       
     
     
@@ -85,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#about" class="md-skip">
+        <a href="#security" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              About
+              Security
             
           </span>
         </div>
@@ -314,8 +316,10 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
+  
+    <li class="md-tabs__item md-tabs__item--active">
       <a href="security.html" class="md-tabs__link">
         
   
@@ -333,10 +337,8 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
+    <li class="md-tabs__item">
       <a href="about.html" class="md-tabs__link">
         
   
@@ -787,33 +789,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="security.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Security
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -833,7 +808,7 @@
   <span class="md-ellipsis">
     
   
-    About
+    Security
   
 
     
@@ -844,14 +819,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="about.html" class="md-nav__link md-nav__link--active">
+      <a href="security.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    About
+    Security
   
 
     
@@ -877,10 +852,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#version" class="md-nav__link">
+  <a href="#what-gets-installed" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Version
+        What gets installed
       
     </span>
   </a>
@@ -888,10 +863,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#authors" class="md-nav__link">
+  <a href="#package-integrity" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Authors
+        Package integrity
       
     </span>
   </a>
@@ -899,10 +874,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contact-support" class="md-nav__link">
+  <a href="#network-access" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Contact &amp; Support
+        Network access
       
     </span>
   </a>
@@ -910,21 +885,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
+  <a href="#vulnerability-scanning" class="md-nav__link">
     <span class="md-ellipsis">
       
-        License
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#citation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Citation
+        Vulnerability scanning
       
     </span>
   </a>
@@ -935,6 +899,33 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -964,69 +955,133 @@
 
 
 
-<h1 id="about">About<a class="headerlink" href="#about" title="Permanent link">¶</a></h1>
-<div class="admonition tip">
-<p class="admonition-title">Early Adopters — We Need Your Feedback!</p>
-<p>MOBI-DIC is in active development and we are actively looking for feedback from early users.
-If you encounter a bug, have a feature request, or just want to share how you are using the tool,
-please reach out — your input directly shapes the next release.</p>
-<ul>
-<li><strong>GitHub Issues (preferred):</strong> <a href="https://github.com/fdenzinger/mobi-dic/issues">github.com/fdenzinger/mobi-dic/issues</a></li>
-<li><strong>Email:</strong> <a href="mailto:mobi-dic@slf.ch">mobi-dic@slf.ch</a></li>
-</ul>
-</div>
-<h2 id="version">Version<a class="headerlink" href="#version" title="Permanent link">¶</a></h2>
+<h1 id="security">Security<a class="headerlink" href="#security" title="Permanent link">¶</a></h1>
+<p>This page explains what MOBI-DIC installs on your machine, where the packages come from, and how their integrity is verified.</p>
+<hr>
+<h2 id="what-gets-installed">What gets installed<a class="headerlink" href="#what-gets-installed" title="Permanent link">¶</a></h2>
+<p>When you click <strong>Install DIC Environment</strong> in the plugin settings, pixi downloads a set of Python packages from <a href="https://conda-forge.org/">conda-forge</a> — a community-maintained, openly reviewed package repository.</p>
+<p>The packages installed depend on the build variant you received:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Base build (DEM + Optical)</label><label for="__tabbed_1_2">Full build (+ Webcam / AI)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <table>
 <thead>
 <tr>
-<th>Field</th>
-<th>Value</th>
+<th>Package</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Plugin version</td>
-<td>1.0.0</td>
+<td><code>python 3.12</code></td>
+<td>Runtime</td>
 </tr>
 <tr>
-<td>QGIS compatibility</td>
-<td>3.16 – 4.x</td>
+<td><code>numpy</code>, <code>scipy</code></td>
+<td>Numerical computing</td>
 </tr>
 <tr>
-<td>Status</td>
-<td>Beta – Actively Developed</td>
+<td><code>pandas</code></td>
+<td>Tabular data handling</td>
+</tr>
+<tr>
+<td><code>geopandas</code>, <code>shapely</code>, <code>pyproj</code></td>
+<td>Geospatial vector data</td>
+</tr>
+<tr>
+<td><code>rasterio</code>, <code>gdal</code>, <code>affine</code></td>
+<td>GeoTIFF / raster I/O</td>
+</tr>
+<tr>
+<td><code>scikit-image</code>, <code>pillow</code></td>
+<td>Image processing</td>
+</tr>
+<tr>
+<td><code>h5py</code></td>
+<td>HDF5 output files</td>
+</tr>
+<tr>
+<td><code>pyyaml</code></td>
+<td>YAML config parsing</td>
+</tr>
+<tr>
+<td><code>requests</code></td>
+<td>Background map tile fetching</td>
+</tr>
+<tr>
+<td><code>matplotlib</code>, <code>matplotlib-scalebar</code></td>
+<td>Plotting and visualisation</td>
+</tr>
+<tr>
+<td><code>tqdm</code>, <code>joblib</code>, <code>psutil</code></td>
+<td>Progress, parallelism, system info</td>
 </tr>
 </tbody>
 </table>
-<h2 id="authors">Authors<a class="headerlink" href="#authors" title="Permanent link">¶</a></h2>
+</div>
+<div class="tabbed-block">
+<p>All packages from the Base build, plus:</p>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pytorch</code>, <code>torchvision</code></td>
+<td>Deep learning runtime</td>
+</tr>
+<tr>
+<td><code>transformers</code></td>
+<td>HuggingFace SegFormer model (AI segmentation)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>No other software, services, or browser extensions are installed. The environment lives entirely in <code>~/.slf-dic/</code> (macOS/Linux) or <code>%USERPROFILE%\.slf-dic\</code> (Windows) and does not modify your system Python or QGIS Python installation.</p>
+<hr>
+<h2 id="package-integrity">Package integrity<a class="headerlink" href="#package-integrity" title="Permanent link">¶</a></h2>
+<p>Every package is pinned to an exact version and verified by <strong>SHA256 hash</strong> before installation. This means:</p>
 <ul>
-<li><strong>Florian Denzinger</strong> (Lead Developer)  </li>
-<li><strong>Andrea Manconi</strong> (Project Lead)</li>
-<li><strong>Nicolas Oestreicher</strong></li>
+<li>You always receive exactly the same packages as tested at release time.</li>
+<li>A corrupted or tampered download is detected and rejected automatically — pixi will refuse to install a package that does not match its recorded hash.</li>
+<li>Packages cannot silently drift to a newer (or older) version between installs.</li>
 </ul>
-<h2 id="contact-support">Contact &amp; Support<a class="headerlink" href="#contact-support" title="Permanent link">¶</a></h2>
-<p>For questions, bug reports, or feature requests:</p>
-<p>WSL Institute for Snow and Avalanche Research SLF<br>
-Flüelastrasse 11, 7260 Davos Dorf, Switzerland
-<a href="mailto:mobi-dic@slf.ch">mobi-dic@slf.ch</a></p>
-<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">¶</a></h2>
-<p>© 2026 WSL Institute for Snow and Avalanche Research SLF. All rights reserved.</p>
-<p>This software is provided for research and scientific use. Redistribution, reverse engineering, decompilation, or modification of the distributed binaries is not permitted without prior written consent from SLF.</p>
-<h2 id="citation">Citation<a class="headerlink" href="#citation" title="Permanent link">¶</a></h2>
-<p>If you use MOBI-DIC in your research, please cite:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">slf-dic-2026</span><span class="p">,</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Denzinger, Florian and Manconi, Andrea}</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="na">title</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">{{MOBI-DIC}: A Fast, Sub-Pixel Displacement Tracking Pipeline</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s">             for Remote-Sensing Imagery}</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="na">year</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{2026}</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="na">url</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">{https://www.slf.ch}</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
-</code></pre></div>
-<p>Also cite the underlying algorithms where appropriate:</p>
-<ul>
-<li>Guizar-Sicairos, M., Thurman, S. T., &amp; Fienup, J. R. (2008). Efficient subpixel image registration algorithms. <em>Optics Letters</em>, 33(2), 156–158.</li>
-<li>D'Errico, J. R. (2005). <em>Surface fitting using gridfit</em>. MATLAB Central File Exchange.</li>
-</ul>
+<p>The full pinned package list with hashes is embedded in the plugin ZIP as <code>pixi.lock</code> and is not downloaded from the internet at install time.</p>
+<hr>
+<h2 id="network-access">Network access<a class="headerlink" href="#network-access" title="Permanent link">¶</a></h2>
+<p>The tool makes outbound network requests in two situations:</p>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>What</th>
+<th>To where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First install</td>
+<td>Download Python packages</td>
+<td>conda-forge mirrors (HTTPS)</td>
+</tr>
+<tr>
+<td>During DIC run (optional)</td>
+<td>Fetch background map tiles</td>
+<td>OpenStreetMap / user-configured tile server</td>
+</tr>
+</tbody>
+</table>
+<p>There is no telemetry, no licence phone-home, and no data upload of any kind. Once the environment is installed, the tool can run fully offline (background maps will not load without internet, but DIC processing is unaffected).</p>
+<hr>
+<h2 id="vulnerability-scanning">Vulnerability scanning<a class="headerlink" href="#vulnerability-scanning" title="Permanent link">¶</a></h2>
+<p>Before each release, all bundled packages are scanned for known CVEs using <a href="https://trivy.dev/">trivy</a>. </p>
+<p><strong>What this means in practice:</strong> all findings in past scans have been low-severity Denial-of-Service issues that require an attacker to provide a specially crafted input file. For a scientific tool processing your own data, this does not represent a realistic threat. No remote code execution or data-theft vulnerabilities have been found.</p>
+<p>If you have a security concern, contact us at <a href="mailto:mobi-dic@slf.ch">mobi-dic@slf.ch</a>.</p>
 
 
 
@@ -1062,7 +1117,7 @@ Flüelastrasse 11, 7260 Davos Dorf, Switzerland
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="security.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Security">
+          <a href="cli/config-reference.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configuration Reference">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -1072,11 +1127,27 @@ Flüelastrasse 11, 7260 Davos Dorf, Switzerland
                 Previous
               </span>
               <div class="md-ellipsis">
-                Security
+                Configuration Reference
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="about.html" class="md-footer__link md-footer__link--next" aria-label="Next: About">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                About
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
         
       </nav>
     
