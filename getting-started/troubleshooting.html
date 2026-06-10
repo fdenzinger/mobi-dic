@@ -1235,16 +1235,6 @@ The two inputs are in different coordinate reference systems. MOBI-DIC processes
 </ul>
 </details>
 <details class="question">
-<summary>The EE (correlation error) layer is very high everywhere</summary>
-<p>High EE (&gt; 0.3) across the entire scene indicates poor overall correlation:</p>
-<ul>
-<li>Inputs from different seasons with large surface changes (snow cover, vegetation).</li>
-<li>Very different illumination conditions between acquisitions (optical images).</li>
-<li>Resolution too fine relative to actual surface texture — try processing at a coarser resolution.</li>
-</ul>
-<p>High EE in isolated patches (water, forest, cloud shadow) is normal — mask those areas out.</p>
-</details>
-<details class="question">
 <summary>Scan for Results finds no layers</summary>
 <ul>
 <li>Confirm the <strong>Output directory</strong> in the I/O tab points to the directory that contains the run sub-folders, not to the sub-folder itself.</li>
