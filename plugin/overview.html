@@ -602,6 +602,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mode-toggle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode toggle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#toolbar-buttons" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -979,33 +990,85 @@
 <h1 id="qgis-plugin-overview">QGIS Plugin Overview<a class="headerlink" href="#qgis-plugin-overview" title="Permanent link">¶</a></h1>
 <p>The MOBI-DIC QGIS plugin provides a full graphical interface for the DIC processing pipeline. It is a standalone dialog plugin (no Processing provider) that runs the Python processor as a subprocess and communicates results back through the QGIS layer tree.</p>
 <h2 id="dialog-layout">Dialog layout<a class="headerlink" href="#dialog-layout" title="Permanent link">¶</a></h2>
-<p>The dialog is organised into four tabs, plus a collapsible log panel at the bottom:</p>
+<p>The dialog is divided into three sidebar sections, selected via the vertical navigation strip on the left:</p>
 <table>
 <thead>
 <tr>
-<th>Tab</th>
+<th>Sidebar section</th>
 <th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="tab-io.html">Input/Output</a></td>
+<td><strong>Processing</strong></td>
+<td>Configure inputs, algorithm parameters, co-registration, and the vector filter, then launch a run</td>
+</tr>
+<tr>
+<td><strong>Visualisation</strong></td>
+<td>Scan output GeoTIFFs, load them into QGIS with auto-symbology, and export to Google Earth</td>
+</tr>
+<tr>
+<td><strong>Post-Processing</strong></td>
+<td>Re-run the coherence filter or neighbour filter on existing results without reprocessing</td>
+</tr>
+</tbody>
+</table>
+<p>Within the <strong>Processing</strong> section the configuration panel is split into four collapsible groups:</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="tab-io.html">Input / Output</a></td>
 <td>Input files, output directory, run tag, single-pair or time-series mode</td>
 </tr>
 <tr>
 <td><a href="tab-dic-params.html">DIC Parameters</a></td>
-<td>Resolution sweep, window sizes, co-registration, feature type</td>
+<td>Resolution sweep, window sizes, correlation feature, oversampling</td>
+</tr>
+<tr>
+<td>Co-Registration</td>
+<td>Global shift correction settings and stable-ground bounding box</td>
 </tr>
 <tr>
 <td><a href="tab-vector-filter.html">Vector Filter</a></td>
-<td>Post-processing thresholds, GPKG/PNG export</td>
-</tr>
-<tr>
-<td><a href="tab-results.html">Visualisation</a></td>
-<td>Scan and load output GeoTIFFs, rename layers, Google Earth export</td>
+<td>Post-processing thresholds, GPKG / PNG export</td>
 </tr>
 </tbody>
 </table>
+<h2 id="mode-toggle">Mode toggle<a class="headerlink" href="#mode-toggle" title="Permanent link">¶</a></h2>
+<p>The <strong>Mode</strong> buttons at the top of the dialog switch between the three processing pipelines:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Input type</th>
+<th>Outputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DEM</strong></td>
+<td>Elevation model pairs (GeoTIFF)</td>
+<td>EW · NS · vertical displacement + 3-D magnitude</td>
+</tr>
+<tr>
+<td><strong>Optical</strong></td>
+<td>Orthoimage pairs (GeoTIFF)</td>
+<td>EW · NS displacement + 2-D magnitude</td>
+</tr>
+<tr>
+<td><strong>Webcam</strong></td>
+<td>Any image pairs (JPEG / PNG / TIFF)</td>
+<td>Pixel displacement (no CRS)</td>
+</tr>
+</tbody>
+</table>
+<p>Switching mode reconfigures the Input/Output and DIC Parameters groups accordingly.</p>
 <h2 id="toolbar-buttons">Toolbar buttons<a class="headerlink" href="#toolbar-buttons" title="Permanent link">¶</a></h2>
 <table>
 <thead>
@@ -1034,6 +1097,14 @@
 <tr>
 <td><strong>■ Cancel</strong></td>
 <td>Interrupt the running subprocess</td>
+</tr>
+<tr>
+<td><strong>⚙ Settings</strong></td>
+<td>Open the Settings dialog (Python environment, CRS, Results defaults)</td>
+</tr>
+<tr>
+<td><strong>?  Help</strong></td>
+<td>Open the online documentation</td>
 </tr>
 </tbody>
 </table>

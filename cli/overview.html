@@ -826,10 +826,49 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#example-invocations" class="md-nav__link">
+  <a href="#main-processing-scripts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example invocations
+        Main processing scripts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standalone-post-processing-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standalone post-processing scripts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Standalone post-processing scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coherence-vector-filter-run_coherence_filter_standalonepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coherence / Vector filter (run_coherence_filter_standalone.py)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neighbour-filter-run_neighbour_filter_standalonepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neighbour filter (run_neighbour_filter_standalone.py)
       
     </span>
   </a>
@@ -1073,32 +1112,136 @@
 </tr>
 </tbody>
 </table>
-<h3 id="example-invocations">Example invocations<a class="headerlink" href="#example-invocations" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># macOS / Linux — DEM-based DIC</span>
+<h3 id="main-processing-scripts">Main processing scripts<a class="headerlink" href="#main-processing-scripts" title="Permanent link">¶</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">macOS</label><label for="__tabbed_1_2">Linux</label><label for="__tabbed_1_3">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># DEM-based DIC</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>~/.slf-dic/.pixi/envs/default/bin/python3<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>~/Library/Application<span class="se">\ </span>Support/QGIS/QGIS3/profiles/default/python/plugins/slfdic/_dic_scripts/run_dic4dem_processing.py<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span>--config<span class="w"> </span>/path/to/config_dic4dem.yml
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Optical image DIC</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>~/.slf-dic/.pixi/envs/default/bin/python3<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span>.../slfdic/_dic_scripts/run_dic4optical_processing.py<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span>~/Library/Application<span class="se">\ </span>Support/QGIS/QGIS3/profiles/default/python/plugins/slfdic/_dic_scripts/run_dic4optical_processing.py<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span>--config<span class="w"> </span>/path/to/config_dic4optical.yml
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># Webcam DIC</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>~/.slf-dic/.pixi/envs/default/bin/python3<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span>.../slfdic/_dic_scripts/run_dic4webcam_processing.py<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span>~/Library/Application<span class="se">\ </span>Support/QGIS/QGIS3/profiles/default/python/plugins/slfdic/_dic_scripts/run_dic4webcam_processing.py<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span>--config<span class="w"> </span>/path/to/config_dic4webcam.yml
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1"># Standalone neighbourhood coherence filter</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>~/.slf-dic/.pixi/envs/default/bin/python3<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span>.../slfdic/_dic_scripts/run_coherence_filter_standalone.py<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span>--config<span class="w"> </span>/path/to/config.yml
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="c1"># Standalone iterative neighbour filter</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>~/.slf-dic/.pixi/envs/default/bin/python3<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span>.../slfdic/_dic_scripts/run_neighbour_filter_standalone.py<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">  </span>--config<span class="w"> </span>/path/to/config.yml
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># DEM-based DIC</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>~/.slf-dic/.pixi/envs/default/bin/python3<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span>~/.local/share/QGIS/QGIS3/profiles/default/python/plugins/slfdic/_dic_scripts/run_dic4dem_processing.py<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span>--config<span class="w"> </span>/path/to/config_dic4dem.yml
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># Optical image DIC</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>~/.slf-dic/.pixi/envs/default/bin/python3<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span>~/.local/share/QGIS/QGIS3/profiles/default/python/plugins/slfdic/_dic_scripts/run_dic4optical_processing.py<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span>--config<span class="w"> </span>/path/to/config_dic4optical.yml
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1"># Webcam DIC</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>~/.slf-dic/.pixi/envs/default/bin/python3<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span>~/.local/share/QGIS/QGIS3/profiles/default/python/plugins/slfdic/_dic_scripts/run_dic4webcam_processing.py<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span>--config<span class="w"> </span>/path/to/config_dic4webcam.yml
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">rem DEM-based DIC</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">%USERPROFILE%</span>\.slf-dic\.pixi\envs\default\python.exe <span class="se">^</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="se"> </span> <span class="nv">%APPDATA%</span>\QGIS\QGIS3\profiles\default\python\plugins\slfdic\_dic_scripts\run_dic4dem_processing.py <span class="se">^</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="se"> </span> --config C:\path\to\config_dic4dem.yml
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">rem Optical image DIC</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nv">%USERPROFILE%</span>\.slf-dic\.pixi\envs\default\python.exe <span class="se">^</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="se"> </span> <span class="nv">%APPDATA%</span>\QGIS\QGIS3\profiles\default\python\plugins\slfdic\_dic_scripts\run_dic4optical_processing.py <span class="se">^</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="se"> </span> --config C:\path\to\config_dic4optical.yml
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1">rem Webcam DIC</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nv">%USERPROFILE%</span>\.slf-dic\.pixi\envs\default\python.exe <span class="se">^</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="se"> </span> <span class="nv">%APPDATA%</span>\QGIS\QGIS3\profiles\default\python\plugins\slfdic\_dic_scripts\run_dic4webcam_processing.py <span class="se">^</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="se"> </span> --config C:\path\to\config_dic4webcam.yml
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="standalone-post-processing-scripts">Standalone post-processing scripts<a class="headerlink" href="#standalone-post-processing-scripts" title="Permanent link">¶</a></h2>
+<p>These scripts are called by the plugin's <strong>Post-Processing</strong> sidebar but can also be run directly.</p>
+<h3 id="coherence-vector-filter-run_coherence_filter_standalonepy">Coherence / Vector filter (<code>run_coherence_filter_standalone.py</code>)<a class="headerlink" href="#coherence-vector-filter-run_coherence_filter_standalonepy" title="Permanent link">¶</a></h3>
+<p>Re-runs the VectorFilter on an existing HDF5 result file. Useful for adjusting filter thresholds or re-exporting outputs without rerunning DIC.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>~/.slf-dic/.pixi/envs/default/bin/python3<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>.../slfdic/_dic_scripts/run_coherence_filter_standalone.py<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>--hdf5<span class="w"> </span>/path/to/DIC_result.h5<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="o">[</span>--Key<span class="w"> </span>value<span class="w"> </span>...<span class="o">]</span>
+</code></pre></div>
+<p>Any additional <code>--Key value</code> arguments are forwarded as VectorFilter parameters (e.g. <code>--MaxMagnitude 3.0 --OutputPlot true</code>).</p>
+<h3 id="neighbour-filter-run_neighbour_filter_standalonepy">Neighbour filter (<code>run_neighbour_filter_standalone.py</code>)<a class="headerlink" href="#neighbour-filter-run_neighbour_filter_standalonepy" title="Permanent link">¶</a></h3>
+<p>Filters a sparse DIC GeoPackage by comparing each displacement vector to its N nearest neighbours in magnitude and direction. Based on the Oestreicher similarity filter.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>~/.slf-dic/.pixi/envs/default/bin/python3<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>.../slfdic/_dic_scripts/run_neighbour_filter_standalone.py<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span>--gpkg<span class="w"> </span>/path/to/DIC_sparse.gpkg<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="o">[</span>--output<span class="w"> </span>/path/to/filtered.gpkg<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="o">[</span>--MagField<span class="w"> </span>xy<span class="p">|</span>xyz<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="o">[</span>--MagThresh<span class="w"> </span><span class="m">10</span>.0<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="o">[</span>--DirThresh<span class="w"> </span><span class="m">15</span>.0<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="o">[</span>--NNeighbours<span class="w"> </span><span class="m">4</span><span class="o">]</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="o">[</span>--MaxDist<span class="w"> </span><span class="m">50</span>.0<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span><span class="o">[</span>--Iterations<span class="w"> </span><span class="m">1</span><span class="o">]</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--gpkg</code></td>
+<td><em>(required)</em></td>
+<td>Input sparse GeoPackage from the DIC pipeline</td>
+</tr>
+<tr>
+<td><code>--output</code></td>
+<td>auto</td>
+<td>Output path; defaults to <code>&lt;input&gt;_filtered.gpkg</code></td>
+</tr>
+<tr>
+<td><code>--MagField</code></td>
+<td><code>xy</code></td>
+<td>Magnitude field to compare: <code>xy</code> (2-D) or <code>xyz</code> (3-D)</td>
+</tr>
+<tr>
+<td><code>--MagThresh</code></td>
+<td><code>10.0</code></td>
+<td>Maximum allowed magnitude difference between neighbours (map units / pixels)</td>
+</tr>
+<tr>
+<td><code>--DirThresh</code></td>
+<td><code>15.0</code></td>
+<td>Maximum allowed azimuth difference between neighbours (degrees)</td>
+</tr>
+<tr>
+<td><code>--NNeighbours</code></td>
+<td><code>4</code></td>
+<td>Number of nearest neighbours to compare</td>
+</tr>
+<tr>
+<td><code>--MaxDist</code></td>
+<td><code>50.0</code></td>
+<td>Maximum search radius for neighbours (map units / pixels)</td>
+</tr>
+<tr>
+<td><code>--Iterations</code></td>
+<td><code>1</code></td>
+<td>Number of filter passes</td>
+</tr>
+</tbody>
+</table>
 <h2 id="pipeline-stages">Pipeline stages<a class="headerlink" href="#pipeline-stages" title="Permanent link">¶</a></h2>
 <p>For each (resolution, window size) combination in the batch sweep:</p>
 <ol>
