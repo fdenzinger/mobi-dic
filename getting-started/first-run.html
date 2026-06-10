@@ -980,6 +980,9 @@
 <p>See <a href="../cli/config-reference.html">Configuration Reference</a> for all available parameters.</p>
 <h2 id="expected-outputs">Expected outputs<a class="headerlink" href="#expected-outputs" title="Permanent link">¶</a></h2>
 <p>Each run produces a directory under <code>output_dir/</code> named after the run tag, containing:</p>
+<blockquote>
+<p><code>*</code> is a shorthand for <code>{run_tag}_{date1}_{date2}</code> throughout the table below.</p>
+</blockquote>
 <table>
 <thead>
 <tr>
@@ -993,31 +996,55 @@
 <td>Raw HDF5 results (sparse correlation grid)</td>
 </tr>
 <tr>
-<td><code>DIC_*_EW.tif</code></td>
-<td>East–West displacement (interpolated GeoTIFF)</td>
+<td><code>DIC_x_*.tif</code></td>
+<td>East–West (x) displacement (interpolated GeoTIFF)</td>
 </tr>
 <tr>
-<td><code>DIC_*_NS.tif</code></td>
-<td>North–South displacement</td>
+<td><code>DIC_y_*.tif</code></td>
+<td>North–South (y) displacement</td>
 </tr>
 <tr>
-<td><code>DIC_*_VT.tif</code></td>
-<td>Vertical displacement (DEM mode only)</td>
+<td><code>DIC_xy_*.tif</code></td>
+<td>2D horizontal displacement magnitude</td>
 </tr>
 <tr>
-<td><code>DIC_*_CC.tif</code></td>
-<td>Cross-correlation coefficient</td>
+<td><code>DIC_dz_*.tif</code></td>
+<td>Vertical displacement, raw (DEM mode only)</td>
 </tr>
 <tr>
-<td><code>*.gpkg</code></td>
+<td><code>DIC_z_*.tif</code></td>
+<td>Vertical displacement, co-registration restored (DEM mode only)</td>
+</tr>
+<tr>
+<td><code>DIC_xyz_*.tif</code></td>
+<td>3D displacement magnitude (DEM mode only)</td>
+</tr>
+<tr>
+<td><code>DIC_az_*.tif</code></td>
+<td>Displacement azimuth (degrees from North)</td>
+</tr>
+<tr>
+<td><code>DIC_dip_*.tif</code></td>
+<td>Displacement dip angle (DEM mode only)</td>
+</tr>
+<tr>
+<td><code>DIC_ee_*.tif</code></td>
+<td>Correlation error (normalised RMS DFT error)</td>
+</tr>
+<tr>
+<td><code>DIC_sparse_*.gpkg</code></td>
 <td>Sparse displacement points (optional)</td>
 </tr>
 <tr>
-<td><code>*.png</code></td>
+<td><code>DIC_coherence_filter_*.gpkg</code></td>
+<td>Coherence-filtered displacement vectors (optional)</td>
+</tr>
+<tr>
+<td><code>DIC_*_filtered.png</code></td>
 <td>Vector field plot (optional)</td>
 </tr>
 <tr>
-<td><code>run_log_*.txt</code></td>
+<td><code>*_log.txt</code></td>
 <td>Full processing log</td>
 </tr>
 </tbody>
