@@ -491,17 +491,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#step-2-install-the-dic-python-environment" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1042,24 +1031,34 @@
 <li>Go to <strong>Plugins → Manage and Install Plugins</strong></li>
 <li>Switch to the <strong>Install from ZIP</strong> tab</li>
 <li>Browse to the <code>_plugin.zip</code> file you received</li>
-<li>Click <strong>Install Plugin</strong></li>
-<li>In the <strong>Installed</strong> tab, find <strong>MOBI-DIC</strong> and tick the checkbox to enable it</li>
+<li>
+<p>Click <strong>Install Plugin</strong>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/install-from-zip.png" data-desc-position="bottom"><img alt="QGIS Plugin Manager – Install from ZIP" src="../assets/screenshots/install-from-zip.png"></a></p>
+</li>
+<li>
+<p>In the <strong>Installed</strong> tab, find <strong>MOBI-DIC</strong> and tick the checkbox to enable it.
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/open_tool.png" data-desc-position="bottom"><img alt="Open Tool" src="../assets/screenshots/open_tool.png"></a>
+A toolbar button (MOBI-DIC logo) will appear in the QGIS toolbar.</p>
+</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/install-from-zip.png" data-desc-position="bottom"><img alt="QGIS Plugin Manager – Install from ZIP" src="../assets/screenshots/install-from-zip.png"></a></p>
-<p>A toolbar button (MOBI-DIC logo) will appear in the QGIS toolbar.</p>
-<h2 id="_1"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/open_tool.png" data-desc-position="bottom"><img alt="Open Tool" src="../assets/screenshots/open_tool.png"></a><a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<hr>
 <h2 id="step-2-install-the-dic-python-environment">Step 2: Install the DIC Python environment<a class="headerlink" href="#step-2-install-the-dic-python-environment" title="Permanent link">¶</a></h2>
 <p>The plugin needs a dedicated Python environment with the DIC processing libraries. This is downloaded automatically on first launch — no terminal or administrator rights are required.</p>
 <ol>
 <li>Click the <strong>MOBI-DIC</strong> toolbar button to open the dialog</li>
-<li>Click the <strong>Settings</strong> button (⚙) in the top-left of the dialog</li>
-<li>In the <strong>DIC Python Environment</strong> section, click <strong>Install DIC Environment</strong></li>
+<li>
+<p>Click the <strong>Settings</strong> button (⚙) in the top-left of the dialog
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/env-install_1.png" data-desc-position="bottom"><img alt="Environment Installation" src="../assets/screenshots/env-install_1.png"></a></p>
+</li>
+<li>
+<p>In the <strong>Python Environment</strong> section, click <strong>Install DIC Environment</strong>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/env-install_2.png" data-desc-position="bottom"><img alt="Settings – DIC Python Environment 2" src="../assets/screenshots/env-install_2.png"></a></p>
+</li>
+<li>Review the package summary and click <strong>Install</strong></li>
+<li>Wait for the installation to complete, this typically takes a few minutes. Progress is shown in the dialog.
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/env-install_3.png" data-desc-position="bottom"><img alt="Settings – DIC Python Environment Continued 3" src="../assets/screenshots/env-install_3.png"></a></li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/env-install.png" data-desc-position="bottom"><img alt="Settings – DIC Python Environment" src="../assets/screenshots/env-install.png"></a>
-4. Review the package summary and click <strong>Install</strong>
-5. Wait for the installation to complete — this typically takes a few minutes. Progress is shown in the dialog.
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/env-install_2.png" data-desc-position="bottom"><img alt="Settings – DIC Python Environment Continued" src="../assets/screenshots/env-install_2.png"></a></p>
-<p>After installation the status line shows <strong>✓ Installed</strong> and the <strong>▶ Run DIC</strong> button becomes available.</p>
+<p>After installation the status line shows <strong>✓ Installed</strong> and <strong>✓ Environment ready</strong> and the <strong>▶ Run DIC</strong> button becomes available. Optionally you can click on the <strong>Test Python</strong> button to check if Python has been installed correctly (it should state Python 3.12.13). </p>
 <div class="admonition note">
 <p class="admonition-title">Environment location</p>
 <p>The environment is stored in <code>~/.slf-dic/</code> (macOS/Linux) or <code>%USERPROFILE%\.slf-dic\</code> (Windows) and survives plugin updates.</p>
