@@ -515,6 +515,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Using the QGIS Plugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-run_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First run
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -946,19 +963,18 @@
 
 <h1 id="first-run">First Run<a class="headerlink" href="#first-run" title="Permanent link">¶</a></h1>
 <h2 id="using-the-qgis-plugin">Using the QGIS Plugin<a class="headerlink" href="#using-the-qgis-plugin" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/mobi-dic-overview.png" data-desc-position="bottom"><img alt="MOBI-DIC main dialog" src="../assets/screenshots/mobi-dic-overview.png"></a></p>
 <p>The plugin dialog consists of five main UI components:</p>
 <ul>
 <li><strong>Plugin icon</strong> — click the MOBI-DIC button in the QGIS toolbar to open the dialog.</li>
 <li><strong>Mode toggle</strong> — switch between <strong>DEM</strong>, <strong>Optical</strong>, and <strong>Webcam</strong> processing modes.</li>
 <li><strong>Menu sidebar</strong> — navigate between the three workflow stages: <em>Processing</em>, <em>Visualisation</em>, and <em>Post-Processing</em>.</li>
 <li><strong>Configuration panel</strong> — the main working area; expands into collapsible sections (Input/Output, DIC Parameters, Co-Registration, Vector Filter) depending on the active sidebar tab.</li>
-<li>
-<p><strong>Run &amp; Processing Log panel</strong> — launch a run with <strong>▶ Run DIC</strong>, load/save configurations, and monitor live log output. Access <strong>Settings</strong> and <strong>Help</strong> from the top-right buttons.</p>
-</li>
-<li>
-<p>Click the <strong>MOBI-DIC</strong> toolbar button to open the dialog.</p>
-</li>
+<li><strong>Run &amp; Processing Log panel</strong> — launch a run with <strong>▶ Run DIC</strong>, load/save configurations, and monitor live log output. Access <strong>Settings</strong> and <strong>Help</strong> from the top-right buttons.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/mobi-dic-overview.png" data-desc-position="bottom"><img alt="MOBI-DIC main dialog" src="../assets/screenshots/mobi-dic-overview.png"></a></p>
+<h3 id="first-run_1">First run<a class="headerlink" href="#first-run_1" title="Permanent link">¶</a></h3>
+<ol>
+<li>Click the <strong>MOBI-DIC</strong> toolbar button to open the dialog.</li>
 <li>In the <strong>Input/Output</strong> tab, set the <strong>Primary input</strong> (pre-event DEM or image) and <strong>Secondary input</strong> (post-event).</li>
 <li>Choose an <strong>Output directory</strong> and optionally edit the <strong>Run tag</strong>.
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/first-run_1.png" data-desc-position="bottom"><img alt="FirstRun" src="../assets/screenshots/first-run_1.png"></a></li>
@@ -966,7 +982,7 @@
 <li>Click <strong>▶ Run DIC</strong> to start processing. Output appears in the log panel. The first run may take a little longer due to one-time initialisation.</li>
 <li>Switch to the <strong>Visualisation</strong> tab and click <strong>Scan results</strong> to load the output GeoTIFFs into QGIS.
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/first-run_2.png" data-desc-position="bottom"><img alt="FirstRun" src="../assets/screenshots/first-run_2.png"></a></li>
-</ul>
+</ol>
 <h2 id="using-the-cli">Using the CLI<a class="headerlink" href="#using-the-cli" title="Permanent link">¶</a></h2>
 <p>The easiest way to get the correct command is the <strong>📋 Copy Run Command</strong> button at the bottom of the plugin dialog — it builds the full invocation with correct paths from the current settings and copies it to the clipboard.</p>
 <p>To run manually, use the Python interpreter and scripts bundled with the plugin:</p>
