@@ -182,7 +182,7 @@
 }
 
 /* ── Screenshots embedded inside feature grid cards ────────────────────── */
-.md-typeset .card-image {
+img.card-image {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
