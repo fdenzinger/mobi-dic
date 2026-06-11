@@ -10,10 +10,10 @@
       
       
       
-        <link rel="prev" href="tab-coreg.html">
+        <link rel="prev" href="tab-dic-params.html">
       
       
-        <link rel="next" href="tab-results.html">
+        <link rel="next" href="tab-vector-filter.html">
       
       
         
@@ -24,7 +24,7 @@
     
     
       
-        <title>Vector Filter - MOBI-DIC</title>
+        <title>Co-Registration - MOBI-DIC</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vector-filter" class="md-skip">
+        <a href="#co-registration" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Vector Filter
+              Co-Registration
             
           </span>
         </div>
@@ -820,34 +820,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="tab-coreg.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Co-Registration
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -867,7 +839,7 @@
   <span class="md-ellipsis">
     
   
-    Vector Filter
+    Co-Registration
   
 
     
@@ -878,14 +850,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="tab-vector-filter.html" class="md-nav__link md-nav__link--active">
+      <a href="tab-coreg.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Vector Filter
+    Co-Registration
   
 
     
@@ -911,57 +883,74 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#filter-mode" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Filter mode
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-co-registration-co_f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enable Co-Registration (co_f)
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#neighbourhood-coherence-filter" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#oversampling-co_os" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Neighbourhood Coherence Filter
+        Oversampling (co_os)
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#iterative-neighbour-filter" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Iterative Neighbour Filter
+        Method
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#export-files" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#stable-ground-bounding-box-coreg_bbox" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Export files
+        Stable-Ground Bounding Box (coreg_bbox)
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#plot-settings" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#error-statistics-plot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Plot settings
+        Error Statistics Plot
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -969,6 +958,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tab-vector-filter.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vector Filter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1534,200 +1551,117 @@
 
 
 
-<h1 id="vector-filter">Vector Filter<a class="headerlink" href="#vector-filter" title="Permanent link">¶</a></h1>
-<p>The Vector Filter removes outlier displacement vectors after DIC and produces cleaned vector outputs as GeoPackage, text, and PNG. It runs as an optional last step within the Processing pipeline, directly after the correlation. Two filter algorithms are available; the choice depends on whether you want to work on the interpolated grid or the sparse point layer.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/qgis_plugin_vectorfilter.png" data-desc-position="bottom"><img alt="QGIS Plugin VectorFilter" src="../assets/screenshots/qgis_plugin_vectorfilter.png"></a></p>
+<h1 id="co-registration">Co-Registration<a class="headerlink" href="#co-registration" title="Permanent link">¶</a></h1>
+<p>Co-registration removes the bulk offset between the primary and secondary image before the main DIC run. Without it, a systematic shift caused by GPS error, georeferencing inconsistency, or sensor drift is absorbed into all displacement estimates and biases every vector in the scene by the same amount. When enabled, the shift is estimated via DFT on a stable-ground region and applied to the secondary image before correlation begins.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/qgis_plugin_coregistration.png" data-desc-position="bottom"><img alt="QGIS Plugin Coregistration" src="../assets/screenshots/qgis_plugin_coregistration.png"></a></p>
 <p>The typical setup is:</p>
 <ol>
-<li>Select a <strong>filter mode</strong> from the dropdown — Neighbourhood Coherence Filter for grid-based filtering, Iterative Neighbour Filter for sparse-point filtering.</li>
-<li>Tune the <strong>filter parameters</strong> — thresholds for magnitude, direction, and neighbourhood radius or distance.</li>
-<li>Choose which <strong>output files</strong> to produce — GeoPackage, text, and/or PNG plot.</li>
-<li>The filter runs automatically at the end of each DIC processing run.</li>
+<li><strong>Enable</strong> co-registration (<code>co_f = 1</code>) — on by default for DEM and Optical mode.</li>
+<li>Choose a <strong>method</strong> — <code>full</code> if most of the scene is stable; <code>bbox</code> if a distinct stable-ground patch needs to be isolated.</li>
+<li>If using <code>bbox</code>, define the <strong>stable-ground bounding box</strong> by drawing on the canvas, loading a vector file, or entering coordinates manually.</li>
+<li>Optionally enable the <strong>error statistics plot</strong> to verify the co-registration converged correctly.</li>
 </ol>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The Vector Filter can also be re-run on existing results without reprocessing — use the <a href="tab-postprocessing.html">Post-Processing</a> sidebar.</p>
+<p class="admonition-title">Default state</p>
+<p>Co-registration is <strong>enabled by default</strong> for DEM and Optical mode and <strong>disabled</strong> for Webcam mode (non-georeferenced images have no georeferencing error to correct).</p>
 </div>
-<h2 id="filter-mode">Filter mode<a class="headerlink" href="#filter-mode" title="Permanent link">¶</a></h2>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">¶</a></h2>
+<h3 id="enable-co-registration-co_f">Enable Co-Registration (<code>co_f</code>)<a class="headerlink" href="#enable-co-registration-co_f" title="Permanent link">¶</a></h3>
+<p>Turns co-registration on or off. When disabled all other settings in this panel are ignored and the secondary image is used as-is.</p>
+<h3 id="oversampling-co_os">Oversampling (<code>co_os</code>)<a class="headerlink" href="#oversampling-co_os" title="Permanent link">¶</a></h3>
+<p>Sub-pixel upsampling factor applied when estimating the bulk shift via DFT. Precision scales as <span class="arithmatex">\(\text{precision} = 1 / \texttt{co\_os}\)</span> pixels — doubling the value halves the shift error. Higher values cost proportionally more computation.</p>
 <table>
 <thead>
 <tr>
-<th>Option</th>
-<th>Description</th>
+<th>Value</th>
+<th>Shift precision</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Disabled</strong></td>
-<td>No filtering — all vectors are passed through as-is</td>
-</tr>
-<tr>
-<td><strong>Neighbourhood Coherence Filter</strong></td>
-<td>Single-pass, radius-based filter operating on the interpolated HDF5 grid. Each vector is compared to neighbours within <code>skip_factor × RadiusMult</code>; vectors deviating too much in direction or amplitude from the local mean are rejected.</td>
-</tr>
-<tr>
-<td><strong>Iterative Neighbour Filter</strong></td>
-<td>Multi-pass N-nearest-neighbour similarity filter operating on the sparse GeoPackage export (<code>export_sparse_gpkg</code> is auto-enabled). Progressively refines the result over multiple passes. Algorithm by Nicolas Oestreicher.</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="neighbourhood-coherence-filter">Neighbourhood Coherence Filter<a class="headerlink" href="#neighbourhood-coherence-filter" title="Permanent link">¶</a></h2>
-<p>Single-pass filter working on the <strong>interpolated grid</strong> (HDF5 output). For each vector, all neighbours within the search radius are found; vectors deviating from the local mean in direction or amplitude are rejected.</p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Max magnitude</strong></td>
-<td>Hard cap applied first, before any neighbourhood comparison. Vectors exceeding this displacement magnitude (m) are removed entirely.</td>
-</tr>
-<tr>
-<td><strong>Threshold min</strong></td>
-<td>Lower amplitude bound. Vectors with magnitude below this value are excluded from all outputs.</td>
-</tr>
-<tr>
-<td><strong>Threshold max</strong></td>
-<td>Upper amplitude bound. Vectors with magnitude above this value are excluded from all outputs.</td>
-</tr>
-<tr>
-<td><strong>Direction threshold</strong></td>
-<td>Each vector is compared to the circular mean direction of its neighbours. Vectors deviating by more than this angle (°) are rejected. Set to 180° to disable direction filtering.</td>
-</tr>
-<tr>
-<td><strong>Amplitude threshold</strong></td>
-<td>Vectors whose magnitude differs from the local neighbourhood mean by more than this value (m) are rejected. Works together with the direction threshold.</td>
-</tr>
-<tr>
-<td><strong>Radius multiplier</strong></td>
-<td>Controls the neighbourhood search radius: <code>radius = skip_factor × multiplier</code>. Larger values include more distant neighbours.</td>
-</tr>
-<tr>
-<td><strong>Arrow downsample (N)</strong></td>
-<td>Keep every N-th vector in all outputs (GPKG, TXT, and plot). Does not affect filtering, only output density.</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="iterative-neighbour-filter">Iterative Neighbour Filter<a class="headerlink" href="#iterative-neighbour-filter" title="Permanent link">¶</a></h2>
-<p>Multi-pass filter working on the <strong>sparse GeoPackage</strong> export. For each vector, the N nearest neighbours within the max distance are evaluated; vectors deviating too much in magnitude or azimuth are rejected. The process repeats for the configured number of iterations.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Enabling this filter automatically turns on <code>export_sparse_gpkg</code> — the sparse GeoPackage is required as input.</p>
-</div>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Magnitude field</strong></td>
-<td><code>xy</code></td>
-<td>Column from the sparse GeoPackage used for neighbourhood comparison. <code>xy</code> = 2-D horizontal magnitude (√(dx²+dy²)); <code>xyz</code> = 3-D magnitude using the co-registration-restored Z component — DEM mode only.</td>
-</tr>
-<tr>
-<td><strong>Magnitude threshold</strong></td>
-<td>10 m</td>
-<td>Maximum allowed magnitude deviation from the neighbourhood mean.</td>
-</tr>
-<tr>
-<td><strong>Direction threshold</strong></td>
-<td>15°</td>
-<td>Maximum allowed azimuth deviation from the neighbourhood circular mean.</td>
-</tr>
-<tr>
-<td><strong>Min neighbours</strong></td>
-<td>4</td>
-<td>Vectors with fewer than this many neighbours within Max distance are removed.</td>
-</tr>
-<tr>
-<td><strong>Max distance</strong></td>
-<td>50 m</td>
-<td>Search radius for finding neighbours (map units / pixels).</td>
-</tr>
-<tr>
-<td><strong>Iterations</strong></td>
 <td>1</td>
-<td>Number of filter passes. More passes remove more outliers but can over-thin dense displacement fields.</td>
+<td>1 pixel (integer only)</td>
+</tr>
+<tr>
+<td>2 <em>(default)</em></td>
+<td>0.5 px</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.25 px</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0.1 px</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<h2 id="export-files">Export files<a class="headerlink" href="#export-files" title="Permanent link">¶</a></h2>
+<h3 id="method">Method<a class="headerlink" href="#method" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
-<th>Option</th>
+<th>Method</th>
 <th>Description</th>
+<th>When to use</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Save as .txt</strong></td>
-<td>Write filtered vectors as tab-separated text (x, y, dx, dy, magnitude columns).</td>
+<td><code>full</code></td>
+<td>Estimates the shift over the entire image overlap</td>
+<td>Most of the scene is stable; no obvious stable patch to isolate</td>
 </tr>
 <tr>
-<td><strong>Save as GeoPackage</strong></td>
-<td>Write filtered vectors as a GeoPackage vector layer with full CRS.</td>
-</tr>
-<tr>
-<td><strong>Save result plot as .png</strong></td>
-<td>Render the filtered displacement field overlaid on a background image and save as PNG.</td>
+<td><code>bbox</code> <em>(default for DEM)</em></td>
+<td>Estimates the shift only within a manually defined stable-ground bounding box</td>
+<td>Most of the scene is moving, using the full image would average moving and stable areas and underestimate the true offset</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<h2 id="plot-settings">Plot settings<a class="headerlink" href="#plot-settings" title="Permanent link">¶</a></h2>
+<h3 id="stable-ground-bounding-box-coreg_bbox">Stable-Ground Bounding Box (<code>coreg_bbox</code>)<a class="headerlink" href="#stable-ground-bounding-box-coreg_bbox" title="Permanent link">¶</a></h3>
+<p>Active only when <strong>Method</strong> is set to <code>bbox</code>. Defines the region used to estimate the bulk shift. Coordinates are in the layer CRS (e.g. EPSG:2056 for Swiss LV95).</p>
+<p>The box can be defined in three ways:</p>
+<ul>
+<li><strong>Draw on Canvas</strong> — digitise the box interactively on the QGIS map canvas</li>
+<li><strong>Browse GPKG / KML</strong> — load a GeoPackage or KML file; the bounding box of the entire layer is used as the stable-ground window</li>
+<li><strong>Manual entry</strong> — type the four coordinates directly</li>
+</ul>
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
+<th>Field</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Colour scale max</strong></td>
-<td>Upper limit of the plot colourbar. Vectors above this value are clipped to the top colour; does not affect which vectors are exported.</td>
+<td>Min X / Max X</td>
+<td>West and east edges</td>
 </tr>
 <tr>
-<td><strong>Black arrows</strong></td>
-<td>When checked, all arrows are drawn in black. When unchecked, arrows are colour-coded by magnitude. Black arrows are useful when the background raster already carries colour information.</td>
-</tr>
-<tr>
-<td><strong>Background alpha</strong></td>
-<td>Opacity of the displacement magnitude colour overlay behind the arrows (0 = transparent, 1 = opaque).</td>
-</tr>
-<tr>
-<td><strong>Plot hillshade from DSM</strong></td>
-<td>Compute a shaded-relief image from the raster below and blend it into the background.</td>
-</tr>
-<tr>
-<td><strong>Background DSM/raster</strong></td>
-<td>Path to a GeoTIFF used as the hillshade source — typically the primary DEM or orthoimage.</td>
-</tr>
-<tr>
-<td><strong>Overlay 3D displacement magnitude</strong></td>
-<td>Colour-code the background by 3-D displacement magnitude (DEM mode only).</td>
-</tr>
-<tr>
-<td><strong>Fetch WMTS/WMS background tile</strong></td>
-<td>Download a web map tile as the plot background (requires internet).</td>
-</tr>
-<tr>
-<td><strong>WMTS/WMS layer</strong></td>
-<td>Tile style: <code>satellite</code> (aerial imagery), <code>map</code> (OpenStreetMap-style), or <code>relief</code> (terrain shading).</td>
+<td>Min Y / Max Y</td>
+<td>South and north edges</td>
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Only the bounding box is used</p>
+<p>Regardless of polygon shape or count, only the <strong>rectangular bounding box</strong> (min/max extent) of the layer is extracted — the actual geometry is ignored. A circular or irregular polygon gives the same result as a rectangle drawn around it. If the file contains multiple features, the bounding box spans all of them combined. To target a precise area, draw the box manually on the canvas instead.</p>
+</div>
+<p><strong>How to choose a good stable-ground patch:</strong></p>
+<ul>
+<li>Select an area that is genuinely stable between the two acquisitions (bedrock outcrop, road, building roof).</li>
+<li>The patch should be large enough to contain many DIC windows, at least a few hundred pixels on each side at the target resolution.</li>
+<li>Avoid areas with shadows, water, snow, or vegetation change.</li>
+<li>The patch does not need to be centred, a corner of the scene is fine as long as the surface is stable.</li>
+</ul>
+<h3 id="error-statistics-plot">Error Statistics Plot<a class="headerlink" href="#error-statistics-plot" title="Permanent link">¶</a></h3>
+<p>When enabled, saves a PNG alongside the HDF5 output showing:</p>
+<ul>
+<li>The stable-ground bounding box overlaid on the primary image</li>
+<li>Histograms of the residual X, Y (and Z for DEM) displacement errors within the stable patch after co-registration</li>
+</ul>
+<p>Use this plot to verify that the co-registration converged and that residual errors are centred near zero. Large residuals or a bimodal histogram indicate a poor stable-ground selection or an insufficient oversampling factor.</p>
 
 
 
@@ -1763,7 +1697,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="tab-coreg.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Co-Registration">
+          <a href="tab-dic-params.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: DIC Parameters">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -1773,20 +1707,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Co-Registration
+                DIC Parameters
               </div>
             </div>
           </a>
         
         
           
-          <a href="tab-results.html" class="md-footer__link md-footer__link--next" aria-label="Next: Results Import">
+          <a href="tab-vector-filter.html" class="md-footer__link md-footer__link--next" aria-label="Next: Vector Filter">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Results Import
+                Vector Filter
               </div>
             </div>
             <div class="md-footer__button md-icon">

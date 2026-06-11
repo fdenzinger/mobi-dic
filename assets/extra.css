@@ -66,9 +66,131 @@
   margin: 0;
 }
 
-.mobi-hero .mobi-subtitle .accent {
+.accent {
   color: var(--md-primary-fg-color);
   font-weight: 700;
+}
+
+/* Header title styling */
+.md-header .accent {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.md-header .header-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.md-header .header-sep {
+  opacity: 0.4;
+  padding: 0 0.3em;
+}
+
+.md-header .header-expansion {
+  font-weight: 300;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+/* Prevent wrapping in the header */
+.md-header__topic .md-ellipsis {
+  white-space: nowrap;
+}
+
+/* ── Landing page tagline ───────────────────────────────────────────────── */
+.mobi-tagline {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--md-default-fg-color--light);
+  max-width: 680px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+/* ── Hero screenshot (full-width, below tagline) ────────────────────────── */
+.mobi-hero-screenshot {
+  margin: 0 auto 1.5rem;
+  max-width: 900px;
+  text-align: center;
+}
+
+.mobi-hero-screenshot img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* ── Screenshot gallery grid ────────────────────────────────────────────── */
+.screenshot-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .screenshot-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.screenshot-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--md-code-bg-color);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.screenshot-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.14);
+  transform: translateY(-2px);
+}
+
+.screenshot-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  margin: 0;
+}
+
+/* The image itself is wrapped in a <p> by MkDocs — strip its padding */
+.screenshot-card p:has(img) {
+  padding: 0;
+  margin: 0;
+}
+
+.screenshot-card p:not(:has(img)) {
+  padding: 0.6rem 0.75rem 0.75rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--md-default-fg-color--light);
+  margin: 0;
+}
+
+.screenshot-card strong {
+  color: var(--md-default-fg-color);
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 0.82rem;
+}
+
+/* ── Screenshots embedded inside feature grid cards ────────────────────── */
+.md-typeset .card-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
 }
 
 /* ── Grid cards tweaks ──────────────────────────────────────────────────── */
