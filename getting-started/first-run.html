@@ -1544,8 +1544,10 @@
 </ol>
 <h2 id="using-the-cli">Using the CLI<a class="headerlink" href="#using-the-cli" title="Permanent link">¶</a></h2>
 <p>The CLI runs the same processing pipeline as the plugin, driven entirely by a YAML configuration file. It is suited for headless servers, automated workflows, or batch jobs sweeping multiple resolution and window size combinations.</p>
-<p>The easiest way to get started is the <strong>📋 Copy Run Command</strong> button at the bottom of the plugin dialog — it writes the current settings to <code>output_dir/last_run_config.yml</code> and copies the full shell command to the clipboard, ready to paste into a terminal or script.</p>
-<p>To run manually, use the Python interpreter and scripts bundled with the plugin:</p>
+<p>The recommended way to get started is the <strong>📋 Copy Run Command</strong> button at the bottom of the plugin dialog. It resolves the correct Python interpreter and script paths for your system automatically — regardless of QGIS version or installation location — writes the current settings to <code>output_dir/last_run_config.yml</code>, and copies the full shell command to the clipboard, ready to paste into a terminal or script.</p>
+<details class="note">
+<summary>Manual path lookup (advanced)</summary>
+<p>If you need to construct the command by hand, the plugin is installed inside the QGIS user profile directory and the bundled Python interpreter lives in <code>~/.slf-dic/</code>. The profile path varies by platform and QGIS major version:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">macOS</label><label for="__tabbed_1_2">Linux</label><label for="__tabbed_1_3">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1568,6 +1570,11 @@
 </div>
 </div>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you are running QGIS 4, replace <code>QGIS3</code> in the path with <code>QGIS4</code>. If you are unsure where your profile directory is, open the QGIS Python console and run <code>QgsApplication.qgisUserDatabaseFilePath()</code> — the plugins folder is a sibling of that file.</p>
+</div>
+</details>
 <p>Replace <code>run_dic4dem_processing.py</code> with <code>run_dic4optical_processing.py</code> or <code>run_dic4webcam_processing.py</code> for other modes.</p>
 <p>See <a href="../cli/overview.html">CLI &amp; Batch Processing</a> for a full walkthrough of batch runs and pipeline-only installations, and <a href="../cli/config-reference.html">Configuration Reference</a> for all available parameters.</p>
 <h2 id="expected-outputs">Expected outputs<a class="headerlink" href="#expected-outputs" title="Permanent link">¶</a></h2>
