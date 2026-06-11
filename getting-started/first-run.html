@@ -1546,18 +1546,24 @@
 <p>The CLI runs the same processing pipeline as the plugin, driven entirely by a YAML configuration file. It is suited for headless servers, automated workflows, or batch jobs sweeping multiple resolution and window size combinations.</p>
 <p>The easiest way to get started is the <strong>📋 Copy Run Command</strong> button at the bottom of the plugin dialog — it writes the current settings to <code>output_dir/last_run_config.yml</code> and copies the full shell command to the clipboard, ready to paste into a terminal or script.</p>
 <p>To run manually, use the Python interpreter and scripts bundled with the plugin:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">macOS / Linux</label><label for="__tabbed_1_2">Windows</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">macOS</label><label for="__tabbed_1_2">Linux</label><label for="__tabbed_1_3">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>~/.slf-dic/.pixi/envs/default/bin/python3<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>~/.local/share/QGIS/QGIS3/profiles/default/python/plugins/slfdic/_dic_scripts/run_dic4dem_processing.py<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>~/Library/Application<span class="se">\ </span>Support/QGIS/QGIS3/profiles/default/python/plugins/slfdic/_dic_scripts/run_dic4dem_processing.py<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>--config<span class="w"> </span>/path/to/config_dic4dem.yml
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">%USERPROFILE%</span>\.slf-dic\.pixi\envs\default\python.exe <span class="se">^</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="se"> </span> <span class="nv">%APPDATA%</span>\QGIS\QGIS3\profiles\default\python\plugins\slfdic\_dic_scripts\run_dic4dem_processing.py <span class="se">^</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="se"> </span> --config C:\path\to\config_dic4dem.yml
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>~/.slf-dic/.pixi/envs/default/bin/python3<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span>~/.local/share/QGIS/QGIS3/profiles/default/python/plugins/slfdic/_dic_scripts/run_dic4dem_processing.py<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span>--config<span class="w"> </span>/path/to/config_dic4dem.yml
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">%USERPROFILE%</span>\.slf-dic\.pixi\envs\default\python.exe <span class="se">^</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="se"> </span> <span class="nv">%APPDATA%</span>\QGIS\QGIS3\profiles\default\python\plugins\slfdic\_dic_scripts\run_dic4dem_processing.py <span class="se">^</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="se"> </span> --config C:\path\to\config_dic4dem.yml
 </code></pre></div>
 </div>
 </div>
