@@ -1593,13 +1593,14 @@
 <p>The Python CLI processes one or more DIC pairs headlessly, driven entirely by a YAML config file. It is the same code the QGIS plugin calls as a subprocess.</p>
 <h2 id="running-from-a-plugin-installation">Running from a plugin installation<a class="headerlink" href="#running-from-a-plugin-installation" title="Permanent link">¶</a></h2>
 <p>After installing the plugin via QGIS, the DIC scripts and Python environment are available without any separate setup.</p>
-<p>The easiest way to get the correct invocation is the <strong>📋 Copy Run Command</strong> button in the plugin dialog, it constructs the full command with correct paths from the current dialog state and copies it to the clipboard.</p>
+<p>The easiest way to get the correct invocation is the <strong>📋 Copy Run Command</strong> button in the plugin dialog — it resolves the correct Python interpreter and script paths for your system automatically, regardless of QGIS version or installation location, and copies the full command to the clipboard.</p>
 <h3 id="script-location">Script location<a class="headerlink" href="#script-location" title="Permanent link">¶</a></h3>
+<p>The plugin is installed inside the QGIS user profile directory. The path contains the QGIS major version number (<code>QGIS3</code>, <code>QGIS4</code>, …) and varies by platform:</p>
 <table>
 <thead>
 <tr>
 <th>Platform</th>
-<th>Path</th>
+<th>Scripts path</th>
 </tr>
 </thead>
 <tbody>
@@ -1617,6 +1618,10 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you are unsure of the exact path, open the QGIS Python console and run <code>QgsApplication.qgisUserDatabaseFilePath()</code> — the plugins folder is a sibling of that file.</p>
+</div>
 <h3 id="python-interpreter">Python interpreter<a class="headerlink" href="#python-interpreter" title="Permanent link">¶</a></h3>
 <table>
 <thead>
