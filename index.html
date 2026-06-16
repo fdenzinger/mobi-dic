@@ -432,10 +432,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-started" class="md-nav__link">
+  <a href="#get-the-software-share-feedback" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Get started
+        Get the software &amp; share feedback
       
     </span>
   </a>
@@ -443,10 +443,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-the-software-share-feedback" class="md-nav__link">
+  <a href="#get-started" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Get the software &amp; share feedback
+        Get started
       
     </span>
   </a>
@@ -1467,53 +1467,71 @@ Sub-pixel displacement tracking for georeferenced and non-georeferenced raster d
 <li>
 <p><span class="twemoji middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.879 13.006v3.65l-3.004-3.048v-3.495h3.582l2.852 2.893zm10.886 7.606V24h-3.654l-5.73-5.9v-3.55h3.354zm-10.828-1.448 3.372 3.371c-1.309.442-2.557.726-4.325.726C5.136 23.26 0 18.243 0 11.565 0 4.92 5.136 0 11.984 0 18.864 0 24 4.952 24 11.565c0 2.12-.523 4.076-1.457 5.759l-3.625-3.725a8.4 8.4 0 0 0 .24-2.005c0-4.291-3.148-7.527-7.1-7.527-3.954 0-7.248 3.236-7.248 7.527s3.33 7.6 7.247 7.6c.548 0 .661.017.88-.03"></path></svg></span> <strong>Native QGIS plugin — ready in minutes</strong></p>
 <hr>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/qgis_plugin_dic_overview.png" data-desc-position="bottom"><img alt="MOBI-DIC plugin overview" class="card-image" src="assets/screenshots/qgis_plugin_dic_overview.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/qgis_plugin_dic_overview_z.png" data-title="Native QGIS plugin — ready in minutes" data-desc-position="bottom"><img alt="MOBI-DIC plugin overview" class="card-image" data-title="Native QGIS plugin — ready in minutes" src="assets/screenshots/qgis_plugin_dic_overview_z.png"></a></p>
 <p>Install once and run directly inside QGIS. The tabbed dialog guides you through every step — configuring single-pair or multi-date time series inputs, tuning DIC parameters, filtering vectors, and loading results with automatic symbology. Run configurations can be saved, reloaded, and shared. Displacement outputs land directly in the QGIS layer tree for immediate further analysis.</p>
 </li>
 <li>
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14 6-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"></path></svg></span> <strong>3D surface displacement from DEMs</strong></p>
 <hr>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/mobi-dic-features-dem.png" data-desc-position="bottom"><img alt="MOBI-DIC4DEM" class="card-image" src="assets/screenshots/mobi-dic-features-dem.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/mobi-dic-features-dem.png" data-title="3D surface displacement from DEMs" data-description="3D displacement computed with MOBI-DIC on the hillshades of UAV-derived DEMs, captured by the Alpine Remote Sensing Group at SLF Davos at 10 cm resolution (downsampled to 1 m for processing). Measured between the primary DEM (21 February 2020) and the secondary DEM (16 March 2022)." data-desc-position="bottom"><img alt="MOBI-DIC4DEM" class="card-image" data-description="3D displacement computed with MOBI-DIC on the hillshades of UAV-derived DEMs, captured by the Alpine Remote Sensing Group at SLF Davos at 10 cm resolution (downsampled to 1 m for processing). Measured between the primary DEM (21 February 2020) and the secondary DEM (16 March 2022)." data-title="3D surface displacement from DEMs" src="assets/screenshots/mobi-dic-features-dem.png"></a></p>
 <p>Derives East-West, North-South, and vertical displacement from repeat DEMs using hillshade or orientation image correlation. The secondary DEM is then shifted back by the measured horizontal offsets, so the vertical component reflects elevation change without horizontal motion bias.</p>
 <p><strong>Output:</strong> HDF5 + GeoTIFF per component.</p>
 </li>
 <li>
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.62 1 5.66 5.67-2.12 2.12-2.12-2.12-1.42 1.42 2.33 2.32-1.16 1.17.45.46a2.5 2.5 0 0 1 2.83.5l-3.53 3.53a2.5 2.5 0 0 1-.5-2.83l-.46-.45-1.17 1.16-2.32-2.33-1.42 1.42 2.12 2.12-2.12 2.12L1 11.62 3.14 9.5l2.12 2.12 1.41-1.41-2.83-2.83c-.78-.78-.78-2.05 0-2.83l.71-.71c.78-.78 2.05-.78 2.83 0l2.83 2.83 1.41-1.41L9.5 3.14zM18 14a4 4 0 0 1-4 4v-2a2 2 0 0 0 2-2zm4 0a8 8 0 0 1-8 8v-2a6 6 0 0 0 6-6z"></path></svg></span> <strong>2D displacement from optical imagery</strong></p>
 <hr>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/mobi-dic-features-optical.png" data-desc-position="bottom"><img alt="DIC4Optical" class="card-image" src="assets/screenshots/mobi-dic-features-optical.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/mobi-dic-features-optical.png" data-title="2D displacement from optical imagery" data-description="Rock glacier displacements at Schafberg above Pontresina (Switzerland), derived from swisstopo aerial imagery (10 cm resolution) and displayed in Google Earth. Measured between the primary image (29 September 2019) and the secondary image (1 September 2021). Input data copyright: swisstopo, BAFU." data-desc-position="bottom"><img alt="DIC4Optical" class="card-image" data-description="Rock glacier displacements at Schafberg above Pontresina (Switzerland), derived from swisstopo aerial imagery (10 cm resolution) and displayed in Google Earth. Measured between the primary image (29 September 2019) and the secondary image (1 September 2021). Input data copyright: swisstopo, BAFU." data-title="2D displacement from optical imagery" src="assets/screenshots/mobi-dic-features-optical.png"></a></p>
 <p>Tracks surface motion in any georeferenced image pair: orthophotos, satellite scenes, or UAV mosaics. Automatic co-registration removes sensor offsets before correlation for cleaner results.</p>
 <p><strong>Output:</strong> HDF5 + GeoTIFF (EW, NS).</p>
 </li>
 <li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m8 3a5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 2a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3"></path></svg></span> <strong>Image-based displacement tracking</strong></p>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m8 3a5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 2a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3"></path></svg></span> <strong>Pixel displacement from non-georeferenced imagery</strong></p>
 <hr>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/mobi-dic-features-webcam.png" data-desc-position="bottom"><img alt="DIC4Webcam" class="card-image" src="assets/screenshots/mobi-dic-features-webcam.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/mobi-dic-features-webcam.png" data-title="Pixel displacement from non-georeferenced imagery" data-description="Pixel-based displacement detected from a fixed time-lapse camera at Driest, overlooking the Moosfluh slope (Valais, Switzerland). The colored area marks surface motion measured between the primary image (1 November 2022) and the secondary image (26 October 2023)." data-desc-position="bottom"><img alt="DIC4Webcam" class="card-image" data-description="Pixel-based displacement detected from a fixed time-lapse camera at Driest, overlooking the Moosfluh slope (Valais, Switzerland). The colored area marks surface motion measured between the primary image (1 November 2022) and the secondary image (26 October 2023)." data-title="Pixel displacement from non-georeferenced imagery" src="assets/screenshots/mobi-dic-features-webcam.png"></a></p>
 <p>Processes non-georeferenced image pairs from fixed cameras, drones, or scanners. Optional AI segmentation masks sky, water, and other non-moving regions before correlation.</p>
 <p><strong>Output:</strong> HDF5 + displacement images (pixel units).</p>
 </li>
 <li>
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 12v7.88c.04.3-.06.62-.29.83a.996.996 0 0 1-1.41 0l-2.01-2.01a.99.99 0 0 1-.29-.83V12h-.03L4.21 4.62a1 1 0 0 1 .17-1.4c.19-.14.4-.22.62-.22h14c.22 0 .43.08.62.22a1 1 0 0 1 .17 1.4L14.03 12z"></path></svg></span> <strong>Post-processing &amp; outlier filtering</strong></p>
 <hr>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/qgis_plugin_postprocessing_export_arrows.png" data-desc-position="bottom"><img alt="Vector filter settings" class="card-image" src="assets/screenshots/qgis_plugin_postprocessing_export_arrows.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/qgis_plugin_postprocessing_export_arrows.png" data-title="Post-processing &amp; outlier filtering" data-desc-position="bottom"><img alt="Vector filter settings" class="card-image" data-title="Post-processing &amp; outlier filtering" src="assets/screenshots/qgis_plugin_postprocessing_export_arrows.png"></a></p>
 <p>Two independent filters — neighbourhood coherence and iterative neighbour similarity — remove outliers without re-running DIC. Thresholds can be tuned interactively and filtered results exported as GeoPackage or PNG.</p>
 </li>
 <li>
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.9 17.39c-.26-.8-1.01-1.39-1.9-1.39h-1v-3a1 1 0 0 0-1-1H8v-2h2a1 1 0 0 0 1-1V7h2a2 2 0 0 0 2-2v-.41a7.984 7.984 0 0 1 2.9 12.8M11 19.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.22.21-1.79L9 15v1a2 2 0 0 0 2 2m1-16A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> <strong>Google Earth export &amp; 3D visualisation</strong></p>
 <hr>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/qgis_plugin_resultsimport_4.png" data-desc-position="bottom"><img alt="Displacement arrows export" class="card-image" src="assets/screenshots/qgis_plugin_resultsimport_4.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/qgis_plugin_resultsimport_4.png" data-title="Google Earth export &amp; 3D visualisation" data-desc-position="bottom"><img alt="Displacement arrows export" class="card-image" data-title="Google Earth export &amp; 3D visualisation" src="assets/screenshots/qgis_plugin_resultsimport_4.png"></a></p>
 <p>Export displacement rasters and vector arrow fields as KMZ directly from the plugin. Results open in Google Earth Pro for interactive 3D inspection, with optional TimeSpan tags for animated time-series playback.</p>
 </li>
 <li>
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15 19-6-2.11V5l6 2.11M20.5 3h-.16L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5a.5.5 0 0 0 .5.5c.05 0 .11 0 .16-.03L9 18.9l6 2.1 5.64-1.9c.21-.1.36-.25.36-.48V3.5a.5.5 0 0 0-.5-.5"></path></svg></span> <strong>Print layout builder</strong></p>
 <hr>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/qgis_plugin_maplayoutbuilder_5.png" data-desc-position="bottom"><img alt="Map layout builder" class="card-image" src="assets/screenshots/qgis_plugin_maplayoutbuilder_5.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/qgis_plugin_maplayoutbuilder_5.png" data-title="Print layout builder" data-desc-position="bottom"><img alt="Map layout builder" class="card-image" data-title="Print layout builder" src="assets/screenshots/qgis_plugin_maplayoutbuilder_5.png"></a></p>
 <p>Create publication-ready displacement maps with one click. Choose from dedicated displacement colormaps, overlay hillshade or satellite basemaps, and open the result directly in QGIS's print layout editor for PDF or PNG export.</p>
 </li>
 <li>
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"></path></svg></span> <strong>CLI &amp; headless batch processing</strong></p>
 <hr>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/mobi-dic-cli.png" data-desc-position="bottom"><img alt="CLI Overview" class="card-image" src="assets/screenshots/mobi-dic-cli.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/mobi-dic-cli.png" data-title="CLI &amp; headless batch processing" data-desc-position="bottom"><img alt="CLI Overview" class="card-image" data-title="CLI &amp; headless batch processing" src="assets/screenshots/mobi-dic-cli.png"></a></p>
 <p>Drive the full pipeline from YAML config files — on a desktop, a server, or inside an automated workflow. Sweep multiple resolutions and window sizes in a single run, with all outputs written automatically. No GUI required.</p>
+</li>
+</ul>
+</div>
+<hr>
+<h2 id="get-the-software-share-feedback">Get the software &amp; share feedback<a class="headerlink" href="#get-the-software-share-feedback" title="Permanent link">¶</a></h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 5.5H9c-1.1 0-2 .9-2 2v9a2 2 0 0 0 2 2h13c1.11 0 2-.89 2-2v-9a2 2 0 0 0-2-2m0 3.67-6.5 3.33L9 9.17V7.5l6.5 3.31L22 7.5zM5 16.5c0 .17.03.33.05.5H1c-.552 0-1-.45-1-1s.448-1 1-1h4zM3 7h2.05c-.02.17-.05.33-.05.5V9H3c-.55 0-1-.45-1-1s.45-1 1-1m-2 5c0-.55.45-1 1-1h3v2H2c-.55 0-1-.45-1-1"></path></svg></span> <strong>Request access</strong></p>
+<hr>
+<p>MOBI-DIC is available on request for research and scientific use, under a signed Research EULA. Contact us to receive the latest build for your platform.</p>
+<p><a href="mailto:mobi-dic@slf.ch"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> mobi-dic@slf.ch</a> &nbsp;·&nbsp; <a href="about.html#license">License &amp; EULA details</a></p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 14h-7.5l2-2H18M6 14v-2.5l6.88-6.86c.19-.19.51-.19.71 0l1.76 1.77c.2.2.2.51 0 .71L8.47 14M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2"></path></svg></span> <strong>Share your feedback</strong></p>
+<hr>
+<p>MOBI-DIC is in active development and early-user input directly shapes the next release. Report bugs, request features, or share how you use the tool.</p>
+<p><a href="https://github.com/fdenzinger/mobi-dic/issues"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> GitHub Issues</a> &nbsp;·&nbsp; <a href="mailto:mobi-dic@slf.ch"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.75 3h20.5c.966 0 1.75.784 1.75 1.75v14a1.75 1.75 0 0 1-1.75 1.75H1.75A1.75 1.75 0 0 1 0 18.75v-14C0 3.784.784 3 1.75 3M1.5 7.412V18.75c0 .138.112.25.25.25h20.5a.25.25 0 0 0 .25-.25V7.412l-9.52 6.433c-.592.4-1.368.4-1.96 0Zm0-2.662v.852l10.36 7a.25.25 0 0 0 .28 0l10.36-7V4.75a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25"></path></svg></span> mobi-dic@slf.ch</a></p>
 </li>
 </ul>
 </div>
@@ -1548,28 +1566,10 @@ Sub-pixel displacement tracking for georeferenced and non-georeferenced raster d
 </ul>
 </div>
 <hr>
-<h2 id="get-the-software-share-feedback">Get the software &amp; share feedback<a class="headerlink" href="#get-the-software-share-feedback" title="Permanent link">¶</a></h2>
-<div class="grid cards">
-<ul>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 5.5H9c-1.1 0-2 .9-2 2v9a2 2 0 0 0 2 2h13c1.11 0 2-.89 2-2v-9a2 2 0 0 0-2-2m0 3.67-6.5 3.33L9 9.17V7.5l6.5 3.31L22 7.5zM5 16.5c0 .17.03.33.05.5H1c-.552 0-1-.45-1-1s.448-1 1-1h4zM3 7h2.05c-.02.17-.05.33-.05.5V9H3c-.55 0-1-.45-1-1s.45-1 1-1m-2 5c0-.55.45-1 1-1h3v2H2c-.55 0-1-.45-1-1"></path></svg></span> <strong>Request access</strong></p>
-<hr>
-<p>MOBI-DIC is available on request for research and scientific use. Contact us to receive the latest build for your platform.</p>
-<p><a href="mailto:mobi-dic@slf.ch"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> mobi-dic@slf.ch</a></p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 14h-7.5l2-2H18M6 14v-2.5l6.88-6.86c.19-.19.51-.19.71 0l1.76 1.77c.2.2.2.51 0 .71L8.47 14M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2"></path></svg></span> <strong>Share your feedback</strong></p>
-<hr>
-<p>MOBI-DIC is in active development and early-user input directly shapes the next release. Report bugs, request features, or share how you use the tool.</p>
-<p><a href="https://github.com/fdenzinger/mobi-dic/issues"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> GitHub Issues</a> &nbsp;·&nbsp; <a href="mailto:mobi-dic@slf.ch"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.75 3h20.5c.966 0 1.75.784 1.75 1.75v14a1.75 1.75 0 0 1-1.75 1.75H1.75A1.75 1.75 0 0 1 0 18.75v-14C0 3.784.784 3 1.75 3M1.5 7.412V18.75c0 .138.112.25.25.25h20.5a.25.25 0 0 0 .25-.25V7.412l-9.52 6.433c-.592.4-1.368.4-1.96 0Zm0-2.662v.852l10.36 7a.25.25 0 0 0 .28 0l10.36-7V4.75a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25"></path></svg></span> mobi-dic@slf.ch</a></p>
-</li>
-</ul>
-</div>
-<hr>
 <h2 id="citation">Citation<a class="headerlink" href="#citation" title="Permanent link">¶</a></h2>
 <p>If you use MOBI-DIC in a publication, please cite:</p>
 <blockquote>
-<p>Oestreicher N., Denzinger F. &amp; Manconi A. (in prep.): MOBI-DIC — applying digital image correlation on elevation models to retrieve 3D surface displacement. WSL/SLF, Davos.</p>
+<p>Denzinger F., Oestreicher, N. &amp; Manconi A.: MOBI-DIC - Multi-purpOse displacement Behavior Identifier Digital Image Correlation Tool. Developed in the Alpine Remote Sensing Group at WSL Institute for Snow and Avalanche Research SLF (Davos).</p>
 </blockquote>
 
 
