@@ -1,0 +1,59 @@
+size: { width: 1200, height: 630 }
+layers:
+
+  # Full background
+  - background:
+      color: "#1565c0"
+
+  # Left square panel — slightly darker (Teams crops this as thumbnail)
+  - size: { width: 630, height: 630 }
+    offset: { x: 0, y: 0 }
+    background:
+      color: "#0d47a1"
+
+  # MOBI-DIC logo centred in left panel
+  - size: { width: 380, height: 380 }
+    offset: { x: 125, y: 125 }
+    background:
+      image: docs/assets/MOBI_DIC_Logo_dark_icon.png
+
+  # Subtle vertical divider
+  - size: { width: 2, height: 480 }
+    offset: { x: 660, y: 75 }
+    background:
+      color: "#ffffff26"
+
+  # Site name (50% white — small text, box height controls font size)
+  - size: { width: 480, height: 40 }
+    offset: { x: 700, y: 80 }
+    typography:
+      content: "{{ config.site_name }}"
+      align: start
+      color: "#ffffff80"
+      font:
+        family: Roboto
+        style: Regular
+
+  # Page title — height=56 gives ~42px font; shrinks for long titles
+  - size: { width: 480, height: 56 }
+    offset: { x: 700, y: 200 }
+    typography:
+      content: "{{ page.title | d(config.site_name, true) }}"
+      align: start
+      color: "#ffffff"
+      overflow: shrink
+      font:
+        family: Roboto
+        style: Bold
+
+  # Description — height=32 gives ~24px font
+  - size: { width: 480, height: 32 }
+    offset: { x: 700, y: 530 }
+    typography:
+      content: "{{ page.meta.description | d(config.site_description, true) }}"
+      align: start
+      color: "#ffffffa6"
+      overflow: shrink
+      font:
+        family: Roboto
+        style: Regular
