@@ -1537,6 +1537,11 @@
 <p>MOBI-DIC runs on all supported operating systems, but Windows is the least tested platform and may run slower due to differences in process handling and I/O performance. <strong>Linux or macOS is recommended</strong> for production workloads.</p>
 </div>
 <p><strong>RAM</strong></p>
+<ul>
+<li><strong>8–16 GB</strong>: Small datasets (&lt; 1 GB combined) with window sizes ≥ 32</li>
+<li><strong>32–64 GB</strong>: Recommended for typical datasets (1–5 GB combined)</li>
+<li><strong>128 GB+</strong>: Large datasets (&gt; 10 GB combined) with small windows (8–16)</li>
+</ul>
 <p>RAM usage scales with input data size and window size. Approximate peak RAM as a multiple of total input GeoTIFF size (primary + secondary combined):</p>
 <table>
 <thead>
@@ -1564,11 +1569,6 @@
 </tr>
 </tbody>
 </table>
-<ul>
-<li><strong>8–16 GB</strong> — small datasets (&lt; 1 GB combined) with window sizes ≥ 32</li>
-<li><strong>32–64 GB</strong> — recommended for typical datasets (1–5 GB combined)</li>
-<li><strong>128 GB+</strong> — large datasets (&gt; 10 GB combined) with small windows (8–16)</li>
-</ul>
 <p>If RAM is limited, increase the window size or reduce the target resolution.</p>
 
 

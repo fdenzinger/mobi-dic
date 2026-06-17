@@ -1446,19 +1446,28 @@
   <h1>Home</h1>
 
 <div class="mobi-hero">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/SLF_DIC_Logo.png" data-desc-position="bottom"><img src="assets/SLF_DIC_Logo.png" alt="MOBI-DIC Logo" style="height: 200px;"></a>
-  </p>
-<p class="mobi-subtitle">
-    <span class="accent">M</span>ulti-purp<span class="accent">O</span>se displacement
-    <span class="accent">B</span>ehavior <span class="accent">I</span>dentifier
-    <span class="accent">D</span>igital <span class="accent">I</span>mage <span class="accent">C</span>orrelation Tool
-  </p>
+  <div class="mobi-hero-split">
+    <div class="mobi-hero-left">
+      <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/SLF_DIC_Logo.png" data-desc-position="bottom"><img src="assets/SLF_DIC_Logo.png" alt="MOBI-DIC Logo" class="mobi-hero-logo-large"></a>
+    </div>
+    <div class="mobi-hero-right">
+      <p class="mobi-subtitle">
+        <span class="accent">M</span>ulti-purp<span class="accent">O</span>se displacement
+        <span class="accent">B</span>ehavior <span class="accent">I</span>dentifier
+        <span class="accent">D</span>igital <span class="accent">I</span>mage <span class="accent">C</span>orrelation Tool
+      </p>
+      <p class="mobi-tagline">
+        Sub-pixel displacement tracking across DEMs, satellite imagery, and fixed cameras.
+        Developed at <a href="https://www.slf.ch">SLF Davos</a> by the
+        <a href="https://www.slf.ch/en/about-the-slf/organisation/research-units/alpine-environment-and-natural-hazards/alpine-remote-sensing/">Alpine Remote Sensing Group</a>.
+      </p>
+      <div class="mobi-cta">
+        <a href="#get-started" class="md-button md-button--primary">Get Started</a>
+        <a href="#get-the-software-share-feedback" class="md-button">Request Access</a>
+      </div>
+    </div>
+  </div>
 </div>
-<p class="mobi-tagline">
-Sub-pixel displacement tracking for georeferenced and non-georeferenced raster data, developed at the
-<a href="https://www.slf.ch">WSL Institute for Snow and Avalanche Research SLF</a> (Davos) by the
-<a href="https://www.slf.ch/en/about-the-slf/organisation/research-units/alpine-environment-and-natural-hazards/alpine-remote-sensing/">Alpine Remote Sensing Group</a>.
-</p>
 
 <hr>
 <h2 id="what-mobi-dic-can-do">What MOBI-DIC can do<a class="headerlink" href="#what-mobi-dic-can-do" title="Permanent link">¶</a></h2>
@@ -1474,22 +1483,22 @@ Sub-pixel displacement tracking for georeferenced and non-georeferenced raster d
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14 6-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"></path></svg></span> <strong>3D surface displacement from DEMs</strong></p>
 <hr>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/mobi-dic-features-dem.png" data-title="3D surface displacement from DEMs" data-description="3D displacement computed with MOBI-DIC on the hillshades of UAV-derived DEMs, captured by the Alpine Remote Sensing Group at SLF Davos at 10 cm resolution (downsampled to 1 m for processing). Measured between the primary DEM (21 February 2020) and the secondary DEM (16 March 2022)." data-desc-position="bottom"><img alt="MOBI-DIC4DEM" class="card-image" data-description="3D displacement computed with MOBI-DIC on the hillshades of UAV-derived DEMs, captured by the Alpine Remote Sensing Group at SLF Davos at 10 cm resolution (downsampled to 1 m for processing). Measured between the primary DEM (21 February 2020) and the secondary DEM (16 March 2022)." data-title="3D surface displacement from DEMs" src="assets/screenshots/mobi-dic-features-dem.png"></a></p>
-<p>Derives East-West, North-South, and vertical displacement from repeat DEMs using hillshade or orientation image correlation. The secondary DEM is then shifted back by the measured horizontal offsets, so the vertical component reflects elevation change without horizontal motion bias.</p>
-<p><strong>Output:</strong> HDF5 + GeoTIFF per component.</p>
+<p>Computes East-West, North-South, and vertical displacement from repeat DEMs. Correlation runs on hillshade or orientation images; the secondary DEM is then shifted back by the measured horizontal offsets before computing vertical change, so the elevation component is free of horizontal motion bias.</p>
+<p><strong>Output:</strong> 3D displacement and velocity as GeoTIFFs (East-West, North-South, vertical); raw sparse results as HDF5, with optional GeoPackage export of sparse points.</p>
 </li>
 <li>
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.62 1 5.66 5.67-2.12 2.12-2.12-2.12-1.42 1.42 2.33 2.32-1.16 1.17.45.46a2.5 2.5 0 0 1 2.83.5l-3.53 3.53a2.5 2.5 0 0 1-.5-2.83l-.46-.45-1.17 1.16-2.32-2.33-1.42 1.42 2.12 2.12-2.12 2.12L1 11.62 3.14 9.5l2.12 2.12 1.41-1.41-2.83-2.83c-.78-.78-.78-2.05 0-2.83l.71-.71c.78-.78 2.05-.78 2.83 0l2.83 2.83 1.41-1.41L9.5 3.14zM18 14a4 4 0 0 1-4 4v-2a2 2 0 0 0 2-2zm4 0a8 8 0 0 1-8 8v-2a6 6 0 0 0 6-6z"></path></svg></span> <strong>2D displacement from optical imagery</strong></p>
 <hr>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/mobi-dic-features-optical.png" data-title="2D displacement from optical imagery" data-description="Rock glacier displacements at Schafberg above Pontresina (Switzerland), derived from swisstopo aerial imagery (10 cm resolution) and displayed in Google Earth. Measured between the primary image (29 September 2019) and the secondary image (1 September 2021). Input data copyright: swisstopo, BAFU." data-desc-position="bottom"><img alt="DIC4Optical" class="card-image" data-description="Rock glacier displacements at Schafberg above Pontresina (Switzerland), derived from swisstopo aerial imagery (10 cm resolution) and displayed in Google Earth. Measured between the primary image (29 September 2019) and the secondary image (1 September 2021). Input data copyright: swisstopo, BAFU." data-title="2D displacement from optical imagery" src="assets/screenshots/mobi-dic-features-optical.png"></a></p>
-<p>Tracks surface motion in any georeferenced image pair: orthophotos, satellite scenes, or UAV mosaics. Automatic co-registration removes sensor offsets before correlation for cleaner results.</p>
-<p><strong>Output:</strong> HDF5 + GeoTIFF (EW, NS).</p>
+<p>Measures surface motion from any georeferenced image pair (orthophotos, satellite scenes, or UAV mosaics) with sub-pixel accuracy. Automatic co-registration removes sensor offsets before correlation.</p>
+<p><strong>Output:</strong> 2D displacement and velocity as GeoTIFFs (East-West, North-South); raw sparse results as HDF5, with optional GeoPackage export of sparse points.</p>
 </li>
 <li>
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m8 3a5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 2a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3"></path></svg></span> <strong>Pixel displacement from non-georeferenced imagery</strong></p>
 <hr>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/screenshots/mobi-dic-features-webcam.png" data-title="Pixel displacement from non-georeferenced imagery" data-description="Pixel-based displacement detected from a fixed time-lapse camera at Driest, overlooking the Moosfluh slope (Valais, Switzerland). The colored area marks surface motion measured between the primary image (1 November 2022) and the secondary image (26 October 2023)." data-desc-position="bottom"><img alt="DIC4Webcam" class="card-image" data-description="Pixel-based displacement detected from a fixed time-lapse camera at Driest, overlooking the Moosfluh slope (Valais, Switzerland). The colored area marks surface motion measured between the primary image (1 November 2022) and the secondary image (26 October 2023)." data-title="Pixel displacement from non-georeferenced imagery" src="assets/screenshots/mobi-dic-features-webcam.png"></a></p>
-<p>Processes non-georeferenced image pairs from fixed cameras, drones, or scanners. Optional AI segmentation masks sky, water, and other non-moving regions before correlation.</p>
-<p><strong>Output:</strong> HDF5 + displacement images (pixel units).</p>
+<p>Measures pixel-level motion from non-georeferenced image pairs: fixed cameras, time-lapse sequences, or scanner imagery. Optional AI segmentation masks static background regions (sky, water) before correlation.</p>
+<p><strong>Output:</strong> Pixel-unit displacement images; raw sparse results as HDF5, with optional GeoPackage export of sparse points.</p>
 </li>
 <li>
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 12v7.88c.04.3-.06.62-.29.83a.996.996 0 0 1-1.41 0l-2.01-2.01a.99.99 0 0 1-.29-.83V12h-.03L4.21 4.62a1 1 0 0 1 .17-1.4c.19-.14.4-.22.62-.22h14c.22 0 .43.08.62.22a1 1 0 0 1 .17 1.4L14.03 12z"></path></svg></span> <strong>Post-processing &amp; outlier filtering</strong></p>
