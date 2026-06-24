@@ -1858,7 +1858,8 @@
 <a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">  </span><span class="o">[</span>--DirThresh<span class="w"> </span><span class="m">15</span>.0<span class="o">]</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">  </span><span class="o">[</span>--NNeighbours<span class="w"> </span><span class="m">4</span><span class="o">]</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">  </span><span class="o">[</span>--MaxDist<span class="w"> </span><span class="m">50</span>.0<span class="o">]</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">  </span><span class="o">[</span>--Iterations<span class="w"> </span><span class="m">1</span><span class="o">]</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">  </span><span class="o">[</span>--Iterations<span class="w"> </span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">  </span><span class="o">[</span>--RealTime<span class="w"> </span><span class="m">0</span><span class="o">]</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -1871,7 +1872,8 @@
 <a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">  </span><span class="o">[</span>--DirThresh<span class="w"> </span><span class="m">15</span>.0<span class="o">]</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">  </span><span class="o">[</span>--NNeighbours<span class="w"> </span><span class="m">4</span><span class="o">]</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">  </span><span class="o">[</span>--MaxDist<span class="w"> </span><span class="m">50</span>.0<span class="o">]</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">  </span><span class="o">[</span>--Iterations<span class="w"> </span><span class="m">1</span><span class="o">]</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">  </span><span class="o">[</span>--Iterations<span class="w"> </span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">  </span><span class="o">[</span>--RealTime<span class="w"> </span><span class="m">0</span><span class="o">]</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -1884,7 +1886,8 @@
 <a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="se"> </span> [--DirThresh 15.0] <span class="se">^</span>
 <a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="se"> </span> [--NNeighbours 4] <span class="se">^</span>
 <a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="se"> </span> [--MaxDist 50.0] <span class="se">^</span>
-<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="se"> </span> [--Iterations 1]
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="se"> </span> [--Iterations 1] <span class="se">^</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="se"> </span> [--RealTime 0]
 </code></pre></div>
 </div>
 </div>
@@ -1937,6 +1940,11 @@
 <td><code>--Iterations</code></td>
 <td><code>1</code></td>
 <td>Number of filter passes</td>
+</tr>
+<tr>
+<td><code>--RealTime</code></td>
+<td><code>0</code></td>
+<td><code>1</code> = real-time deletion: rejected points are excluded from subsequent evaluations within the same pass (order-dependent, slower)</td>
 </tr>
 </tbody>
 </table>
