@@ -129,7 +129,13 @@
 }
 
 /* Push mike's version selector to the far right of the header, next to
-   search/theme-toggle, instead of it sitting flush against the title. */
+   search/theme-toggle. mike appends .md-version INSIDE .md-header__topic,
+   which is shrink-to-fit by default -- margin-left:auto has no room to
+   work with unless the topic bar itself is stretched full width first. */
+.md-header__topic {
+  width: 100%;
+}
+
 .md-version {
   margin-left: auto;
 }
