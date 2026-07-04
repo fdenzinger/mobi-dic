@@ -1651,7 +1651,7 @@
 <tr>
 <td><strong>Base resolution</strong></td>
 <td>auto-detected</td>
-<td>Native ground sampling distance (GSD) of the input data. Auto-detected from the primary file geotransform when the input is set in the I/O tab. In Webcam mode fixed at 1 px/px and not editable.</td>
+<td>Native ground sampling distance (GSD) of the input data. Auto-detected from the primary file geotransform when the input is set in the I/O tab. In Webcam mode fixed at 1 px/px and not editable. If the source raster's native X and Y pixel size differ, a warning appears inline showing the actual per-axis pixel size the current target resolution(s) will produce — resampling applies one scale factor to both axes, so the target is only exactly achieved in X.</td>
 </tr>
 <tr>
 <td><strong>Target resolutions</strong></td>
@@ -1661,7 +1661,7 @@
 <tr>
 <td><strong>Window sizes (px)</strong></td>
 <td><code>[64]</code></td>
-<td>Comma-separated list of correlation window side lengths in pixels. Larger windows are more robust against noise but give coarser spatial detail. Multiple values produce one scenario per entry.</td>
+<td>Comma-separated list of correlation window side lengths in pixels. Larger windows are more robust against noise but give coarser spatial detail. Multiple values produce one scenario per entry. An inline note shows the window's physical size (<code>window size × target resolution</code>) and a rule-of-thumb maximum detectable displacement of half that size — a DFT correlation window can't reliably locate a shift much larger than that before the true peak falls outside the search area.</td>
 </tr>
 <tr>
 <td><strong>Correlation feature (OR)</strong></td>
@@ -1728,12 +1728,12 @@
 <tr>
 <td><strong>DIC oversampling (<code>os</code>)</strong></td>
 <td><code>4</code></td>
-<td>Sub-pixel upsampling factor inside the DFT registration step. Higher values achieve finer localisation at the cost of more computation. Values of 4–8 are typical.</td>
+<td>Sub-pixel upsampling factor inside the DFT registration step. Higher values achieve finer localisation at the cost of more computation. Values of 4–8 are typical. An inline note shows a rule-of-thumb detection limit (<code>target resolution ÷ os</code>) — roughly the smallest displacement distinguishable from noise. This is guidance, not a hard bound: actual precision also depends on image texture, window size, and noise.</td>
 </tr>
 <tr>
 <td><strong>Skip factor</strong></td>
 <td><code>4</code></td>
-<td>Controls the stride between successive windows: <code>step = window_size / skip_factor</code> pixels. Larger values produce sparser but faster results; smaller values produce denser, overlapping windows.</td>
+<td>Controls the stride between successive windows: <code>step = window_size / skip_factor</code> pixels. Larger values produce sparser but faster results; smaller values produce denser, overlapping windows. An inline note shows this step converted to real-world units — <code>(window size ÷ skip factor) × target resolution</code>, the actual distance between adjacent DIC measurement points and the true spatial resolution of the displacement grid — plus the window overlap percentage (<code>1 − 1/skip_factor</code>), which depends only on skip factor. <code>skip_factor=1</code> → 0% overlap (windows abut); <code>skip_factor=4</code> → 75%; <code>skip_factor=8</code> → 87.5%. Higher overlap smooths the field and reduces noise between neighbouring measurements but adds redundant computation. GeoTIFF outputs are resampled onto a finer pixel grid for display, but only carry independent information at this spacing — blocks of uniform colour between measurement points are a resampling artifact, not additional detail.</td>
 </tr>
 <tr>
 <td><strong>Output CRS</strong></td>

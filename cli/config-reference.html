@@ -1834,7 +1834,7 @@
 <tr>
 <td><code>coreg_method</code></td>
 <td><code>"full"</code> / <code>"bbox"</code></td>
-<td><code>"bbox"</code></td>
+<td><code>"full"</code></td>
 <td>Co-registration window: <code>full</code> = whole image; <code>bbox</code> = sub-window defined by <code>coreg_bbox</code>.</td>
 </tr>
 <tr>
@@ -1864,7 +1864,7 @@
 <tr>
 <td><code>auto_reproject_to_utm</code></td>
 <td>bool</td>
-<td><code>false</code></td>
+<td><code>true</code></td>
 <td>When <code>true</code>, inputs with a geographic CRS (degrees) are automatically reprojected to UTM before processing.</td>
 </tr>
 <tr>
@@ -1956,7 +1956,7 @@
 <tr>
 <td><code>auto_reproject_to_utm</code></td>
 <td>bool</td>
-<td><code>false</code></td>
+<td><code>true</code></td>
 <td>When <code>true</code>, inputs with a geographic CRS (degrees) are automatically reprojected to UTM before processing.</td>
 </tr>
 <tr>
@@ -2463,16 +2463,16 @@
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nt">dic_params</span><span class="p">:</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nt">rescale_results</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nt">export_sparse_gpkg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="nt">OR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">                      </span><span class="c1"># (4)!</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="nt">co_f</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">                    </span><span class="c1"># (5)!</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="nt">co_os</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="nt">coreg_method</span><span class="p">:</span><span class="w"> </span><span class="s">"bbox"</span><span class="w">       </span><span class="c1"># (6)!</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="nt">coreg_bbox</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">minx</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">miny</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">maxx</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">maxy</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nt">OR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">                      </span><span class="c1"># (4)!</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="nt">co_f</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">                    </span><span class="c1"># (5)!</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="nt">co_os</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="nt">coreg_method</span><span class="p">:</span><span class="w"> </span><span class="s">"full"</span><span class="w">       </span><span class="c1"># (6)!</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="c1"># coreg_bbox: [minx, miny, maxx, maxy]</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="nt">export_sparse_gpkg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="nt">os</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span><span class="w">                      </span><span class="c1"># (7)!</span>
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="nt">skip_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span><span class="w">             </span><span class="c1"># (8)!</span>
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="nt">refcode</span><span class="p">:</span><span class="w"> </span><span class="s">"EPSG:2056"</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="nt">auto_reproject_to_utm</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="nt">auto_reproject_to_utm</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">  </span><span class="nt">debug_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">  </span><span class="nt">n_workers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
@@ -2501,7 +2501,7 @@
 <li>Correlation window size(s) in pixels. Larger windows = smoother but spatially coarser results. Typical range: 32–256. Use a list like <code>[32, 64, 128]</code> for a batch sweep.</li>
 <li>Correlation feature: <code>1</code> = orientation image (recommended for DEMs — invariant to illumination); <code>0</code> = hillshade.</li>
 <li>Co-registration switch: <code>1</code> = enabled, <code>0</code> = disabled. Removes systematic offsets caused by GPS error or georeferencing inconsistency before DIC.</li>
-<li>Co-registration window: <code>"bbox"</code> uses the stable-ground region defined by <code>coreg_bbox</code>; <code>"full"</code> uses the entire image overlap.</li>
+<li>Co-registration window: <code>"full"</code> uses the entire image overlap (default). Switch to <code>"bbox"</code> and uncomment <code>coreg_bbox</code> if only a small stable region is available.</li>
 <li>DFT upsampling factor for subpixel displacement precision. <code>4</code> = 0.25 px precision. Higher values increase accuracy but slow down processing.</li>
 <li>Controls output grid density: step = <code>window_size / skip_factor</code>. <code>skip_factor: 4</code> with <code>window_size: 64</code> gives a point every 16 px. Higher = denser grid.</li>
 <li>Master switch for post-processing. Set <code>true</code> to filter outlier vectors and produce GeoPackage / PNG outputs after DIC.</li>
@@ -2530,7 +2530,7 @@
 <a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">  </span><span class="nt">os</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
 <a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">  </span><span class="nt">skip_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
 <a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">  </span><span class="nt">refcode</span><span class="p">:</span><span class="w"> </span><span class="s">"EPSG:2056"</span><span class="w">       </span><span class="c1"># (5)!</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">  </span><span class="nt">auto_reproject_to_utm</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">  </span><span class="nt">auto_reproject_to_utm</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">  </span><span class="nt">debug_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">  </span><span class="nt">n_workers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
@@ -2578,51 +2578,52 @@
 <a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nt">dic_params</span><span class="p">:</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span><span class="nt">rescale_results</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">  </span><span class="nt">align_mode</span><span class="p">:</span><span class="w"> </span><span class="s">"crop"</span><span class="w">         </span><span class="c1"># (2)!</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">  </span><span class="nt">co_f</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">                    </span><span class="c1"># (3)!</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">  </span><span class="nt">co_os</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">  </span><span class="nt">coreg_method</span><span class="p">:</span><span class="w"> </span><span class="s">"full"</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">  </span><span class="nt">export_sparse_gpkg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">  </span><span class="nt">OR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">  </span><span class="nt">os</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">  </span><span class="nt">skip_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">  </span><span class="nt">refcode</span><span class="p">:</span><span class="w"> </span><span class="s">"pixel"</span><span class="w">           </span><span class="c1"># (4)!</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">  </span><span class="nt">debug_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">  </span><span class="nt">n_workers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">  </span><span class="nt">AIMask</span><span class="p">:</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">    </span><span class="nt">Enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">           </span><span class="c1"># (5)!</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">    </span><span class="nt">ExcludeTypes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"sky"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"water"</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># (6)!</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">    </span><span class="nt">Device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w">             </span><span class="c1"># (7)!</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">    </span><span class="nt">MaxInputDim</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2048</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">    </span><span class="nt">DilationPixels</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">    </span><span class="nt">DebugSegmentation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">    </span><span class="nt">SnowBrightnessMin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">    </span><span class="nt">SnowSaturationMax</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">  </span><span class="nt">BlinkGif</span><span class="p">:</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">    </span><span class="nt">Enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">           </span><span class="c1"># (8)!</span>
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">    </span><span class="nt">OverlayDic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="w">    </span><span class="nt">OverlayAlpha</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="w">    </span><span class="nt">OverlayCmap</span><span class="p">:</span><span class="w"> </span><span class="s">"YlOrRd"</span>
-<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="w">    </span><span class="nt">OverlayVmax</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
-<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="w">    </span><span class="nt">FrameDuration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
-<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="w">    </span><span class="nt">MaxDim</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1024</span>
-<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>
-<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="w">  </span><span class="nt">VectorFilter</span><span class="p">:</span>
-<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="w">    </span><span class="nt">Enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">           </span><span class="c1"># (9)!</span>
-<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="w">    </span><span class="nt">OutputTxt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a><span class="w">    </span><span class="nt">OutputGpkg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a><span class="w">    </span><span class="nt">OutputPlot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a><span class="w">    </span><span class="nt">PlotResult</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a><span class="w">    </span><span class="c1"># HillshadeTif: "/path/to/frame_before.jpg"</span>
-<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a><span class="w">    </span><span class="nt">PlotWMS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a><span class="w">    </span><span class="nt">PlotHillshade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a><span class="w">    </span><span class="nt">PlotBackgroundXYZ</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a><span class="w">    </span><span class="nt">BlackArrows</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a><span class="w">    </span><span class="nt">MaxMagnitude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w">       </span><span class="c1"># (10)!</span>
-<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a><span class="w">    </span><span class="nt">ColorMax</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
-<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a><span class="w">    </span><span class="nt">BackgroundAlpha</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.6</span>
-<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a><span class="w">    </span><span class="nt">Downsample</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">  </span><span class="nt">OR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">  </span><span class="nt">co_f</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">                    </span><span class="c1"># (3)!</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">  </span><span class="nt">co_os</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">  </span><span class="nt">coreg_method</span><span class="p">:</span><span class="w"> </span><span class="s">"full"</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">  </span><span class="c1"># coreg_bbox: [col_min, row_min, col_max, row_max]</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">  </span><span class="nt">export_sparse_gpkg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">  </span><span class="nt">os</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">  </span><span class="nt">skip_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">  </span><span class="nt">refcode</span><span class="p">:</span><span class="w"> </span><span class="s">"pixel"</span><span class="w">           </span><span class="c1"># (4)!</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">  </span><span class="nt">debug_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">  </span><span class="nt">n_workers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">  </span><span class="nt">AIMask</span><span class="p">:</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">    </span><span class="nt">Enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">           </span><span class="c1"># (5)!</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">    </span><span class="nt">ExcludeTypes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"sky"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"water"</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># (6)!</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">    </span><span class="nt">Device</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w">             </span><span class="c1"># (7)!</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">    </span><span class="nt">MaxInputDim</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2048</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">    </span><span class="nt">DilationPixels</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">    </span><span class="nt">DebugSegmentation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">    </span><span class="nt">SnowBrightnessMin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">    </span><span class="nt">SnowSaturationMax</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">  </span><span class="nt">BlinkGif</span><span class="p">:</span>
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">    </span><span class="nt">Enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">           </span><span class="c1"># (8)!</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="w">    </span><span class="nt">OverlayDic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="w">    </span><span class="nt">OverlayAlpha</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="w">    </span><span class="nt">OverlayCmap</span><span class="p">:</span><span class="w"> </span><span class="s">"YlOrRd"</span>
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="w">    </span><span class="nt">OverlayVmax</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="w">    </span><span class="nt">FrameDuration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span>
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="w">    </span><span class="nt">MaxDim</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1024</span>
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="w">  </span><span class="nt">VectorFilter</span><span class="p">:</span>
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="w">    </span><span class="nt">Enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">           </span><span class="c1"># (9)!</span>
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a><span class="w">    </span><span class="nt">OutputTxt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a><span class="w">    </span><span class="nt">OutputGpkg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a><span class="w">    </span><span class="nt">OutputPlot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a><span class="w">    </span><span class="nt">PlotResult</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a><span class="w">    </span><span class="c1"># HillshadeTif: "/path/to/frame_before.jpg"</span>
+<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a><span class="w">    </span><span class="nt">PlotWMS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a><span class="w">    </span><span class="nt">PlotHillshade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a><span class="w">    </span><span class="nt">PlotBackgroundXYZ</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a><span class="w">    </span><span class="nt">BlackArrows</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a><span class="w">    </span><span class="nt">MaxMagnitude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w">       </span><span class="c1"># (10)!</span>
+<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a><span class="w">    </span><span class="nt">ColorMax</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a><span class="w">    </span><span class="nt">BackgroundAlpha</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.6</span>
+<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a><span class="w">    </span><span class="nt">Downsample</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
 </code></pre></div>
 <ol>
 <li>Keep at <code>1.0</code> for non-georeferenced webcam images. All outputs are in pixels, not metres.</li>
