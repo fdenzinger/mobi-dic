@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Licence badge – top right of header. Version is shown by mike's
+      // own version selector (extra.version.provider: mike in mkdocs.yml).
+      var opts = document.querySelector('.md-header__options');
+      if (opts) {
+        var lic = document.createElement('span');
+        lic.className = 'md-header-badge md-header-badge--proprietary';
+        lic.textContent = 'Proprietary';
+        opts.insertBefore(lic, opts.firstChild);
+      }
+
+    });
+  </script>
+{% endblock %}

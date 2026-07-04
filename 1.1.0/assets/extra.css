@@ -1,0 +1,253 @@
+/* ── Header badges (version + licence) ─────────────────────────────────── */
+.md-header-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.2em 0.55em;
+  border-radius: 3px;
+  margin-right: 6px;
+  white-space: nowrap;
+  vertical-align: middle;
+  align-self: center;
+}
+
+.md-header-badge--version {
+  background: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.md-header-badge--proprietary {
+  background: rgba(251, 191, 36, 0.2);
+  color: rgba(255, 220, 100, 0.95);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+}
+
+/* ── Footer meta text ───────────────────────────────────────────────────── */
+.md-footer-meta-text {
+  opacity: 0.6;
+  font-size: 0.7rem;
+}
+
+/* ── Footer: match header color ─────────────────────────────────────────── */
+.md-footer {
+  background-color: var(--md-primary-fg-color);
+}
+
+.md-footer-nav__link {
+  color: var(--md-primary-bg-color);
+}
+
+.md-footer-meta {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+/* ── Home page hero ─────────────────────────────────────────────────────── */
+
+/* Hide the auto-generated "Home" page title — only fires when mobi-hero is present */
+.md-content__inner:has(.mobi-hero) > h1:first-child {
+  display: none;
+}
+
+/* Pull the hero up tight against the nav bar */
+.md-content__inner:has(.mobi-hero) {
+  padding-top: 0;
+}
+
+.mobi-hero {
+  padding: 2rem 0 2rem;
+}
+
+/* ── Split hero layout ──────────────────────────────────────────────────── */
+.mobi-hero-split {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.mobi-hero-left {
+  flex: 0 0 42%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobi-hero-right {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
+.mobi-hero-logo-large {
+  width: 85%;
+  max-width: 320px;
+  height: auto;
+}
+
+.mobi-hero .mobi-subtitle {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--md-default-fg-color);
+  margin: 0 0 0.5rem;
+  line-height: 1.45;
+}
+
+.mobi-tagline {
+  font-size: 0.95rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.6;
+  margin: 0 0 0;
+}
+
+.mobi-cta {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .mobi-hero-split {
+    flex-direction: column;
+  }
+  .mobi-hero-left {
+    flex: none;
+  }
+  .mobi-hero-right {
+    text-align: center;
+  }
+  .mobi-cta {
+    justify-content: center;
+  }
+}
+
+.accent {
+  color: var(--md-typeset-a-color);
+  font-weight: 700;
+}
+
+/* Header title styling */
+.md-header .accent {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.md-header .header-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.md-header .header-sep {
+  opacity: 0.4;
+  padding: 0 0.3em;
+}
+
+.md-header .header-expansion {
+  font-weight: 300;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+/* Prevent wrapping in the header */
+.md-header__topic .md-ellipsis {
+  white-space: nowrap;
+}
+
+/* ── Hero screenshot (full-width, below tagline) ────────────────────────── */
+.mobi-hero-screenshot {
+  margin: 0 auto 1.5rem;
+  max-width: 900px;
+  text-align: center;
+}
+
+.mobi-hero-screenshot img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* ── Screenshot gallery grid ────────────────────────────────────────────── */
+.screenshot-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .screenshot-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.screenshot-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--md-code-bg-color);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.screenshot-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.14);
+  transform: translateY(-2px);
+}
+
+.screenshot-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  margin: 0;
+}
+
+/* The image itself is wrapped in a <p> by MkDocs — strip its padding */
+.screenshot-card p:has(img) {
+  padding: 0;
+  margin: 0;
+}
+
+.screenshot-card p:not(:has(img)) {
+  padding: 0.6rem 0.75rem 0.75rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--md-default-fg-color--light);
+  margin: 0;
+}
+
+.screenshot-card strong {
+  color: var(--md-default-fg-color);
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 0.82rem;
+}
+
+/* ── Screenshots embedded inside feature grid cards ────────────────────── */
+img.card-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* ── Grid cards tweaks ──────────────────────────────────────────────────── */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li {
+  border-top: 3px solid var(--md-primary-fg-color);
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ol > li:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
