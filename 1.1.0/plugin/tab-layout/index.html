@@ -9,31 +9,31 @@
         <meta name="author" content="Florian Denzinger – SLF Davos">
       
       
-        <link rel="canonical" href="https://fdenzinger.github.io/mobi-dic/1.1.0/plugin/tab-results.html">
+        <link rel="canonical" href="https://fdenzinger.github.io/mobi-dic/1.1.0/plugin/tab-layout/">
       
       
-        <link rel="prev" href="tab-vector-filter.html">
+        <link rel="prev" href="../tab-results/">
       
       
-        <link rel="next" href="tab-layout.html">
+        <link rel="next" href="../tab-postprocessing/">
       
       
         
       
       
-      <link rel="icon" href="../assets/MOBI_DIC_Logo_dark_icon.png">
+      <link rel="icon" href="../../assets/MOBI_DIC_Logo_dark_icon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Results Import - MOBI-DIC</title>
+        <title>Map Layout Builder - MOBI-DIC</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -52,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/extra.css">
+      <link rel="stylesheet" href="../../assets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,18 +62,18 @@
     
   
 <meta property="og:type" content="website">
-<meta property="og:title" content="Results Import - MOBI-DIC">
+<meta property="og:title" content="Map Layout Builder - MOBI-DIC">
 <meta property="og:description" content="Multi-purpose displacement Behavior Identifier Digital Image Correlation Tool">
-<meta property="og:image" content="https://fdenzinger.github.io/mobi-dic/1.1.0/assets/images/social/plugin/tab-results.png">
+<meta property="og:image" content="https://fdenzinger.github.io/mobi-dic/1.1.0/assets/images/social/plugin/tab-layout.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://fdenzinger.github.io/mobi-dic/1.1.0/plugin/tab-results.html">
+<meta property="og:url" content="https://fdenzinger.github.io/mobi-dic/1.1.0/plugin/tab-layout/">
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="Results Import - MOBI-DIC">
+<meta property="twitter:title" content="Map Layout Builder - MOBI-DIC">
 <meta property="twitter:description" content="Multi-purpose displacement Behavior Identifier Digital Image Correlation Tool">
-<meta property="twitter:image" content="https://fdenzinger.github.io/mobi-dic/1.1.0/assets/images/social/plugin/tab-results.png">
-<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+<meta property="twitter:image" content="https://fdenzinger.github.io/mobi-dic/1.1.0/assets/images/social/plugin/tab-layout.png">
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#results-import" class="md-skip">
+        <a href="#map-layout-builder" class="md-skip">
           Skip to content
         </a>
       
@@ -117,12 +117,12 @@
             <div class="md-banner__inner md-grid md-typeset">
               
   You're not viewing the latest version.
-  <a href="../..">
+  <a href="../../..">
     <strong>Click here to go to latest.</strong>
   </a>
 
             </div>
-            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
           </aside>
         
       </div>
@@ -134,9 +134,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="MOBI-DIC" class="md-header__button md-logo" aria-label="MOBI-DIC" data-md-component="logo">
+    <a href="../.." title="MOBI-DIC" class="md-header__button md-logo" aria-label="MOBI-DIC" data-md-component="logo">
       
-  <img src="../assets/MOBI_DIC_Logo_dark_icon.png" alt="logo">
+  <img src="../../assets/MOBI_DIC_Logo_dark_icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -153,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Results Import
+              Map Layout Builder
             
           </span>
         </div>
@@ -248,7 +248,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../index.html" class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -269,7 +269,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../getting-started/installation.html" class="md-tabs__link">
+        <a href="../../getting-started/installation/" class="md-tabs__link">
           
   
   
@@ -293,7 +293,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="overview.html" class="md-tabs__link">
+        <a href="../overview/" class="md-tabs__link">
           
   
   
@@ -315,7 +315,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../cli/overview.html" class="md-tabs__link">
+        <a href="../../cli/overview/" class="md-tabs__link">
           
   
   
@@ -335,7 +335,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../tags.html" class="md-tabs__link">
+      <a href="../../tags/" class="md-tabs__link">
         
   
   
@@ -356,7 +356,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../about.html" class="md-tabs__link">
+        <a href="../../about/" class="md-tabs__link">
           
   
   
@@ -400,9 +400,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="MOBI-DIC" class="md-nav__button md-logo" aria-label="MOBI-DIC" data-md-component="logo">
+    <a href="../.." title="MOBI-DIC" class="md-nav__button md-logo" aria-label="MOBI-DIC" data-md-component="logo">
       
-  <img src="../assets/MOBI_DIC_Logo_dark_icon.png" alt="logo">
+  <img src="../../assets/MOBI_DIC_Logo_dark_icon.png" alt="logo">
 
     </a>
     MOBI-DIC
@@ -417,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -508,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/installation.html" class="md-nav__link">
+      <a href="../../getting-started/installation/" class="md-nav__link">
         
   
   
@@ -536,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/installation-qgis.html" class="md-nav__link">
+      <a href="../../getting-started/installation-qgis/" class="md-nav__link">
         
   
   
@@ -564,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/installation-pipeline.html" class="md-nav__link">
+      <a href="../../getting-started/installation-pipeline/" class="md-nav__link">
         
   
   
@@ -592,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/first-run.html" class="md-nav__link">
+      <a href="../../getting-started/first-run/" class="md-nav__link">
         
   
   
@@ -620,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/troubleshooting.html" class="md-nav__link">
+      <a href="../../getting-started/troubleshooting/" class="md-nav__link">
         
   
   
@@ -722,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="overview.html" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -815,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tab-io.html" class="md-nav__link">
+      <a href="../tab-io/" class="md-nav__link">
         
   
   
@@ -843,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tab-dic-params.html" class="md-nav__link">
+      <a href="../tab-dic-params/" class="md-nav__link">
         
   
   
@@ -871,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tab-coreg.html" class="md-nav__link">
+      <a href="../tab-coreg/" class="md-nav__link">
         
   
   
@@ -899,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tab-vector-filter.html" class="md-nav__link">
+      <a href="../tab-vector-filter/" class="md-nav__link">
         
   
   
@@ -995,6 +995,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../tab-results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Results Import
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1014,7 +1042,7 @@
   <span class="md-ellipsis">
     
   
-    Results Import
+    Map Layout Builder
   
 
     
@@ -1025,14 +1053,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="tab-results.html" class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Results Import
+    Map Layout Builder
   
 
     
@@ -1058,16 +1086,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#1-scan-select-layers" class="md-nav__link">
+  <a href="#1-select-data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1 · Scan &amp; Select Layers
+        1 · Select Data
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1 · Scan &amp; Select Layers">
+    <nav class="md-nav" aria-label="1 · Select Data">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data type
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#directory-scan" class="md-nav__link">
@@ -1081,32 +1120,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#component-filter" class="md-nav__link">
+  <a href="#layout-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Component filter
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#layer-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Layer list
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#output-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Output components
+        Layout mode
       
     </span>
   </a>
@@ -1119,71 +1136,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-symbology-display" class="md-nav__link">
+  <a href="#2-page-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2 · Symbology &amp; Display
+        2 · Page Setup
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="2 · Symbology &amp; Display">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#symbology-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Symbology table
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#layer-opacity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Layer opacity
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-qml-override" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Custom QML override
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#global-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Global settings
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-google-earth-export" class="md-nav__link">
+  <a href="#3-map-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3 · Google Earth Export
+        3 · Map Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-colours-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 · Colours &amp; Ranges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-the-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building the layout
       
     </span>
   </a>
@@ -1194,34 +1183,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tab-layout.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Map Layout Builder
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1301,7 +1262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tab-postprocessing.html" class="md-nav__link">
+      <a href="../tab-postprocessing/" class="md-nav__link">
         
   
   
@@ -1402,7 +1363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cli/overview.html" class="md-nav__link">
+      <a href="../../cli/overview/" class="md-nav__link">
         
   
   
@@ -1430,7 +1391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cli/config-reference.html" class="md-nav__link">
+      <a href="../../cli/config-reference/" class="md-nav__link">
         
   
   
@@ -1465,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tags.html" class="md-nav__link">
+      <a href="../../tags/" class="md-nav__link">
         
   
   
@@ -1550,7 +1511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about.html" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   
@@ -1578,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../security.html" class="md-nav__link">
+      <a href="../../security/" class="md-nav__link">
         
   
   
@@ -1631,7 +1592,7 @@
   
   
     <li class="md-path__item">
-      <a href="../index.html" class="md-path__link">
+      <a href="../.." class="md-path__link">
         
   <span class="md-ellipsis">
     Home
@@ -1649,7 +1610,7 @@
     
     
       <li class="md-path__item">
-        <a href="overview.html" class="md-path__link">
+        <a href="../overview/" class="md-path__link">
           
   <span class="md-ellipsis">
     QGIS Plugin
@@ -1667,7 +1628,7 @@
     
     
       <li class="md-path__item">
-        <a href="tab-results.html" class="md-path__link">
+        <a href="../tab-results/" class="md-path__link">
           
   <span class="md-ellipsis">
     Visualisation
@@ -1693,217 +1654,34 @@
       
       
       
-        <a href="../tags.html#tag:google-earth" class="md-tag">Google Earth</a>
+        <a href="../../tags/#tag:qgis" class="md-tag">QGIS</a>
       
     
       
       
       
       
-        <a href="../tags.html#tag:qgis" class="md-tag">QGIS</a>
-      
-    
-      
-      
-      
-      
-        <a href="../tags.html#tag:visualisation" class="md-tag">Visualisation</a>
+        <a href="../../tags/#tag:visualisation" class="md-tag">Visualisation</a>
       
     
   </nav>
 
 
 
-<h1 id="results-import">Results Import<a class="headerlink" href="#results-import" title="Permanent link">¶</a></h1>
-<p>The Results Import tab is the starting point for inspecting DIC outputs inside QGIS. After a processing run has completed, point it to the output directory and scan for results. You can then select individual displacement components, configure their colour scale and range, and load them directly into the QGIS layer tree with one click. From the same tab you can also export layers to Google Earth Pro as georeferenced KMZ overlays, optionally with time slider support for multi-date datasets.</p>
+<h1 id="map-layout-builder">Map Layout Builder<a class="headerlink" href="#map-layout-builder" title="Permanent link">¶</a></h1>
+<p>The Map Layout Builder generates print-ready QGIS map layouts directly from DIC results. It arranges displacement components into a panel grid, adds a shared colorbar, scale bar, north arrow, and an optional background map, and opens the result in the QGIS Print Layout window where it can be exported to PDF or PNG.</p>
 <p>The workflow is straightforward:</p>
 <ol>
-<li>Set the <strong>Directory</strong> and click <strong>Scan for Results</strong> to discover all available layers.</li>
-<li>Tick the components you need and click <strong>▶ Load Selected into QGIS</strong>.</li>
-<li>Optionally click <strong>🌍 Export to Google Earth Pro…</strong> to create KMZ files from the scanned layers.</li>
+<li>Set the <strong>Directory</strong> and click <strong>Scan for Results</strong> to discover available timesteps and components.</li>
+<li>Choose a <strong>Layout mode</strong> to control how components and timesteps are arranged across pages.</li>
+<li>Configure page size, background map, colour ranges, and map extent.</li>
+<li>Click <strong>Build Layout</strong> — the layout opens in QGIS and is ready to export.</li>
 </ol>
-<p>The tab is organised into three collapsible sections covering these steps in order.</p>
-<hr>
-<h2 id="1-scan-select-layers">1 · Scan &amp; Select Layers<a class="headerlink" href="#1-scan-select-layers" title="Permanent link">¶</a></h2>
-<p>Discover and select the displacement layers to load. Point the plugin to the output directory, trigger a scan, and choose which components to bring into QGIS.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/qgis_plugin_resultsimport_1.png" data-desc-position="bottom"><img alt="QGIS Plugin ResultsImport 1" src="../assets/screenshots/qgis_plugin_resultsimport_1.png"></a></p>
-<h3 id="directory-scan">Directory &amp; scan<a class="headerlink" href="#directory-scan" title="Permanent link">¶</a></h3>
-<p>Point <strong>Directory</strong> to the root folder of a DIC processing run and click <strong>Scan for Results</strong>. The scan searches recursively for all <code>DIC_*.tif</code> files and populates the layer list. Range computation for the Symbology table is also triggered at this point.</p>
-<h3 id="component-filter">Component filter<a class="headerlink" href="#component-filter" title="Permanent link">¶</a></h3>
-<p>Narrows the layer list to a specific displacement component or result type. After scanning, only components actually found in the directory are offered as options.</p>
-<h3 id="layer-list">Layer list<a class="headerlink" href="#layer-list" title="Permanent link">¶</a></h3>
-<p>Tick the layers you want to load, then click <strong>▶ Load Selected into QGIS</strong>. Use the <strong>All / None / Invert</strong> buttons to manage the selection quickly. Layers are loaded into a named group in the QGIS layer tree.</p>
-<h3 id="output-components">Output components<a class="headerlink" href="#output-components" title="Permanent link">¶</a></h3>
-<p>Each DIC run produces one GeoTIFF per displacement component:</p>
-<table>
-<thead>
-<tr>
-<th>Layer</th>
-<th>Modes</th>
-<th>Physical meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>DIC_x</code></td>
-<td>DEM, Optical</td>
-<td>East–West displacement. Positive = eastward.</td>
-</tr>
-<tr>
-<td><code>DIC_y</code></td>
-<td>DEM, Optical</td>
-<td>North–South displacement. Positive = northward.</td>
-</tr>
-<tr>
-<td><code>DIC_xy</code></td>
-<td>DEM, Optical</td>
-<td>2-D horizontal magnitude: <span class="arithmatex">\(\sqrt{x^2 + y^2}\)</span>. Always ≥ 0.</td>
-</tr>
-<tr>
-<td><code>DIC_dz</code></td>
-<td>DEM only</td>
-<td>Vertical displacement <em>before</em> co-registration offset is restored.</td>
-</tr>
-<tr>
-<td><code>DIC_z</code></td>
-<td>DEM only</td>
-<td>Vertical displacement <em>after</em> co-registration offset is restored — the physically meaningful value.</td>
-</tr>
-<tr>
-<td><code>DIC_xyz</code></td>
-<td>DEM only</td>
-<td>3-D magnitude: <span class="arithmatex">\(\sqrt{x^2 + y^2 + z^2}\)</span>. Always ≥ 0.</td>
-</tr>
-<tr>
-<td><code>DIC_az</code></td>
-<td>DEM, Optical</td>
-<td>Displacement azimuth in degrees clockwise from North (0–360°).</td>
-</tr>
-<tr>
-<td><code>DIC_dip</code></td>
-<td>DEM only</td>
-<td>Displacement dip angle from horizontal (−90° to +90°). Positive = upward.</td>
-</tr>
-<tr>
-<td><code>DIC_ee</code></td>
-<td>DEM, Optical</td>
-<td>Correlation error — normalised RMS residual from the DFT registration.</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">EE (correlation error): What it measures</p>
-<p>EE is the normalised RMS registration error from the DFT cross-correlation algorithm (Guizar-Sicairos et al. 2008):</p>
-<div class="arithmatex">\[\mathrm{EE} = \sqrt{\left|1 - \frac{|\mathrm{CC}_\max|^2}{E_\text{ref} \cdot E_\text{sec}}\right|}\]</div>
-<p>where <span class="arithmatex">\(\mathrm{CC}_\max\)</span> is the cross-correlation peak value and <span class="arithmatex">\(E_\text{ref}\)</span>, <span class="arithmatex">\(E_\text{sec}\)</span> are the total spectral energies of the reference and secondary image windows. A value of 0 means a perfect correlation peak; 1 means no correlation at all.</p>
-<p>EE always reflects the quality of the <strong>2-D image correlation</strong> — for Optical and Webcam mode this is the orthoimage patch; for DEM mode it is the hillshade or orientation image used as the correlation feature. It is therefore an XY-plane quality indicator in all modes and does not directly reflect the vertical displacement quality in DEM results.</p>
-<p>A more representative quality metric is planned for a future release.</p>
-</div>
-<hr>
-<h2 id="2-symbology-display">2 · Symbology &amp; Display<a class="headerlink" href="#2-symbology-display" title="Permanent link">¶</a></h2>
-<p>Configure the colormap and colour range applied to each component before loading. Each component has sensible defaults but can be overridden per-component or globally with a custom QML file.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/qgis_plugin_resultsimport_2.png" data-desc-position="bottom"><img alt="QGIS Plugin ResultsImport 2" src="../assets/screenshots/qgis_plugin_resultsimport_2.png"></a></p>
-<h3 id="symbology-table">Symbology table<a class="headerlink" href="#symbology-table" title="Permanent link">¶</a></h3>
-<p>Each component row has four configurable columns:</p>
-<table>
-<thead>
-<tr>
-<th>Column</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Colormap</strong></td>
-<td>Named colour scale or a custom QML file</td>
-</tr>
-<tr>
-<td><strong>Min / Max</strong></td>
-<td>Values mapped to the two ends of the colour ramp</td>
-</tr>
-<tr>
-<td><strong>Range</strong></td>
-<td><strong>Auto</strong> — computed from raster data at load time; <strong>Fixed</strong> — uses the entered Min/Max</td>
-</tr>
-</tbody>
-</table>
-<p>Default colormaps per component:</p>
-<table>
-<thead>
-<tr>
-<th>Component</th>
-<th>Default colormap</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>X, Y, Z, dZ</td>
-<td>RdBu (diverging)</td>
-<td>Range centred at zero</td>
-</tr>
-<tr>
-<td>XY, XYZ</td>
-<td>Deformation QML</td>
-<td>Magnitude — always ≥ 0</td>
-</tr>
-<tr>
-<td>AZ</td>
-<td>AZ bundled QML</td>
-<td>Fixed 0–360°</td>
-</tr>
-<tr>
-<td>DIP</td>
-<td>DIP bundled QML</td>
-<td>Fixed −90° to +90°</td>
-</tr>
-<tr>
-<td>EE</td>
-<td>YlOrRd</td>
-<td>Fixed 0–1</td>
-</tr>
-</tbody>
-</table>
-<p>In <strong>Auto</strong> mode, symmetric components (X, Y, Z, dZ) are automatically centred at zero: <code>bound = max(|p5|, |p95|)</code>, range set to <code>[−bound, +bound]</code>. AZ, DIP, and EE always keep their fixed defaults regardless of this setting.</p>
-<p>Use <strong>↺ Reset ranges to Auto</strong> to clear any manually entered values and recompute from data.</p>
-<h3 id="layer-opacity">Layer opacity<a class="headerlink" href="#layer-opacity" title="Permanent link">¶</a></h3>
-<p>Transparency applied to every raster layer when loaded (default 80 %). Lower values let the basemap show through.</p>
-<h3 id="custom-qml-override">Custom QML override<a class="headerlink" href="#custom-qml-override" title="Permanent link">¶</a></h3>
-<p>Enable <strong>Override with custom QML for all layers</strong> and browse to a <code>.qml</code> file to apply a single style to every loaded layer, bypassing the per-component table.</p>
-<h3 id="global-settings">Global settings<a class="headerlink" href="#global-settings" title="Permanent link">¶</a></h3>
-<p>The <strong>Settings → Results</strong> section sets defaults applied on every scan:</p>
-<table>
-<thead>
-<tr>
-<th>Setting</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Default range mode</td>
-<td>Auto</td>
-<td>Fixed or Auto for all components</td>
-</tr>
-<tr>
-<td>Percentile range</td>
-<td>5 % – 95 %</td>
-<td>Low/high percentile bounds used in Auto mode</td>
-</tr>
-<tr>
-<td>Custom default ranges</td>
-<td>(table)</td>
-<td>Per-component Min/Max used in Fixed mode; Reset restores built-in defaults</td>
-</tr>
-</tbody>
-</table>
-<p>Range computation uses GDAL's histogram method — no full raster read is needed; overviews are used where available.</p>
-<hr>
-<h2 id="3-google-earth-export">3 · Google Earth Export<a class="headerlink" href="#3-google-earth-export" title="Permanent link">¶</a></h2>
-<p>Export selected layers as georeferenced KMZ overlays for Google Earth Pro. Supports time slider animation for multi-date datasets and an embedded colormap legend.</p>
-<p>Select one or more layers in the list and click <strong>🌍 Export to Google Earth Pro…</strong> to create a georeferenced KMZ overlay and load it automatically in Google Earth Pro for a quick 3D visualisation with a legend indication.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/qgis_plugin_resultsimport_3.png" data-desc-position="bottom"><img alt="QGIS Plugin ResultsImport 3" src="../assets/screenshots/qgis_plugin_resultsimport_3.png"></a></p>
+<p>The tab is organised into four collapsible sections covering these steps in order.</p>
+<h2 id="1-select-data">1 · Select Data<a class="headerlink" href="#1-select-data" title="Permanent link">¶</a></h2>
+<p>Define which DIC results to include in the layout and how they should be arranged. Scan the output directory first — this populates the timestep and component lists that all other sections depend on.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/screenshots/qgis_plugin_maplayoutbuilder_1.png" data-desc-position="bottom"><img alt="QGIS Plugin MapLayout 1" src="../../assets/screenshots/qgis_plugin_maplayoutbuilder_1.png"></a></p>
+<h3 id="data-type">Data type<a class="headerlink" href="#data-type" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -1913,20 +1691,123 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>TimeSpan tags</strong></td>
-<td>Adds KML <code>&lt;TimeSpan&gt;</code> tags so Google Earth Pro can animate layers using its time slider. Dates are extracted automatically from output subdirectory names (format <code>YYYYMMDD</code>). Requires at least two dates in the directory name.</td>
+<td><strong>Displacement results</strong></td>
+<td>Cumulative displacement layers (<code>DIC_x</code>, <code>DIC_y</code>, etc.) in metres</td>
 </tr>
 <tr>
-<td><strong>Embed colormap legend</strong></td>
-<td>Inserts the colour bar as a screen overlay inside each KMZ, positioned in the bottom-left corner with component name, unit, and min/max values.</td>
+<td><strong>Velocity results</strong></td>
+<td>Layers produced by the Velocity Calculator; units shown as m/yr or m/day</td>
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/qgis_plugin_resultsimport_4.png" data-desc-position="bottom"><img alt="QGIS Plugin ResultsImport 4" src="../assets/screenshots/qgis_plugin_resultsimport_4.png"></a></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>For a full time series, export all layers at once — each component gets its own KMZ plus a master KML that links them. Use the master KML in Google Earth to keep file sizes small and toggle layers independently.</p>
-</div>
+<h3 id="directory-scan">Directory &amp; scan<a class="headerlink" href="#directory-scan" title="Permanent link">¶</a></h3>
+<p>Point <strong>Directory</strong> to the root folder of a DIC processing run, then click <strong>Scan for Results</strong>. The scan searches recursively for all <code>DIC_*.tif</code> files underneath it and populates the timestep and component dropdowns. The title and subtitle fields are auto-filled from the run tag at this point.</p>
+<h3 id="layout-mode">Layout mode<a class="headerlink" href="#layout-mode" title="Permanent link">¶</a></h3>
+<p>Controls how the scanned DIC layers are arranged across pages:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>All components for one timestep</strong></td>
+<td>All displacement components in an auto-fitted grid on a single page. Select which timestep to show from the dropdown.</td>
+</tr>
+<tr>
+<td><strong>All timesteps, all components</strong></td>
+<td>One page per timestep, each with the full component grid. Available when multiple timesteps are found.</td>
+</tr>
+<tr>
+<td><strong>One component across all timesteps</strong></td>
+<td>One panel per timestep, all showing the same component. Select the component from the dropdown.</td>
+</tr>
+<tr>
+<td><strong>Custom selection</strong></td>
+<td>Manually tick the exact files to include, filtered by component. Grid dimensions can be overridden in Page Setup.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-page-setup">2 · Page Setup<a class="headerlink" href="#2-page-setup" title="Permanent link">¶</a></h2>
+<p>Set the paper format, orientation, panel grid dimensions, and the title and subtitle text that appear at the top of the layout. For most cases the Auto grid setting produces a well-balanced arrangement without manual adjustment.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/screenshots/qgis_plugin_maplayoutbuilder_2.png" data-desc-position="bottom"><img alt="QGIS Plugin MapLayout 2" src="../../assets/screenshots/qgis_plugin_maplayoutbuilder_2.png"></a></p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Page size</strong></td>
+<td>Standard paper format (A4, A3, Letter, …) or Custom with manual width × height in mm</td>
+</tr>
+<tr>
+<td><strong>Orientation</strong></td>
+<td>Portrait or Landscape</td>
+</tr>
+<tr>
+<td><strong>Grid</strong></td>
+<td>Cols × Rows for the panel grid — set both to <strong>Auto</strong> (0) to let the builder choose the best fit</td>
+</tr>
+<tr>
+<td><strong>Title</strong></td>
+<td>Large bold text at the top of the first page; auto-filled from the run tag after scanning</td>
+</tr>
+<tr>
+<td><strong>Subtitle</strong></td>
+<td>Smaller text below the title, typically showing DIC run parameters; auto-filled from the run tag</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-map-settings">3 · Map Settings<a class="headerlink" href="#3-map-settings" title="Permanent link">¶</a></h2>
+<p>Control what is shown behind and around the displacement data — background map, spatial extent, coordinate grid, scale bar, north arrow, and layer transparency. The extent is computed automatically from the selected layers by default.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/screenshots/qgis_plugin_maplayoutbuilder_3.png" data-desc-position="bottom"><img alt="QGIS Plugin MapLayout 3" src="../../assets/screenshots/qgis_plugin_maplayoutbuilder_3.png"></a></p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Background</strong></td>
+<td>Base map rendered behind DIC results: swisstopo, SwissImage, SwissAlti3D hillshade, OpenStreetMap, None, or a custom local raster. Swiss options require EPSG:2056 and an internet connection.</td>
+</tr>
+<tr>
+<td><strong>Extent</strong></td>
+<td><strong>Auto</strong> — bounding box of selected layers (recommended); <strong>Canvas</strong> — current QGIS map view; <strong>File</strong> — bounding box of the first feature in a GPKG / SHP / KML file</td>
+</tr>
+<tr>
+<td><strong>Buffer</strong></td>
+<td>Extra margin added to each side of the computed extent in metres</td>
+</tr>
+<tr>
+<td><strong>Map grid</strong></td>
+<td>Optional coordinate grid overlay; set interval to 0 for Auto</td>
+</tr>
+<tr>
+<td><strong>Cartographic</strong></td>
+<td>Toggle scale bar and north arrow independently; both are hidden automatically in Webcam / pixel-coordinate mode</td>
+</tr>
+<tr>
+<td><strong>Layer opacity</strong></td>
+<td>Transparency of the DIC raster overlay (default 80 %)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-colours-ranges">4 · Colours &amp; Ranges<a class="headerlink" href="#4-colours-ranges" title="Permanent link">¶</a></h2>
+<p>Override the colormap and colour range for each displacement component independently. Use this to ensure consistent symbology across layouts regardless of the data range in individual files.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/screenshots/qgis_plugin_maplayoutbuilder_4.png" data-desc-position="bottom"><img alt="QGIS Plugin MapLayout 4" src="../../assets/screenshots/qgis_plugin_maplayoutbuilder_4.png"></a></p>
+<p>Overrides the colormap and Min/Max range for each component independently. Settings here apply only to the generated layout and do not affect the symbology of layers already loaded in QGIS.</p>
+<p>Defaults match the component-specific colormaps from the <a href="../tab-results/#symbology--display">Results Import</a> tab.</p>
+<h2 id="building-the-layout">Building the layout<a class="headerlink" href="#building-the-layout" title="Permanent link">¶</a></h2>
+<p>Click <strong>Build Layout</strong> at the bottom of the tab. The builder creates a new QGIS Print Layout named after the run tag and opens it. From there use <strong>Layout → Export as PDF</strong> or <strong>Export as Image</strong> to save the output.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/screenshots/qgis_plugin_maplayoutbuilder_5.png" data-desc-position="bottom"><img alt="QGIS Plugin MapLayout 5" src="../../assets/screenshots/qgis_plugin_maplayoutbuilder_5.png"></a></p>
 
 
 
@@ -1965,7 +1846,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="tab-vector-filter.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Vector Filter">
+          <a href="../tab-results/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Results Import">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -1975,20 +1856,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Vector Filter
+                Results Import
               </div>
             </div>
           </a>
         
         
           
-          <a href="tab-layout.html" class="md-footer__link md-footer__link--next" aria-label="Next: Map Layout Builder">
+          <a href="../tab-postprocessing/" class="md-footer__link md-footer__link--next" aria-label="Next: Post-Processing">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Map Layout Builder
+                Post-Processing
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2006,7 +1887,7 @@
   
     <div class="md-copyright__highlight">
       <a href="https://www.slf.ch" target="_blank" rel="noopener" title="WSL Institute for Snow and Avalanche Research SLF">
-        <img src="../assets/SLF_Logo.svg" alt="SLF" style="height:28px; width:auto; vertical-align:middle; margin-right:10px; opacity:0.85;">
+        <img src="../../assets/SLF_Logo.svg" alt="SLF" style="height:28px; width:auto; vertical-align:middle; margin-right:10px; opacity:0.85;">
       </a>
       © 2026 WSL Institute for Snow and Avalanche Research SLF
     </div>
@@ -2049,16 +1930,16 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.top", "navigation.path", "navigation.footer", "header.autohide", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.top", "navigation.path", "navigation.footer", "header.autohide", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../assets/mathjax.js"></script>
+        <script src="../../assets/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../assets/header-title.js"></script>
+        <script src="../../assets/header-title.js"></script>
       
     
   
