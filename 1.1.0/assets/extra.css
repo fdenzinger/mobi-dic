@@ -154,6 +154,12 @@
   white-space: nowrap;
 }
 
+/* Push mike's version selector to the far right of the header, next to
+   search/theme-toggle, instead of it sitting flush against the title. */
+.md-version {
+  margin-left: auto;
+}
+
 /* ── Hero screenshot (full-width, below tagline) ────────────────────────── */
 .mobi-hero-screenshot {
   margin: 0 auto 1.5rem;
