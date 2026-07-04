@@ -1797,14 +1797,16 @@
     
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Licence badge – top right of header. Version is shown by mike's
-      // own version selector (extra.version.provider: mike in mkdocs.yml).
-      var opts = document.querySelector('.md-header__options');
-      if (opts) {
+      // Licence badge – top right of header, just before the search box.
+      // Version is shown by mike's own version selector (see
+      // extra.version.provider: mike in mkdocs.yml).
+      var nav = document.querySelector('.md-header__inner');
+      if (nav) {
         var lic = document.createElement('span');
         lic.className = 'md-header-badge md-header-badge--proprietary';
         lic.textContent = 'Proprietary';
-        opts.insertBefore(lic, opts.firstChild);
+        var search = nav.querySelector('[for="__search"]');
+        nav.insertBefore(lic, search || null);
       }
 
     });
