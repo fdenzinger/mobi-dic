@@ -1738,7 +1738,7 @@
 <tr>
 <td><strong>Output CRS</strong></td>
 <td><code>EPSG:2056</code></td>
-<td>EPSG code for the output coordinate reference system. Auto-detected from the primary input. Change manually or via the Settings dialog if needed. Locked to <code>pixel</code> in Webcam mode.</td>
+<td>EPSG code for the output coordinate reference system. Auto-detected from the primary input. Change manually or via the Settings dialog if needed. Locked to <code>pixel</code> in Webcam mode. If this differs from the primary/secondary input files' actual CRS, processing runs in the input files' real CRS and every output GeoTIFF is reprojected (bilinear resampling) to this value at the end of the run — a genuine coordinate transformation, not just a label change on the file.</td>
 </tr>
 <tr>
 <td><strong>Auto-reproject to UTM</strong></td>

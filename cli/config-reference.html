@@ -1859,7 +1859,7 @@
 <td><code>refcode</code></td>
 <td>string</td>
 <td><code>"EPSG:2056"</code></td>
-<td>EPSG code of the input CRS.</td>
+<td>Desired EPSG code for the output CRS. Normally matches the input files' actual CRS. If it doesn't, processing runs in the input files' real (detected) CRS and every output GeoTIFF is reprojected (bilinear resampling) to <code>refcode</code> at the end — a genuine coordinate transformation, not just a relabelled file.</td>
 </tr>
 <tr>
 <td><code>auto_reproject_to_utm</code></td>
@@ -1951,7 +1951,7 @@
 <td><code>refcode</code></td>
 <td>string</td>
 <td><code>"EPSG:2056"</code></td>
-<td>EPSG code of the input CRS. Change to match your data.</td>
+<td>Desired EPSG code for the output CRS. Normally matches the input files' actual CRS. If it doesn't, processing runs in the input files' real (detected) CRS and every output GeoTIFF is reprojected (bilinear resampling) to <code>refcode</code> at the end — a genuine coordinate transformation, not just a relabelled file.</td>
 </tr>
 <tr>
 <td><code>auto_reproject_to_utm</code></td>
@@ -2447,6 +2447,7 @@
 </table>
 <h2 id="complete-examples">Complete examples<a class="headerlink" href="#complete-examples" title="Permanent link">¶</a></h2>
 <p>These match the starter config files shipped with the distribution. Replace all paths with your own.</p>
+<p>Only parameters that need context beyond their name and value are annotated with <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> — see the tables above for the full reference of every key.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><input id="__tabbed_5_3" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">DEM</label><label for="__tabbed_5_2">Optical</label><label for="__tabbed_5_3">Webcam</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2471,13 +2472,13 @@
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="nt">export_sparse_gpkg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="nt">os</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span><span class="w">                      </span><span class="c1"># (7)!</span>
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="nt">skip_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span><span class="w">             </span><span class="c1"># (8)!</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="nt">refcode</span><span class="p">:</span><span class="w"> </span><span class="s">"EPSG:2056"</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="nt">refcode</span><span class="p">:</span><span class="w"> </span><span class="s">"EPSG:2056"</span><span class="w">       </span><span class="c1"># (9)!</span>
 <a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="nt">auto_reproject_to_utm</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">  </span><span class="nt">debug_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">  </span><span class="nt">n_workers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
 <a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="nt">VectorFilter</span><span class="p">:</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="nt">Enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">           </span><span class="c1"># (9)!</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="nt">Enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">           </span><span class="c1"># (10)!</span>
 <a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="nt">OutputTxt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="nt">OutputGpkg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">    </span><span class="nt">OutputPlot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
@@ -2504,6 +2505,7 @@
 <li>Co-registration window: <code>"full"</code> uses the entire image overlap (default). Switch to <code>"bbox"</code> and uncomment <code>coreg_bbox</code> if only a small stable region is available.</li>
 <li>DFT upsampling factor for subpixel displacement precision. <code>4</code> = 0.25 px precision. Higher values increase accuracy but slow down processing.</li>
 <li>Controls output grid density: step = <code>window_size / skip_factor</code>. <code>skip_factor: 4</code> with <code>window_size: 64</code> gives a point every 16 px. Higher = denser grid.</li>
+<li>Desired output CRS. Normally matches the input DEMs' actual CRS (e.g. <code>"EPSG:32632"</code> for UTM zone 32N). If it doesn't match, processing runs in the DEMs' real (detected) CRS and every output GeoTIFF is reprojected (bilinear resampling) to this value at the end — a genuine coordinate transformation, not just a relabelled file.</li>
 <li>Master switch for post-processing. Set <code>true</code> to filter outlier vectors and produce GeoPackage / PNG outputs after DIC.</li>
 </ol>
 </div>
@@ -2558,7 +2560,7 @@
 <li>Two window sizes in one batch run — <code>32</code> captures fine detail; <code>64</code> gives a smoother, more robust result. Compare the outputs to choose.</li>
 <li>Correlation feature: <code>0</code> = grayscale intensity (default for optical). Use <code>1</code> (orientation image) for textured scenes with strong illumination variation.</li>
 <li>Whole-image co-registration. Recommended for optical when the scene has a large stable area. Switch to <code>"bbox"</code> and uncomment <code>coreg_bbox</code> if only a small stable region is available.</li>
-<li>EPSG code of your input CRS. Change this to match your data — e.g. <code>"EPSG:32632"</code> for UTM zone 32N.</li>
+<li>Desired output CRS. Normally matches the input orthophotos' actual CRS (e.g. <code>"EPSG:32632"</code> for UTM zone 32N). If it doesn't match, processing runs in the images' real (detected) CRS and every output GeoTIFF is reprojected (bilinear resampling) to this value at the end — a genuine coordinate transformation, not just a relabelled file.</li>
 <li>Master switch for post-processing. Set <code>true</code> to filter outlier vectors and produce GeoPackage / PNG outputs after DIC.</li>
 <li><code>false</code> = arrows coloured by magnitude. Often looks better on orthophotos than uniform black arrows.</li>
 </ol>
