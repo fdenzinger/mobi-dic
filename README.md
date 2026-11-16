@@ -2,7 +2,7 @@
 
 **Multi-purpose displacement Behavior Identifier – Digital Image Correlation**
 
-This repository hosts the documentation for MOBI-DIC, a sub-pixel displacement tracking tool for DEMs, optical imagery, and webcam images, developed at the [WSL Institute for Snow and Avalanche Research SLF](https://www.slf.ch).
+This repository hosts the documentation for MOBI-DIC, a sub-pixel displacement tracking tool for DEMs, orthoimages, and camera images, developed at the [WSL Institute for Snow and Avalanche Research SLF](https://www.slf.ch).
 
 ## Documentation
 
