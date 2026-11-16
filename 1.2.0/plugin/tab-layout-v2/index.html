@@ -1,0 +1,1876 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Multi-purpose displacement Behavior Identifier Digital Image Correlation Tool">
+      
+      
+        <meta name="author" content="Florian Denzinger – SLF Davos">
+      
+      
+        <link rel="canonical" href="https://fdenzinger.github.io/mobi-dic/1.2.0/plugin/tab-layout-v2/">
+      
+      
+        <link rel="prev" href="../tab-results/">
+      
+      
+        <link rel="next" href="../../cli/overview/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/MOBI_DIC_Logo_dark_icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Map Layout - MOBI-DIC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website">
+<meta property="og:title" content="Map Layout - MOBI-DIC">
+<meta property="og:description" content="Multi-purpose displacement Behavior Identifier Digital Image Correlation Tool">
+<meta property="og:image" content="https://fdenzinger.github.io/mobi-dic/1.2.0/assets/images/social/plugin/tab-layout-v2.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://fdenzinger.github.io/mobi-dic/1.2.0/plugin/tab-layout-v2/">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Map Layout - MOBI-DIC">
+<meta property="twitter:description" content="Multi-purpose displacement Behavior Identifier Digital Image Correlation Tool">
+<meta property="twitter:image" content="https://fdenzinger.github.io/mobi-dic/1.2.0/assets/images/social/plugin/tab-layout-v2.png">
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#map-layout" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../..">
+    <strong>Click here to go to latest.</strong>
+  </a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MOBI-DIC" class="md-header__button md-logo" aria-label="MOBI-DIC" data-md-component="logo">
+      
+  <img src="../../assets/MOBI_DIC_Logo_dark_icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MOBI-DIC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Map Layout
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/installation/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  QGIS Plugin
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cli/overview/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  CLI Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MOBI-DIC" class="md-nav__button md-logo" aria-label="MOBI-DIC" data-md-component="logo">
+      
+  <img src="../../assets/MOBI_DIC_Logo_dark_icon.png" alt="logo">
+
+    </a>
+    MOBI-DIC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation-qgis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation Guide (QGIS + CLI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation Guide (Pipeline Only)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QGIS Plugin
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    QGIS Plugin
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QGIS Plugin Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Processing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tab-io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input / Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tab-dic-params/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DIC Parameters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tab-coreg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Co-Registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tab-vector-filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outlier Filtering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tab-postprocessing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post-process Existing Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Results
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Results
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tab-results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Map Layout
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Map Layout
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Map Layout
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Map Layout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CLI Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI &amp; Batch Processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/config-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../overview/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    QGIS Plugin
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Map Layout
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags">
+    
+      
+      
+      
+      
+        <a href="../../tags/#tag:map-layout" class="md-tag">Map Layout</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../tags/#tag:qgis" class="md-tag">QGIS</a>
+      
+    
+  </nav>
+
+
+
+<h1 id="map-layout">Map Layout<a class="headerlink" href="#map-layout" title="Permanent link">¶</a></h1>
+<p>The Map Layout tab builds <strong>finished maps (single page, multipage report or panel grid; A4 to A2, Letter or custom, portrait or landscape)</strong> of DIC result layers, composed like a cartographic print product.</p>
+<p>The <strong>Map Layout</strong> tab in the sidebar holds this builder.</p>
+<h2 id="composition">Composition<a class="headerlink" href="#composition" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌──────────────────────────────────────────────┐
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│ Horizontal displacement (XY)           [logo]│  title block: title, subtitle
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│ Borehole · 14 Oct 2022 → 16 Aug 2023 · 306 d │  (dates and interval), rule
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├──────────────────────────────────────────────┤
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│  ┌────────────────────────────────────────┐  │
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│  │ coordinate frame      main map     [N] │  │  background + result (+ arrows)
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│  │                                        │  │  frame with coordinate labels,
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│  │ [Scale 1:5 000 ┣━━ 0   100 m ━┫]       │  │  scale bar and north arrow
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│  └────────────────────────────────────────┘  │  inside the map
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├──────────────────────────────────────────────┤
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│ XY displacement [m]   │ Overview │ Method    │  colour bar with ticks and unit,
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│ ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇   │ ┌──────┐ │ DIC of    │  reference arrow, locator map,
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│ 0   2.5  5   7.5  10  │ │  ▫   │ │ two …     │  method text
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│ → = 2 m               │ └──────┘ │           │
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>├──────────────────────────────────────────────┤
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│ Borehole · RES 1 m · WIN 32 · … · EPSG:2056  │  footer: run, parameters, CRS,
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│                              MOBI-DIC · date  │  version and date
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>└──────────────────────────────────────────────┘
+</code></pre></div>
+<h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">¶</a></h2>
+<p>The settings are grouped like in Results: <strong>Select data</strong> (folder, data type, layer, report type and the maps of a multipage report) and <strong>Page &amp; title</strong> (page size and orientation, title, subtitle, logos) are open; everything else is in the collapsed <strong>Advanced options</strong> group with the sub-groups <strong>Map settings</strong>, <strong>Arrows</strong>, <strong>Colours &amp; ranges</strong> and <strong>Locator, method &amp; footer</strong>, whose headers show their current state (for example "Map settings — swisstopo · scale 1:5'000 · frame").</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/screenshots/qgis_plugin_maplayout_1.png" data-desc-position="bottom"><img alt="Map Layout: Select data and Page &amp; title" src="../../assets/screenshots/qgis_plugin_maplayout_1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/screenshots/qgis_plugin_maplayout_2.png" data-desc-position="bottom"><img alt="Map Layout: Advanced options (map settings and arrows)" src="../../assets/screenshots/qgis_plugin_maplayout_2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/screenshots/qgis_plugin_maplayout_3.png" data-desc-position="bottom"><img alt="Map Layout: several pages, with the Maps grid" src="../../assets/screenshots/qgis_plugin_maplayout_3.png"></a></p>
+<p>The settings are remembered between QGIS sessions (page size and orientation, frame, arrows, colormaps and ranges per component, locator, key figures, method, footer note, report options). The folder, the selected layer and the maps ticked in the grid are not. The panel is also usable in a narrow dock: fields shrink, and the Maps grid scrolls sideways.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data</strong></td>
+<td>Directory, Data type, Result layer</td>
+<td>Folder of a DIC run (scanned automatically); <strong>Data type</strong> Displacement (components and DIC input images), or Velocity, which switches the layer list and the Maps grid (a note shows how many files of the other type are hidden); and the result raster to map.</td>
+</tr>
+<tr>
+<td></td>
+<td>Report</td>
+<td><strong>Single page</strong> (selected layer), <strong>several pages</strong> (one map per page) or a <strong>panel grid</strong> (several maps per page, see below): every map switched on in the <strong>Maps</strong> grid, the same toggle grid as in Results (rows = image pairs, columns = components and, if exported, the DIC input images: hillshade, gradient magnitude and direction, primary and secondary). Click a cell, a row or a column header to switch maps on or off; the buttons All / Results / DIC inputs / None select in bulk. Pages are ordered by image pair, then component. By default the components of the selected layer's pair are on. Optional <strong>summary page</strong> first: a table of all maps (dates, maximum, mean, 95th percentile), small previews of the first maps (overview) and the method text. By default a component has the same colour range on all its pages (comparable time steps); input images share one grey stretch per kind. Everything is one layout; PDF export writes one multi-page file, PNG export one file per page. Arrows are drawn only from the sparse points of the same run <em>and dates</em>; pages without a matching file get no arrows (a note appears under the buttons).</td>
+</tr>
+<tr>
+<td></td>
+<td>Panel grid</td>
+<td>Report type with several maps per page (A4 to A2, Letter or custom size). All panels share one extent and scale, so they are directly comparable. With <strong>One page per image pair</strong> every pair starts a new page with its maps together. Columns and rows can be set (Auto picks a good fit; with Auto the maps are split over pages of at most <em>max per page</em> panels). If every panel shows the same component with the same colour range (time steps), one colour bar sits at the bottom of the page; otherwise each panel has its own small colour bar. The scale bar and north arrow are in the first panel of each page; the reference arrow and the background attribution are in the bottom band. The summary page works as for several pages.</td>
+</tr>
+<tr>
+<td><strong>Title block</strong></td>
+<td>Title, Subtitle, Logo, MOBI-DIC logo</td>
+<td>Filled in from the component and run (dates and interval); edit freely. The MOBI-DIC logo (on by default) sits in the top right corner; an optional extra logo, e.g. your institution, goes to its left.</td>
+</tr>
+<tr>
+<td><strong>Colours</strong></td>
+<td>Components table, Round range, Opacity</td>
+<td>One row per component found in the folder with its own <strong>colormap</strong> (default: the usual one of the component) and <strong>range</strong>: <em>Percentile</em>, <em>Min–max</em> (calculated from the layer, shown for the selected layer), <em>Fixed (Settings default)</em> or <em>Custom</em> with Min and Max. <em>Round range to nice values</em> rounds calculated ranges outwards and puts a colour bar tick at every step (0.093 – 11 becomes 0 – 12, ticks every 2). Settings are remembered per component while you work.</td>
+</tr>
+<tr>
+<td><strong>Map</strong></td>
+<td>Background, Multiply</td>
+<td>Input image or DEM hillshade of the Input / Output tab, or a swisstopo / OpenStreetMap service; <em>Multiply</em> blends the result over the background.</td>
+</tr>
+<tr>
+<td></td>
+<td>Arrows</td>
+<td>Direction arrows from the sparse points, drawn on the XY and XYZ components only, with a reference arrow in the legend.</td>
+</tr>
+<tr>
+<td></td>
+<td>Map extent, Extent padding</td>
+<td><strong>Data extent</strong> (default), <strong>Current map canvas view</strong> (the part of the QGIS canvas you see now, used for all pages) or <strong>Extent of a file</strong> (bounding box of a GPKG / SHP / KML / … polygon, e.g. an area of interest). Padding is added around it; a fixed scale centres on it.</td>
+</tr>
+<tr>
+<td></td>
+<td>Extent padding</td>
+<td>Space around the extent.</td>
+</tr>
+<tr>
+<td></td>
+<td>Frame style</td>
+<td>Look of the coordinate frame: thin zebra (default), zebra, ticks inside / outside, line only, grid lines or grid crosses inside the map.</td>
+</tr>
+<tr>
+<td></td>
+<td>Map scale</td>
+<td><strong>Auto</strong> fits the data into the map (the scale it would use is shown next to the box); a fixed scale <strong>1 : N</strong> centres the map on the data and uses exactly that scale (the layout is in mm, so 1 : 5000 shows 5 m per mm). Data that does not fit is cropped and a note appears. All pages of a report use the same scale.</td>
+</tr>
+<tr>
+<td></td>
+<td>Tick labels on</td>
+<td>Which edges of the map get coordinate labels (left, bottom, top, right; default left and bottom). The right edge reserves a 6 mm strip. Top / right are taken over by the lat/lon frame when that is on.</td>
+</tr>
+<tr>
+<td></td>
+<td>Key figures</td>
+<td>Maximum, mean, 95th percentile and valid area of the layer in a small table (maximum, mean and 95th percentile of the absolute value for signed components).</td>
+</tr>
+<tr>
+<td></td>
+<td>Arrow source, anchor, filter</td>
+<td>Draw the arrows from the raw sparse points or from the coherence- / neighbour-filtered GeoPackage of the same run (if it exists), starting at or centred on the point, optionally hiding arrows whose direction deviates more than a set angle from their neighbours or whose displacement is below or above a limit. Arrow thickness and a thin outline in the opposite colour (on by default) keep them readable on dark and light areas. The colours of the result are not filtered.</td>
+</tr>
+<tr>
+<td></td>
+<td>Round range</td>
+<td>Rounds the calculated Percentile / Min–max range outwards to nice values and puts a colour bar tick at every whole step (0.093 – 11 becomes 0 – 12, ticks every 2).</td>
+</tr>
+<tr>
+<td></td>
+<td>Page</td>
+<td>Size <strong>A4, A3, A2, Letter or custom</strong> (width × height in portrait) and <strong>landscape</strong> (default: map left, legend / locator / method in a column on the right) or <strong>portrait</strong> (map on top, legend / locator / method below). Fonts keep their size, so a larger page gives a larger map.</td>
+</tr>
+<tr>
+<td></td>
+<td>Coordinate frame, Lat/lon frame, Scale bar, North arrow</td>
+<td>Frame with coordinate labels in the map CRS (left and bottom), an optional second frame in latitude / longitude (degrees and minutes, top and right), scale bar with scale, north arrow. Hidden in Camera mode (pixel coordinates).</td>
+</tr>
+<tr>
+<td><strong>Locator, method and footer</strong></td>
+<td>Locator map</td>
+<td>Small overview map with the mapped area marked in red, from a swisstopo or OpenStreetMap service.</td>
+</tr>
+<tr>
+<td></td>
+<td>Method text, Footer, Footer note</td>
+<td>Processing description and the footer line, taken from the run tag; an optional note (data source, author).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Build map layout</strong> creates the layout and opens it in the Layout Designer; <strong>Export PDF…</strong> and <strong>Export PNG…</strong> build it and write the file directly (300 dpi).</p>
+<div class="admonition note">
+<p class="admonition-title">Camera mode</p>
+<p>Camera results have no coordinate system: the layout has no coordinate frame, scale bar, north arrow or locator map, and units are pixels.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../tab-results/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Results">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Results
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../cli/overview/" class="md-footer__link md-footer__link--next" aria-label="Next: CLI &amp;amp; Batch Processing">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                CLI &amp; Batch Processing
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://www.slf.ch" target="_blank" rel="noopener" title="WSL Institute for Snow and Avalanche Research SLF">
+        <img src="../../assets/SLF_Logo.svg" alt="SLF" style="height:28px; width:auto; vertical-align:middle; margin-right:10px; opacity:0.85;">
+      </a>
+      © 2026 WSL Institute for Snow and Avalanche Research SLF
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:mobi-dic@slf.ch" target="_blank" rel="noopener" title="Contact SLF Davos" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/fdenzinger/mobi-dic/issues" target="_blank" rel="noopener" title="GitHub Issues" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.top", "navigation.path", "navigation.footer", "header.autohide", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../assets/header-title.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

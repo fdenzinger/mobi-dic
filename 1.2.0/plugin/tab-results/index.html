@@ -1,0 +1,2179 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Multi-purpose displacement Behavior Identifier Digital Image Correlation Tool">
+      
+      
+        <meta name="author" content="Florian Denzinger – SLF Davos">
+      
+      
+        <link rel="canonical" href="https://fdenzinger.github.io/mobi-dic/1.2.0/plugin/tab-results/">
+      
+      
+        <link rel="prev" href="../tab-postprocessing/">
+      
+      
+        <link rel="next" href="../tab-layout-v2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/MOBI_DIC_Logo_dark_icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Results - MOBI-DIC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website">
+<meta property="og:title" content="Results - MOBI-DIC">
+<meta property="og:description" content="Multi-purpose displacement Behavior Identifier Digital Image Correlation Tool">
+<meta property="og:image" content="https://fdenzinger.github.io/mobi-dic/1.2.0/assets/images/social/plugin/tab-results.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://fdenzinger.github.io/mobi-dic/1.2.0/plugin/tab-results/">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Results - MOBI-DIC">
+<meta property="twitter:description" content="Multi-purpose displacement Behavior Identifier Digital Image Correlation Tool">
+<meta property="twitter:image" content="https://fdenzinger.github.io/mobi-dic/1.2.0/assets/images/social/plugin/tab-results.png">
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#results" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../..">
+    <strong>Click here to go to latest.</strong>
+  </a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MOBI-DIC" class="md-header__button md-logo" aria-label="MOBI-DIC" data-md-component="logo">
+      
+  <img src="../../assets/MOBI_DIC_Logo_dark_icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MOBI-DIC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Results
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/installation/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  QGIS Plugin
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cli/overview/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  CLI Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MOBI-DIC" class="md-nav__button md-logo" aria-label="MOBI-DIC" data-md-component="logo">
+      
+  <img src="../../assets/MOBI_DIC_Logo_dark_icon.png" alt="logo">
+
+    </a>
+    MOBI-DIC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation-qgis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation Guide (QGIS + CLI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation Guide (Pipeline Only)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QGIS Plugin
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    QGIS Plugin
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QGIS Plugin Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Processing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tab-io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input / Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tab-dic-params/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DIC Parameters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tab-coreg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Co-Registration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tab-vector-filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outlier Filtering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tab-postprocessing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post-process Existing Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Results
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Results
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Results
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#select-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Select layers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Select layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directory-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directory &amp; scan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-images-as-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input images as layers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choosing-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing layers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Choosing layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sparse-geopackage-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sparse GeoPackage layers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appearance-symbology-and-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appearance (symbology and display)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appearance (symbology and display)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbology-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbology table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer-names-and-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer names and groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer-opacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer opacity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blending-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blending mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-qml-override" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom QML override
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-earth-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google Earth export
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4">
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Map Layout
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Map Layout
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tab-layout-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Map Layout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CLI Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI &amp; Batch Processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/config-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../overview/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    QGIS Plugin
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Results
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags">
+    
+      
+      
+      
+      
+        <a href="../../tags/#tag:google-earth" class="md-tag">Google Earth</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../tags/#tag:qgis" class="md-tag">QGIS</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../tags/#tag:results" class="md-tag">Results</a>
+      
+    
+  </nav>
+
+
+
+<h1 id="results">Results<a class="headerlink" href="#results" title="Permanent link">¶</a></h1>
+<p>The Results tab is the starting point for inspecting DIC outputs inside QGIS. After a processing run has completed, point it to the output directory and scan for results. You can then select individual displacement components, configure their colour scale and range, and load them directly into the QGIS layer tree with one click. From the same tab you can also export layers to Google Earth Pro as georeferenced KMZ overlays, optionally with time slider support for multi-date datasets.</p>
+<p>The workflow is straightforward:</p>
+<ol>
+<li>Check the <strong>Directory</strong> (filled in from the Processing output folder). The folder is scanned automatically.</li>
+<li>Tick the components you need and click <strong>▶ Load Selected into QGIS</strong>.</li>
+<li>Optionally click <strong>🌍 Export to Google Earth Pro…</strong> to create KMZ files from the scanned layers.</li>
+</ol>
+<p>The tab has three collapsible sections: <strong>Select layers</strong> (open by default), <strong>Appearance</strong> and <strong>Google Earth export</strong>. The <em>Appearance</em> header shows the current state, for example "default colour scales · opacity 80 %".</p>
+<hr>
+<h2 id="select-layers">Select layers<a class="headerlink" href="#select-layers" title="Permanent link">¶</a></h2>
+<p>Discover and select the displacement layers to load. Point the plugin to the output directory, trigger a scan, and choose which components to bring into QGIS.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/screenshots/qgis_plugin_resultsimport_1.png" data-desc-position="bottom"><img alt="QGIS Plugin ResultsImport 1" src="../../assets/screenshots/qgis_plugin_resultsimport_1.png"></a></p>
+<h3 id="directory-scan">Directory &amp; scan<a class="headerlink" href="#directory-scan" title="Permanent link">¶</a></h3>
+<p><strong>Directory</strong> is the root folder of a DIC processing run. It is filled in automatically from the Processing output folder and scanned without pressing anything. The scan searches recursively for all <code>DIC_*.tif</code> files and populates the layer list; range computation for the Symbology table is triggered at the same time.</p>
+<div class="admonition info">
+<p class="admonition-title">When does the automatic scan run?</p>
+<p>Only when the directory has changed since the last scan <strong>and</strong> the Results tab is visible (shortly after you stop typing a path, or when you open the tab). Switching between tabs does not re-scan an unchanged folder, and a very large output folder (e.g. a SWISSIMAGE tile batch) is never scanned in the background. Use <strong>↻ Rescan</strong> to scan again, for example after a new run has finished.</p>
+</div>
+<h3 id="data-type">Data type<a class="headerlink" href="#data-type" title="Permanent link">¶</a></h3>
+<p>Choose <strong>Displacement results</strong> (default) or <strong>Velocity results</strong>, the same choice as in Map Layout. Displacement shows the cumulative displacement layers, the sparse GeoPackages and the input images. Velocity shows only the <code>_vel_</code> layers (written when <em>Export velocity</em> is enabled). Switching only re-filters the files already scanned, so no new scan is needed. Sparse GeoPackages written with <em>Export velocity</em> on also contain velocity columns (<code>x_vel_&lt;unit&gt;</code>, <code>y_vel_&lt;unit&gt;</code>, <code>xy_vel_&lt;unit&gt;</code>, and in DEM mode <code>z_vel_</code>, <code>dz_vel_</code>, <code>xyz_vel_</code>, e.g. <code>xy_vel_myear</code>; displacement divided by the time between the two dates, like the velocity GeoTIFFs). They are listed under <strong>Velocity results</strong> (<em>Sparse GPKGs</em> in the filter) and can be loaded as coloured points or arrows coloured by the chosen velocity component; arrow direction is unchanged. GeoPackages from earlier runs have no velocity columns and stay under Displacement results. When files of the other type exist, the status line tells you how many are hidden.</p>
+<h3 id="input-images-as-layers">Input images as layers<a class="headerlink" href="#input-images-as-layers" title="Permanent link">¶</a></h3>
+<p>Switch on the <strong>Primary</strong> / <strong>Secondary</strong> buttons in the layer grid (column <em>Primary / secondary image</em>) to add the two input files from the Input / Output tab to the result group when you load layers. They are placed <strong>below</strong> all results with QGIS' default rendering; the primary image is switched on, the secondary one is added switched off in the layer tree (tick it to compare the epochs). In DEM mode <strong>Draw DEMs as hillshade</strong> (default on) shows the input DEMs as a multidirectional hillshade (azimuth 315°, elevation 45°, assumes a metric CRS) instead of grey elevation values. The buttons only appear once the input files are set in Input / Output. In <strong>Camera</strong> mode the images appear in pixel coordinates, in the same place as the results (the plugin writes camera results with the same pixel convention as QGIS uses for an image without georeferencing; results written from the command line with <code>rescale_results: false</code> use a different vertical origin and would be offset).</p>
+<h3 id="choosing-layers">Choosing layers<a class="headerlink" href="#choosing-layers" title="Permanent link">¶</a></h3>
+<p>There is no separate filter: the layer grid (see below) is the selection. Switch single layers, whole columns (a component for all pairs) or whole rows (one pair) on or off. The <strong>Appearance</strong> section follows the selection: the colormap table is shown for the ticked raster components and for the component of ticked sparse points (rows marked <em>points</em>, with the default colormap of the matching raster component), and the point and arrow settings appear when a sparse-points column is ticked. Rows set to <strong>Auto</strong> also recompute their colour range from the ticked rasters only (a moment after each change); ranges you have edited by hand are not touched.</p>
+<h4 id="sparse-geopackage-layers">Sparse GeoPackage layers<a class="headerlink" href="#sparse-geopackage-layers" title="Permanent link">¶</a></h4>
+<p>Whenever sparse GeoPackages are found (sparse, coherence-filtered or neighbour-filtered), a <strong>Sparse points, component</strong> dropdown appears above the grid. It defaults to <strong>xyz</strong> (3D magnitude) in DEM mode and <strong>xy</strong> (2D magnitude) in Ortho and Camera mode; choose <strong>all</strong> or another component if you need it. Your choice is kept while you stay on the same GeoPackage type.</p>
+<p>Arrow layers are always loaded fully opaque (100 %, arrow colours without transparency); the layer opacity setting applies to the rasters and the coloured points.</p>
+<p><strong>Coloured points</strong> are styled in the colour table of <em>Appearance</em>, in the rows marked <strong>points</strong> (for example <em>XY points</em>), which appear for the component of the ticked sparse points. Per row: <strong>Colormap</strong>: the default is the colour family of the raster of the same component (RdBu for X, Y, Z, dZ; Deformation (QML) for XY, XYZ; Twilight for AZ; RdYlBu_r for DIP); choose RdBu, Deformation (QML), AZ / Twilight, DIP / RdYlBu_r, YlOrRd or Viridis to change it. <strong>Range</strong>: <em>Min–max</em> (default, the extremes of the loaded field), <em>Percentile</em> (the low / high percentile set in Settings → Results, default 5–95 %, robust against a few outliers; computed once per layer) or <em>Fixed</em> (the default Min and Max of the component from Settings → Results) or <em>Custom</em> with your own Min and Max (editable only in this mode; points outside the range are not drawn). For signed components such as X, Y, Z, dZ and DIP the first two modes make the range symmetric around zero so zero keeps the neutral colour; azimuth keeps 0–360°. With the component <em>all</em>, every loaded component has its own row. <strong>Point size</strong> (circle diameter in mm, default 1.5) stays in the vector display options. Changes apply live to point layers that are already loaded.</p>
+<div class="admonition note">
+<p class="admonition-title">Arrows always show the horizontal displacement</p>
+<p>Arrow direction and length come from the <code>x</code> and <code>y</code> fields, also in DEM mode; a map arrow cannot show the vertical part. The <strong>Component</strong> you choose (e.g. <code>xyz</code>, <code>z</code>) only sets the colour of <em>Magnitude arrows</em> and the field that <strong>Max magnitude</strong> and <em>Hide arrows above</em> test. With <code>xyz</code> an arrow can therefore look short but be coloured as a large displacement when the movement is mostly vertical. Choose <code>xy</code> if arrow length, colour and cut-off should describe the same horizontal displacement. The direction filter uses the horizontal direction only.</p>
+</div>
+<p><strong>Vector display</strong> (shown for GeoPackage layers) selects <em>Coloured points</em>, <em>Black arrows</em> or <em>Magnitude arrows</em>. For <strong>Magnitude arrows</strong> you can set the <strong>Max magnitude</strong> (top of the colour scale) and the <strong>Colormap</strong>: Green – Yellow – Red (default), Deformation scale (same colours as the XY/XYZ rasters), YlOrRd, RdYlBu_r or Viridis. With <strong>Auto size and density</strong> (default, recommended) the arrows are made readable automatically: the DIC grid is thinned so that about <strong>Arrows across map</strong> arrows (default 40) span the longer side of the data, keeping every k-th point in x and y (the value is limited to what the grid holds, i.e. every point; a grey note next to it shows the resulting thinning, the approximate number of arrows and that maximum once a layer is loaded; 20–80 is readable, much higher values turn the arrows into blobs and make QGIS slow); the arrow length is scaled (in map units, so it follows the map scale) so that a typical (upper-quartile) arrow is one thinned grid spacing long; and the arrowhead and line widths follow that length (multiplied by <strong>Thickness</strong>). The data is not changed, points are only hidden by the layer's renderer, which also makes large layers much faster to draw. Untick it to set scale and widths manually.</p>
+<p><strong>Live adjustment.</strong> After arrow layers have been loaded, changing <strong>Arrows across map</strong>, <strong>Thickness</strong>, <strong>Max magnitude</strong>, <strong>Hide arrows above</strong>, <strong>Colormap</strong> or the manual scale and width fields restyles the loaded arrow layers shortly after the last change (about 0.3 s), without reloading. With the direction filter on, a new density re-thins the temporary copy from points that were read once at load time. Switching <strong>Auto size and density</strong> off or on is also live: when you untick it, the manual scale and width fields are filled with the sizes Auto was drawing at the current map scale (so the arrows do not jump) and then update the loaded layers as you change them; with the direction filter on, the arrows stay thinned at the last automatic density. Ticking the <strong>Direction filter</strong> also works on arrow layers that are already loaded: each loaded Auto arrow layer is replaced, at the same place in the layer tree and with the same name, visibility and opacity, by the temporary filter copy (the layer's internal id changes, so map themes or print layouts that reference the old layer by id would need to be updated; layers loaded with Auto off are skipped with a note). Unticking it shows all arrows again. Only the display type (Coloured points / Black arrows / Magnitude arrows) still requires a reload. The <strong>Max magnitude</strong> row also has the <strong>Hide arrows above</strong> checkbox next to the value; for Black arrows the value is greyed out until the box is ticked.</p>
+<p><strong>Saving the result.</strong> Once the filters look right, <strong>💾 Save filtered points…</strong> (in the arrow options) writes the points that pass them to a new GeoPackage: the direction-deviation threshold of the slider (if the direction filter is ticked) and, if ticked, the <strong>Hide arrows above</strong> cut-off on the magnitude field. The file contains <strong>all original attributes plus <code>dir_dev</code></strong> and is written at the <strong>full DIC resolution</strong>: the deviation is computed for every point of the grid, not only for the thinned arrows on screen. The source GeoPackage is never changed. With several arrow layers loaded you pick a folder and get one file per layer (named <code>&lt;source&gt;_filtered_dir&lt;angle&gt;_max&lt;value&gt;.gpkg</code>). Writing hundreds of thousands of points can take a while.</p>
+<p><strong>Remembered settings.</strong> The vector display settings (display type, Auto, arrows across map, thickness, direction filter and angle, Max magnitude and cut-off, colormaps, manual scale and widths, point size and the colormap and range of each points row) are stored between QGIS sessions and restored when the plugin opens.</p>
+<p><strong>Direction filter</strong> (needs Auto): tick <em>Direction filter: hide arrows that deviate from their neighbours</em> before loading. The plugin then loads a thinned, temporary copy of the points that carries, for each arrow, the angle between its direction and the median direction of its 5 × 5 grid neighbours (component-wise median of the neighbours' unit vectors) (computed from all points of the DIC grid; points with fewer than 6 valid neighbours count as 180°). The <strong>Max deviation</strong> slider (5°–180°, 180° = show all) then hides arrows above the chosen angle immediately in all loaded arrow layers, and shows how many arrows remain. Use it to explore how much of the field is directionally inconsistent. Computing the deviation reads every point once, which can take a few seconds for very large layers. The copy is a scratch layer that QGIS does not save with the project: <strong>📌 Keep filter layers in project</strong> writes each one to a GeoPackage next to its source (<code>&lt;source&gt;_dirfilter.gpkg</code>) and replaces the scratch layer by that file (same name, place, style and threshold), so it is still there when the project is reopened. The slider picks such layers up again when the Results tab is shown.</p>
+<p><strong>Max magnitude</strong> is the top of the colour scale. By default arrows above it take the top colour (Magnitude arrows) or are all drawn (Black arrows). <strong>Auto</strong> next to Max magnitude sets it to the high percentile of the loaded field (rounded up), so a few outliers do not compress the colour scale. Tick <strong>Hide arrows above</strong> (next to Max magnitude, both arrow styles) to hide them instead; the data is not changed, arrows are only hidden by the layer's renderer (not applied to azimuth/dip fields). The colormap applies to the layers loaded into QGIS; Google Earth vector exports keep their own colour scale, but honour the cut-off.</p>
+<h3 id="layer-list">Layer list<a class="headerlink" href="#layer-list" title="Permanent link">¶</a></h3>
+<p>The found files are shown as a <strong>grid of toggle buttons</strong>: one block per run (its processing parameters as the title), one row per image pair and one column per layer type, in this order: <strong>Sparse points</strong>, <strong>GeoTIFF results</strong>, <strong>Primary / secondary image</strong> (the input files from Input / Output) and <strong>DIC input images</strong> (hillshade / gradient rasters). A blue button means the layer will be loaded; click it to switch it off. Clicking a <strong>column header</strong> switches that layer type on or off for all pairs, clicking a <strong>row label</strong> does the same for one pair; hover a button to see the file name. The grid is as tall as it needs to be and only scrolls when there is more than one time step. Tick <em>Show file names</em> to see the plain file list instead; it has the same order and also shows the <strong>Primary image</strong> and <strong>Secondary image</strong> entries (switched off by default), which are the same switches as the grid buttons.</p>
+<p>The <strong>Sparse points, component</strong> selector above the grid chooses which component the loaded sparse points are coloured by (<em>all</em> loads one layer per component).</p>
+<p>Click <strong>▶ Load Selected into QGIS</strong> to load the blue layers. Use the quick-select buttons <strong>All</strong>, <strong>Sparse points</strong>, <strong>Magnitude only</strong>, <strong>DIC inputs</strong> (hillshade and gradient rasters) and <strong>None</strong> to manage the selection quickly. Layers are loaded into a named group in the QGIS layer tree (the group of an earlier load of the same folder is reused). New layers are always added on top of the group, and sparse point / arrow layers are always placed above the GeoTIFF layers.</p>
+<h3 id="output-components">Output components<a class="headerlink" href="#output-components" title="Permanent link">¶</a></h3>
+<p>Each DIC run produces one GeoTIFF per displacement component:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Modes</th>
+<th>Physical meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DIC_x</code></td>
+<td>DEM, Ortho</td>
+<td>East–West displacement. Positive = eastward.</td>
+</tr>
+<tr>
+<td><code>DIC_y</code></td>
+<td>DEM, Ortho</td>
+<td>North–South displacement. Positive = northward.</td>
+</tr>
+<tr>
+<td><code>DIC_xy</code></td>
+<td>DEM, Ortho</td>
+<td>2-D horizontal magnitude: <span class="arithmatex">\(\sqrt{x^2 + y^2}\)</span>. Always ≥ 0.</td>
+</tr>
+<tr>
+<td><code>DIC_dz</code></td>
+<td>DEM only</td>
+<td>Vertical displacement <em>before</em> co-registration offset is restored.</td>
+</tr>
+<tr>
+<td><code>DIC_z</code></td>
+<td>DEM only</td>
+<td>Vertical displacement <em>after</em> co-registration offset is restored — the physically meaningful value.</td>
+</tr>
+<tr>
+<td><code>DIC_xyz</code></td>
+<td>DEM only</td>
+<td>3-D magnitude: <span class="arithmatex">\(\sqrt{x^2 + y^2 + z^2}\)</span>. Always ≥ 0.</td>
+</tr>
+<tr>
+<td><code>DIC_az</code></td>
+<td>all modes</td>
+<td>Displacement azimuth in degrees clockwise from North (0–360°); in Camera mode from the top of the image (0° = up, 90° = right).</td>
+</tr>
+<tr>
+<td><code>DIC_dip</code></td>
+<td>DEM only</td>
+<td>Displacement dip angle from horizontal (−90° to +90°). Positive = upward.</td>
+</tr>
+<tr>
+<td><code>DIC_ee</code></td>
+<td>DEM, Ortho</td>
+<td>Correlation error — normalised RMS residual from the DFT registration.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Optional input images.</strong> If <em>Export hillshades</em> / <em>Export gradient images</em> was enabled, the run also contains <code>DIC_input_hillshade_*</code>, <code>DIC_input_gradmag_*</code> and <code>DIC_input_gradang_*</code> rasters (primary <code>prim</code> and secondary <code>seco</code>). They show what the correlation was run on — see <a href="../tab-dic-params/#correlation-input-images">Correlation input images</a> for what each one means. They are listed first (in processing order). The component filter offers them as <strong>Hillshades</strong>, <strong>Gradient direction images</strong> and <strong>Gradient magnitude images</strong> (each shown only if present), plus <strong>Input images (all)</strong> when more than one kind exists; the <strong>Input images</strong> quick-select button ticks all of them, and are styled automatically: a grey stretch for hillshade and magnitude and the cyclic twilight scale (0–360°) for direction. Primary and secondary of the same kind share one grey range (union over all loaded files), so they are directly comparable.</p>
+<div class="admonition note">
+<p class="admonition-title">EE (correlation error): What it measures</p>
+<p>EE is the normalised RMS registration error from the DFT cross-correlation algorithm (Guizar-Sicairos et al. 2008):</p>
+<div class="arithmatex">\[\mathrm{EE} = \sqrt{\left|1 - \frac{|\mathrm{CC}_\max|^2}{E_\text{ref} \cdot E_\text{sec}}\right|}\]</div>
+<p>where <span class="arithmatex">\(\mathrm{CC}_\max\)</span> is the cross-correlation peak value and <span class="arithmatex">\(E_\text{ref}\)</span>, <span class="arithmatex">\(E_\text{sec}\)</span> are the total spectral energies of the reference and secondary image windows. A value of 0 means a perfect correlation peak; 1 means no correlation at all.</p>
+<p>EE always reflects the quality of the <strong>2-D image correlation</strong> — for Ortho and Camera mode this is the orthoimage patch; for DEM mode it is the hillshade or orientation image used as the correlation feature. It is therefore an XY-plane quality indicator in all modes and does not directly reflect the vertical displacement quality in DEM results.</p>
+<p>A more representative quality metric is planned for a future release.</p>
+</div>
+<hr>
+<h2 id="appearance-symbology-and-display">Appearance (symbology and display)<a class="headerlink" href="#appearance-symbology-and-display" title="Permanent link">¶</a></h2>
+<p>Configure the colormap and colour range applied to each component before loading. Each component has sensible defaults but can be overridden per-component or globally with a custom QML file.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/screenshots/qgis_plugin_resultsimport_2.png" data-desc-position="bottom"><img alt="QGIS Plugin ResultsImport 2" src="../../assets/screenshots/qgis_plugin_resultsimport_2.png"></a></p>
+<h3 id="symbology-table">Symbology table<a class="headerlink" href="#symbology-table" title="Permanent link">¶</a></h3>
+<p>Each component row has four configurable columns:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Colormap</strong></td>
+<td>Named colour scale or a custom QML file</td>
+</tr>
+<tr>
+<td><strong>Min / Max</strong></td>
+<td>Values mapped to the two ends of the colour ramp</td>
+</tr>
+<tr>
+<td><strong>Range</strong></td>
+<td><strong>Percentile</strong> (default) — Min/Max from the data of the ticked rasters without outliers (percentiles from Settings → Results); <strong>Min–max</strong> — the extremes of that data; <strong>Fixed</strong> — the default Min/Max of the component from Settings → Results; <strong>Custom</strong> — you enter Min and Max yourself (editing a value switches the row to Custom). Min and Max are greyed out in all modes except Custom, but show the values that will be used (they update when you change the ticked layers or the component)</td>
+</tr>
+</tbody>
+</table>
+<p>Default colormaps per component:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Default colormap</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X, Y, Z, dZ</td>
+<td>RdBu (diverging)</td>
+<td>Range centred at zero</td>
+</tr>
+<tr>
+<td>XY, XYZ</td>
+<td>Deformation QML</td>
+<td>Magnitude — always ≥ 0</td>
+</tr>
+<tr>
+<td>AZ</td>
+<td>AZ bundled QML</td>
+<td>Fixed 0–360°</td>
+</tr>
+<tr>
+<td>DIP</td>
+<td>DIP bundled QML</td>
+<td>Fixed −90° to +90°</td>
+</tr>
+<tr>
+<td>EE</td>
+<td>YlOrRd</td>
+<td>Fixed 0–1</td>
+</tr>
+</tbody>
+</table>
+<p>In <strong>Percentile</strong> and <strong>Min–max</strong> mode, symmetric components (X, Y, Z, dZ) are automatically centred at zero: <code>bound = max(|low|, |high|)</code>, range set to <code>[−bound, +bound]</code>. AZ, DIP, and EE always keep their fixed defaults regardless of this setting.</p>
+<p>Use <strong>↺ Reset ranges to Auto</strong> to switch all rows back to Percentile and recompute from data. In the colour table the rows for sparse points come first, then the raster rows.</p>
+<h3 id="layer-names-and-groups">Layer names and groups<a class="headerlink" href="#layer-names-and-groups" title="Permanent link">¶</a></h3>
+<p>By default (<strong>Layer names: Compact</strong>) loaded layers are organised by run instead of using the long file names:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>▾ Borehole                                                               ← main group: run name
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  ▾ RES 1 m · WIN 32 · SKF 4 · Orientation image · CoReg off · OS 10     ← processing parameters
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>      ▾ Points &amp; arrows
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>          Arrows XYZ · 2022-10-14→2023-08-16 · 306 d
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>          Sparse XY · 2022-10-14→2023-08-16 · 306 d
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      ▾ Results
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>          XY · 2022-10-14→2023-08-16 · 306 d
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>          X · …
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>      ▸ Input images
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>          Primary image · 2022-10-14
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>      ▸ DIC inputs
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>          Grad. mag. prim · 2022-10-14
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>▾ Brienz                                                                 ← another run, its own main group
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  ▸ RES 0.5 m · WIN 64 · …
+</code></pre></div>
+<ul>
+<li><strong>Main group = run name, group below = parameters.</strong> Data of different runs (different names) goes into separate main groups. Inside, one group per parameter set (resolution, window, skip factor, correlation feature, co-registration, oversampling) makes it clear with what the layers below were calculated; several parameter sets of the same run (a sweep) sit side by side under the run name. Groups are matched by the run name and the full run tag, not by their titles. Loading again adds to the existing groups.</li>
+<li><strong>Layer = component, time span and time difference</strong> (<code>306 d</code>); the run name is in the main group and is not repeated in every layer name. Input images show the date of their epoch. Velocity layers carry their unit (<code>XY vel m/yr</code>).</li>
+<li><strong>Sub-groups</strong> <em>Points &amp; arrows</em>, <em>Results</em>, <em>Input images</em> (primary / secondary image) and <em>DIC inputs</em> (hillshade and gradient rasters) keep the fixed stacking order: sparse points on top, then the GeoTIFF results, the input images and last the DIC inputs. When a load contains several pairs of the same run (a time series), each pair gets its own sub-group named <code>date1→date2 · n d</code>, in chronological order.</li>
+<li><strong>Nothing is lost.</strong> The full run tag, the parameters and the file path are stored in the layer metadata (Layer Properties → Information).</li>
+<li><strong>Full file names</strong> restores the old behaviour: one group per output folder and the complete file name as layer name. Files whose names do not follow the DIC pattern are always loaded into a group named after the output folder.</li>
+</ul>
+<h3 id="layer-opacity">Layer opacity<a class="headerlink" href="#layer-opacity" title="Permanent link">¶</a></h3>
+<p>Transparency applied to every raster layer when loaded (default 80 %). Lower values let the basemap show through.</p>
+<h3 id="blending-mode">Blending mode<a class="headerlink" href="#blending-mode" title="Permanent link">¶</a></h3>
+<p>Next to the opacity: <strong>Normal</strong> (default) or <strong>Multiply</strong>. Multiply blends the loaded result rasters and coloured points with the layers below by multiplying the colours, so a hillshade or orthoimage underneath stays visible through the results without lowering their opacity. It is applied when layers are loaded; arrows are always drawn normally.</p>
+<h3 id="custom-qml-override">Custom QML override<a class="headerlink" href="#custom-qml-override" title="Permanent link">¶</a></h3>
+<p>Enable <strong>Override with custom QML for all layers</strong> and browse to a <code>.qml</code> file to apply a single style to every loaded layer, bypassing the per-component table.</p>
+<h3 id="global-settings">Global settings<a class="headerlink" href="#global-settings" title="Permanent link">¶</a></h3>
+<p>The <strong>Settings → Results</strong> section sets defaults applied on every scan:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default range mode</td>
+<td>Auto</td>
+<td>Fixed or Auto for all components</td>
+</tr>
+<tr>
+<td>Percentile range</td>
+<td>5 % – 95 %</td>
+<td>Low/high percentile bounds used in Auto mode</td>
+</tr>
+<tr>
+<td>Custom default ranges</td>
+<td>(table)</td>
+<td>Per-component Min/Max used in Fixed mode; Reset restores built-in defaults</td>
+</tr>
+</tbody>
+</table>
+<p>Range computation uses GDAL's histogram method — no full raster read is needed; overviews are used where available.</p>
+<hr>
+<h2 id="google-earth-export">Google Earth export<a class="headerlink" href="#google-earth-export" title="Permanent link">¶</a></h2>
+<p>Export selected layers as georeferenced KMZ overlays for Google Earth Pro. Supports time slider animation for multi-date datasets and an embedded colormap legend.</p>
+<p>Select one or more layers in the list and click <strong>🌍 Export to Google Earth Pro…</strong> to create a georeferenced KMZ overlay and load it automatically in Google Earth Pro for a quick 3D visualisation with a legend indication.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/screenshots/qgis_plugin_resultsimport_3.png" data-desc-position="bottom"><img alt="QGIS Plugin ResultsImport 3" src="../../assets/screenshots/qgis_plugin_resultsimport_3.png"></a></p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TimeSpan tags</strong></td>
+<td>Adds KML <code>&lt;TimeSpan&gt;</code> tags so Google Earth Pro can animate layers using its time slider. Dates are extracted automatically from output subdirectory names (format <code>YYYYMMDD</code>). Requires at least two dates in the directory name.</td>
+</tr>
+<tr>
+<td><strong>Embed colormap legend</strong></td>
+<td>Inserts the colour bar as a screen overlay inside each KMZ, positioned in the bottom-left corner with component name, unit, and min/max values.</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/screenshots/qgis_plugin_resultsimport_4.png" data-desc-position="bottom"><img alt="QGIS Plugin ResultsImport 4" src="../../assets/screenshots/qgis_plugin_resultsimport_4.png"></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For a full time series, export all layers at once — each component gets its own KMZ plus a master KML that links them. Use the master KML in Google Earth to keep file sizes small and toggle layers independently.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../tab-postprocessing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Post-process Existing Results">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Post-process Existing Results
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../tab-layout-v2/" class="md-footer__link md-footer__link--next" aria-label="Next: Map Layout">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Map Layout
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://www.slf.ch" target="_blank" rel="noopener" title="WSL Institute for Snow and Avalanche Research SLF">
+        <img src="../../assets/SLF_Logo.svg" alt="SLF" style="height:28px; width:auto; vertical-align:middle; margin-right:10px; opacity:0.85;">
+      </a>
+      © 2026 WSL Institute for Snow and Avalanche Research SLF
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:mobi-dic@slf.ch" target="_blank" rel="noopener" title="Contact SLF Davos" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/fdenzinger/mobi-dic/issues" target="_blank" rel="noopener" title="GitHub Issues" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.top", "navigation.path", "navigation.footer", "header.autohide", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../assets/header-title.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
